@@ -39,47 +39,51 @@ $total = $photos[photos][total]; // returns how many photos there are in total
 </head>
 
 <body>
-<div id="header">
-<h1><a href="/"><?php echo $gallery_title; ?></a></h1>
-</div>
-<div id="thumbs">
-<?php
-	foreach ($photos['photos']['photo'] as $photo) {
-   
-         echo "<a href=\"photo.php?id=$photo[id]\" title=\"View $photo[title]\">";
-	 // this next line uses buildPhotoURL to construct the location of our image 
-	   echo "<img alt=\"$photo[title]\" ".
-            "src=\"" . $f->buildPhotoURL($photo, "Medium") . "\" />";
-        echo "</a>\n";
+	
 
-} // end loop
+	<?php require_once("inc/header.php"); ?>
+	
+	<section class="main" role="main">
+	
+		<ul class="thumbs cf">
+		<?php
+			foreach ($photos['photos']['photo'] as $photo) {
+				?>
+			   	 	<li>
+			         <a href="view.php?id=<?php echo $photo[id];?>" title="<?php echo $photo[title];?>">
+						<img alt="<?php echo $photo[title]?>" src="<?php echo $f->buildPhotoURL($photo, $thumb_size);?>"/>
+					 </a>
+				 </li>
+		<?php } ?>
+		</ul><!-- thumbs -->
 
-?>
-</div><!-- end thumbs -->
 
-<!-- Paging -->
-<nav>
-	<ul>
-<?php
-// Some simple paging code to add Prev/Next to scroll through the thumbnails
-$back = $page - 1; 
-$next = $page + 1; 
+	
+		<nav class="paging">
+			<ul>
+		<?php
+		// Some simple paging code to add Prev/Next to scroll through the thumbnails
+		$back = $page - 1; 
+		$next = $page + 1; 
 
-if($page > 1) { 
-echo "<li><a href='?page=$back'>&laquo; <strong>Prev</strong></a></li>"; 
-} 
-// if not last page
-if($page != $pages) { 
-echo "<li><a href='?page=$next'><strong>Next</strong> &raquo;</a></li>";} 
-?>
-</ul>
-</nav>
+		if($page > 1) { 
+		echo "<li><a href='?page=$back'>&laquo; <strong>Prev</strong></a></li>"; 
+		} 
+		// if not last page
+		if($page != $pages) { 
+		echo "<li><a href='?page=$next'><strong>Next</strong> &raquo;</a></li>";} 
+		?>
+		</ul>
+		</nav>
 
-<?php
-// a quick bit of info about where we are in the gallery
-echo"<p>Page $page of $pages ($total photos in the gallery)</p>";
+		<?php
+		// a quick bit of info about where we are in the gallery
+		echo"<p>Page $page of $pages ($total photos in the gallery)</p>";
 
-?>
+		?>
+
+
+</section> <!-- main -->
 
 
 </body>

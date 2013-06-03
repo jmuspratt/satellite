@@ -1,21 +1,22 @@
 /*	------------------------
+	Satellite
+
+	Design/layout by James Muspratt 2013
 	http://jamesmuspratt.com
-	Design Â© James Muspratt 2013
-	Updated May 2012
-	v8
+	Updated June 2012
 
 	*/
 
 
-/*	------------------------
-	Reset */
+/*	Reset ------------------ */
+
 
 	html			{margin:0; padding:0;}
 	body, body * 	{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
 	body img		{border:0;}
 
-/*	------------------------
-	Useful Classes */
+/*	Utility Classes ------------------ */
+
 
 	.clear 		{clear:both;}
 	.cf:after	{content: " "; display: block; font-size: 0; clear: both; visibility: hidden;}
@@ -24,9 +25,8 @@
 	nav.local-nav ul li.invisible 		{display:none;}
 
 
+/*	Type ------------------ */
 
-/*	------------------------
-	1: Type */
 
  	h1, h2, h3, h4	{font-weight:400; font-size:14px; line-height:20px; clear:both; margin:0 0 10px 0 ;}
  	h2 				{color:#000; font-weight:700; }
@@ -36,17 +36,89 @@
 	p + h2			{margin-top:20px;}
 	ul + h3			{margin-top:10px;}
 
-	a				{border-bottom:1px solid #2d9af6; color:#646464;}
+	a				{color:#646464;}
 	a:hover 		{border-color:#aaa; color:#888}
 
-	a, div, p, section	{
-		-webkit-transition: 	all .4s ease;
-		-moz-transition: 		all .4s ease;
-		-o-transition:  		all .4s ease;
-		transition: 			all .4s ease;
+/*	Transitions ------------------ */
+
+	a, section	{
+		-webkit-transition: 	all .5s ease;
+		-moz-transition: 		all .5s ease;
+		-o-transition:  		all .5s ease;
+		transition: 			all .5s ease;
 		}
 
+/*	Nav ------------------ */
 
-	p.edit 		{clear:both;}
-	p.edit a {border:0; color:white; text-transform:uppercase; display:inline-block; margin:20px; padding:5px; background-color:#2d9af6;}
 
+/*	Home ------------------ */
+
+		.thumbs {list-style:none;}
+		.thumbs li {float:left; width:240px; height:140px; margin-right:.5em; margin-bottom:.5em; overflow:hidden;}
+
+/*	View Page (individual photo) ------------------ */
+
+
+
+
+		/* --------------- Breakpoint 2:  --------------- */
+
+			@media screen and (min-width: 500px) {
+			body:after {content: "2"; display:none;}
+	
+			.home-image						{width:1500px; height:1000px; overflow:hidden;}
+	
+			body#page-home header h1 a {background-image: url(images/rachel-hulin.png); top:50px; width:800px; text-indent:-9999px; height:100px;}
+	
+	
+			header h1 a 	{height:40px;}
+			#main			{padding-top:20px;}
+			#main, footer 	{padding-left:3%; padding-right:3%;}
+
+
+			}
+	
+	
+			/* ---------------  Breakpoint 3:  --------------- */
+			@media screen and (min-width: 1000px) {
+				body:after {content: "3"; display:none;}
+		
+				.set-desc	 	{width:50%;}
+		
+		/*		.flexslider		{width:100%; }*/
+				.slides p 		{position:absolute; top:300px; left:-200px; width:100px; margin-top:0;}
+
+				.featured-image {width:25%; margin-right:3%;}
+				.page-content 	{width:55%; float:left; }
+
+
+			}
+	
+	
+	
+
+	
+			/*	////////////////////////
+				Retina  */
+
+
+			@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+				}  /* end retina */
+
+
+				@media screen and (min-width: 450px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+				}  /* end retina */
+
+
+		
+			/*	////////////////////////
+				Clean Up
+				Fix iOS and Windows Mobile font-size changes */
+	
+				@media screen and (max-device-width: 480px), screen and (max-width: 600px) {
+		
+					html {-ms-text-size-adjust: none;-webkit-text-size-adjust: none;}
+			
+				} /* end clean up */
