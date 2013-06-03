@@ -1,0 +1,52 @@
+/*	------------------------
+	http://jamesmuspratt.com
+	Design Â© James Muspratt 2013
+	Updated May 2012
+	v8
+
+	*/
+
+
+/*	------------------------
+	Reset */
+
+	html			{margin:0; padding:0;}
+	body, body * 	{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
+	body img		{border:0;}
+
+/*	------------------------
+	Useful Classes */
+
+	.clear 		{clear:both;}
+	.cf:after	{content: " "; display: block; font-size: 0; clear: both; visibility: hidden;}
+	.scroll 	{overflow-x:scroll;  -webkit-overflow-scrolling: touch;}
+	.scroll:before {font-size:10px; content: "Scroll â†’"; display:block; padding:3px 5px;  background:#eaeaea; color:#888; letter-spacing:1px; text-transform:uppercase; text-align:center; width:80px; }
+	nav.local-nav ul li.invisible 		{display:none;}
+
+
+
+/*	------------------------
+	1: Type */
+
+ 	h1, h2, h3, h4	{font-weight:400; font-size:14px; line-height:20px; clear:both; margin:0 0 10px 0 ;}
+ 	h2 				{color:#000; font-weight:700; }
+ 	h3				{font-style:italic; margin-bottom:0;}
+ 	p 				{margin-bottom:10px;}
+
+	p + h2			{margin-top:20px;}
+	ul + h3			{margin-top:10px;}
+
+	a				{border-bottom:1px solid #2d9af6; color:#646464;}
+	a:hover 		{border-color:#aaa; color:#888}
+
+	a, div, p, section	{
+		-webkit-transition: 	all .4s ease;
+		-moz-transition: 		all .4s ease;
+		-o-transition:  		all .4s ease;
+		transition: 			all .4s ease;
+		}
+
+
+	p.edit 		{clear:both;}
+	p.edit a {border:0; color:white; text-transform:uppercase; display:inline-block; margin:20px; padding:5px; background-color:#2d9af6;}
+
