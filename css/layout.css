@@ -1,32 +1,32 @@
 /*	------------------------
 	Satellite
 
-	Design/layout by James Muspratt 2013
+	Layout
+
+	Design/layout by James Muspratt
 	http://jamesmuspratt.com
-	Updated June 2012
 
 	*/
 
 
 /*	Reset ------------------ */
 
-
 	html			{margin:0; padding:0;}
 	body, body * 	{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
 	body img		{border:0;}
+	
 
 /*	Utility Classes ------------------ */
-
 
 	.clear 		{clear:both;}
 	.cf:after	{content: " "; display: block; font-size: 0; clear: both; visibility: hidden;}
 	.scroll 	{overflow-x:scroll;  -webkit-overflow-scrolling: touch;}
 	.scroll:before {font-size:10px; content: "Scroll â†’"; display:block; padding:3px 5px;  background:#eaeaea; color:#888; letter-spacing:1px; text-transform:uppercase; text-align:center; width:80px; }
 	nav.local-nav ul li.invisible 		{display:none;}
-
-
+	
 	
 /*	Responsive Media ------------------ */
+	
 	img, video, embed 			{max-width:100%;}
 	
 
@@ -40,10 +40,18 @@
 		}
 
 /*	Layout ------------------ */
-	.main	{max-width:900px; margin:0 auto; }
-
+	
+	body {padding:0 5%;}
+	
+	header.primary, .main	{max-width:900px; margin:0 auto; }
+	header.primary			{min-height:60px; padding:20px 0; }
+	
+	
 /*	Nav ------------------ */
-
+	
+	nav.primary ul 			{list-style:none;}
+	nav.primary li 			{display:inline-block; margin-right:1em;}
+	
 
 /*	Home ------------------ */
 
@@ -56,69 +64,50 @@
 	.paging li a 	{padding:3px 8px; background:#eaeaea; color:#555;}
 	.paging li a:hover	{background:#bbb;}
 
+
 /*	View Page (individual photo) ------------------ */
 
-	
+
+
+
+
 
 
 		/* --------------- Breakpoint 2:  --------------- */
 
 			@media screen and (min-width: 500px) {
-			body:after {content: "2"; display:none;}
+			body:after {content: "2"; display:none;} /* flag for javascript */
+			body {padding:0 3%;}
 	
-			.home-image						{width:1500px; height:1000px; overflow:hidden;}
-	
-			body#page-home header h1 a {background-image: url(images/rachel-hulin.png); top:50px; width:800px; text-indent:-9999px; height:100px;}
-	
-	
-			header h1 a 	{height:40px;}
-			#main			{padding-top:20px;}
-			#main, footer 	{padding-left:3%; padding-right:3%;}
 
-
-			}
+			} /* 2 */
 	
 	
-			/* ---------------  Breakpoint 3:  --------------- */
-			@media screen and (min-width: 1000px) {
-				body:after {content: "3"; display:none;}
-		
-				.set-desc	 	{width:50%;}
-		
-		/*		.flexslider		{width:100%; }*/
-				.slides p 		{position:absolute; top:300px; left:-200px; width:100px; margin-top:0;}
+		/* ---------------  Breakpoint 3:  --------------- */
+		@media screen and (min-width: 1000px) {
+			body:after		{content: "3"; display:none;} /* flag for javascript */
+			body 			{padding:0 1%;}
+				
 
-				.featured-image {width:25%; margin-right:3%;}
-				.page-content 	{width:55%; float:left; }
-
-
-			}
+			} /* 3 */
 	
 	
 	
 
 	
-			/*	////////////////////////
-				Retina  */
+			/*	Retina ------------------ */
 
 
 			@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
 				}  /* end retina */
 
-
-				@media screen and (min-width: 450px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-
-				}  /* end retina */
-
-
 		
-			/*	////////////////////////
-				Clean Up
-				Fix iOS and Windows Mobile font-size changes */
+			/*	Clean up ------------------ */
+			/* 	Fix iOS and Windows Mobile font-size changes */
 	
-				@media screen and (max-device-width: 480px), screen and (max-width: 600px) {
+			@media screen and (max-device-width: 480px), screen and (max-width: 600px) {
+	
+				html {-ms-text-size-adjust: none;-webkit-text-size-adjust: none;}
 		
-					html {-ms-text-size-adjust: none;-webkit-text-size-adjust: none;}
-			
-				} /* end clean up */
+			} /* clean up */

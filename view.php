@@ -11,10 +11,10 @@
 
 	$f->enableCache("fs", "cache");
 
-	$photo = $f->photos_getInfo("$id", $secret = NULL);
+	$photo = $f->photos_getInfo($id, $secret = NULL);
 
 
-	$photosize = $f->photos_getSizes("$id", $secret = NULL);
+	$photosize = $f->photos_getSizes($id, $secret = NULL);
 	$size = $photosize[8];
 
 	//$allcontexts = $f->photos_getAllContexts("$id");
