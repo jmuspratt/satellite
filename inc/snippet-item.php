@@ -1,8 +1,3 @@
 <?php
 ?>
-	<img src="<?php echo $photoUrl;?>" alt="<?php echo $photo[title];?>" />
-	<h2><?php echo $photo["title"];?></h2>
-
-	<div class="photo-desc">
-		<p><?php echo $photo[description]; ?></p>
-	</div>
+	<img src="<?php echo $photoUrl;?>" alt="<?php echo $photo["photo"]["title"];?>" />

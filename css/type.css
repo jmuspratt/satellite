@@ -13,13 +13,13 @@
 
 /*	Type ------------------ */
 
-	body 			{font: .8em/1.5em arial, sans-serif;}
+	body 			{font: .8em/1.5em arial, sans-serif; color:#666;}
 
  	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 0 10px 0 ;}
 	h1				{font-size:1.5em; font-weight:bold;}
- 	h2 				{color:#000; font-weight:bold; }
+ 	h2 				{ font-weight:bold; color:#999;}
  	h3				{font-style:italic; margin-bottom:0;}
- 	p 				{font-size:.8em; margin-bottom:10px;}
+ 	p 				{font-size:1em; margin-bottom:1em;}
 
 
 	a				{color:#2d9af6;}
@@ -28,5 +28,11 @@
 
 	header.primary h1 a {color:#888;}
 	
-/*	Foooter ------------------ */
+	
+/*	Meta ------------------ */
+	
+	.meta .title-desc {margin-bottom:3em;}
+	
+	
+/*	Footer ------------------ */
 	footer p {font-size:.8em; color:#888;}
