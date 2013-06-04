@@ -6,15 +6,15 @@
 
 	<head>
 
-	<title><?php echo $config["gallery_title"]; ?> <?php if ($photo['title']) {echo ": " . $photo['title'];} ?></title>
+	<title><?php echo $config["gallery_title"]; ?><?php if ($photo['photo']['title']) {echo " - " . $photo['photo']['title'];} ?></title>
 
 	</head>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-	<link href="css/layout.css" rel="stylesheet" type="text/css">
-	<link href="css/type.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo $config[root_url];?>/css/layout.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo $config[root_url];?>/css/type.css" rel="stylesheet" type="text/css">
 	
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>

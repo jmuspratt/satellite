@@ -32,7 +32,7 @@
 
 /*	Transitions ------------------ */
 
-	a, section	{
+	a	{
 		-webkit-transition: 	all .3s ease;
 		-moz-transition: 		all .3s ease;
 		-o-transition:  		all .3s ease;
@@ -41,10 +41,10 @@
 
 /*	Layout ------------------ */
 	
-	body {padding:0 5%;}
+	body {padding:0 8%;}
 	
 	header.primary, .main	{max-width:1400px; margin:0 auto; }
-	header.primary			{min-height:60px; padding:20px 0; }
+	header.primary			{min-height:60px; padding:20px 0; margin-bottom:20px; border-bottom:1px solid #eee;}
 	
 	
 /*	Nav ------------------ */
@@ -61,15 +61,13 @@
 	.paging 		{margin:20px 0; }
 	.paging ul 		{list-style:none; margin;}
 	.paging li 		{display:inline-block;}
-	.paging li a 	{padding:3px 8px; background:#eaeaea; color:#555;}
-	.paging li a:hover	{background:#bbb;}
 
 
 /*	View Page (individual photo) ------------------ */
 	
-	.photo-title-desc				{margin-bottom:4em; padding-top:2em; border-top:3px solid #efefef;  max-width:175px;}
+	.photo-title-desc				{margin-bottom:4em;   max-width:175px;}
 	
-	nav.photo-prev-next				{margin-bottom:4em; padding-top:2em; border-top:3px solid #efefef; max-width:175px; }
+	nav.photo-prev-next				{margin-bottom:4em; max-width:175px; }
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
@@ -88,7 +86,7 @@
 
 			@media screen and (min-width: 500px) {
 			body:after {content: "2"; display:none;} /* flag for javascript */
-			body {padding:0 3%;}
+			body {padding:0 5%;}
 	
 
 			} /* 2 */
@@ -97,7 +95,6 @@
 		/* ---------------  Breakpoint 3:  --------------- */
 		@media screen and (min-width: 1000px) {
 			body:after		{content: "3"; display:none;} /* flag for javascript */
-			body 			{padding:0 1%;}
 			
 			.item		 	{float:left; width:70%;}
 			.meta 			{float:right; width:28%;}

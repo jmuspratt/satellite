@@ -1,20 +1,18 @@
 <?php 
 
 	// get photo id from the url
-	$id = isset($_GET['id']) ? $_GET['id'] : NULL; 
-
-	require_once('lib/phpFlickr.php');
-	require_once('config/config.php');
+	$id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
+	
+	
+	require_once('../lib/phpFlickr.php');
+	require_once('../config/config.php');
 
 	// Fire up the phpFlickr class
 	$f = new phpFlickr($config["key"]);
 
-	$f->enableCache("fs", "cache");
+	$f->enableCache("fs", "../cache");
 
 	$photo = $f->photos_getInfo($id, $secret = NULL);
-	
-
-
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
 	$size = $photosize[8];
 
@@ -25,22 +23,17 @@
 
 ?>
 
-<?php require_once("inc/doc-head.php"); ?>
+<?php require_once("../inc/doc-head.php"); ?>
 
 <body class="view">
 
-	<?php require_once("inc/header.php"); ?>
+	<?php require_once("../inc/header.php"); ?>
 	
 	<section class="main cf" role="main">
 		
-		<?php
-			
-			
-		?>
-		
 		
 		<section class="item">
-			<?php require_once("inc/snippet-item.php"); ?>
+			<?php require_once("../inc/snippet-item.php"); ?>
 		</section>
 
 
@@ -50,7 +43,7 @@
 			<div class="photo-title-desc">
 				<h2 class="photo-title"><?php echo $photo["photo"]["title"];?></h2>
 				<p class="photo-desc"><?php echo $photo["photo"]["description"]; ?></p>
-				<p><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
+				<p class="button"><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
 			
 			</div>
 			
@@ -62,7 +55,7 @@
 			<ul>
 			<?php if ($context['prevphoto']['id']){ ?>
 				<li>
-					<a href="?id=<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+					<a href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 						<img src="<?php echo $context['prevphoto']['thumb'];?>" />
 					</a>
 				</li>
@@ -74,7 +67,7 @@
 
 			<?php if ($context['nextphoto']['id']){ ?>
 					<li>
-						<a href="?id=<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+						<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 							<img src="<?php echo $context['nextphoto']['thumb']; ?>" />
 						</a>
 					</li>
@@ -91,7 +84,7 @@
 </section> <!-- main  -->
 
 
-<?php require_once ("inc/footer.php"); ?>
+<?php require_once ("../inc/footer.php"); ?>
 
 
 

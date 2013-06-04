@@ -4,7 +4,7 @@
 		<nav class="primary">
 			<ul>
 				<li><a href="<?php echo $config['root_url'];?>">Home</a></li>
-				<li><a href="<?php echo $config['root_url'];?>">Some Other Link</a></li>
+				<li><a href="<?php echo $config['root_url'];?>/sets">Sets</a></li>
 			</ul>
 		</nav>
 	
