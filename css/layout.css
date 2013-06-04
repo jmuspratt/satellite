@@ -80,13 +80,12 @@
 	
 	.meta 							{margin-bottom:2em;}
 
-	nav.photo-prev-next				{border-top:1px solid #eaeaea; padding-top:2em; margin-bottom:2em; max-width:175px; }
+	nav.photo-prev-next				{border-top:1px solid #eaeaea; padding-top:2em; margin-bottom:2em; max-width:190px; }
 
 	
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
-	nav.photo-prev-next li a:hover 	{opacity:.8;}
 
 /*	Footer (individual photo) ------------------ */
 	

@@ -65,7 +65,7 @@
 			<nav class="photo-prev-next">
 			<ul>
 			<?php if ($context['prevphoto']['id']){ ?>
-				<li>
+				<li class="prev">
 					<a href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 						<img src="<?php echo $context['prevphoto']['thumb'];?>" /><br />
 						<span>‹</span> Previous
@@ -73,12 +73,12 @@
 				</li>
 
 				<?php } else { ?>
-					<li><img src="images/no-img.png" alt="No Image" /></li>
+					<li class="prev"><img src="images/no-img.png" alt="No Image" /></li>
 				<?php } ?>
 
 
 			<?php if ($context['nextphoto']['id']){ ?>
-					<li>
+					<li class="next">
 						<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 							<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
 							Next <span>›</span>
@@ -87,7 +87,7 @@
 					</li>
 
 				<?php } else { ?>
-					<li><img src="images/no-img.png" alt="No Image" /></li>
+					<li class="next"><img src="images/no-img.png" alt="No Image" /></li>
 				<?php } ?>
 				</ul>
 			</nav>

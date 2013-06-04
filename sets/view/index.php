@@ -24,9 +24,6 @@
 
 	$set_info = $f->photosets_getInfo($set_id);
 
-	// Some bits for paging
-	$pages = $photos[photos][pages]; // returns total number of pages
-	$total = $photos[photos][total]; // returns how many photos there are in total
 	?>
 
 <!doctype html>
@@ -50,39 +47,11 @@
 		<p><?php echo $set_info["count_photos"];?> Photos, <?php echo $set_info["count_videos"];?> Videos</p>
 		<p><?php echo $set_info["description"];?></p>
 		
-		<nav class="paging cf">
-			
-			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong> (<?php echo $total; ?> photos in the gallery)</p>
-			
-			<ul>
-				<?php
-				// Some simple paging code to add Prev/Next to scroll through the thumbnails
-				$back = $page - 1; 
-				$next = $page + 1; 
-
-				if($page > 1) { ?>
-			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
-				<?php } 
-				// if not last page
-				if($page != $pages) { ?>
-		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
-				<?php } ?>
-				</ul>
-		
-
-		</nav> <!-- paging -->
-	
-	
-	
-		<h2>Set Name here</h2>
-		
 		<ul class="thumbs cf">
 		<?php
 			foreach ($photos['photoset']['photo'] as $photo) {
 				
 				$id = $photo["id"];
-				
-
 				$photosize = $f->photos_getSizes($id, $secret = NULL);
 				
 				include ("../../inc/snippet-thumbs.php");
