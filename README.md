@@ -20,6 +20,5 @@ Configuration and Setup
 
 To Do 
 -----
-- Support Videos (will be HTML5 only)
+- Display sets
 - More layout options
-- Separate CSS into type.css and layout.css

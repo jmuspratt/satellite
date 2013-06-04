@@ -1,30 +1,28 @@
 <?php 
-	
-	$this_page = "home";
-	
-	// For paging the thumbnails, get the page we are on
-	// if there isn't one - we are on page 1
-	$page = isset($_GET['page']) ? $_GET['page'] : 1;
+	$this_page = "set-view";
 
-	require_once('lib/phpFlickr.php');
-	require_once('config/config.php');
+	// get set id from the url
+	$set_id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
+
+
+	require_once('../../lib/phpFlickr.php');
+	require_once('../../config/config.php');
 
 	// Fire up the phpFlickr class
 	$f = new phpFlickr($config["key"]);
 
 	// phpFlickr needs a cache folder
 	// in this case we have a writable folder on the root of our site, with permissions set to 777
-	$f->enableCache("fs", "cache");
-
-	//returns an array
-	$result = $f->people_findByUsername($config["username"]);
+	$f->enableCache("fs", "../../cache");
 
 	// grab our unique user id from the $result array
 	$nsid = $result["id"];
 
-	// Get the user's public photos and show $config['photos_per_page'] per page
-	//$page at the end specifies which page to start on, that's the page number ($page) that we got at the start
-	$photos = $f->people_getPublicPhotos($nsid, NULL, NULL, $config['photos_per_page'], $page);
+
+
+	$photos = $f->photosets_getPhotos($set_id, NULL, NULL, $config['photos_per_page'], $page);
+
+	$set_info = $f->photosets_getInfo($set_id);
 
 	// Some bits for paging
 	$pages = $photos[photos][pages]; // returns total number of pages
@@ -34,16 +32,24 @@
 <!doctype html>
 
 
-<?php require_once("inc/doc-head.php"); ?>
+<?php require_once("../../inc/doc-head.php"); ?>
 
 
-<body class="home">
+
+<body class="set-view">
 	
+	<?php require_once("../../inc/header.php"); ?>
 	
-	<?php require_once("inc/header.php"); ?>
 	
 	<section class="main" role="main">
-	
+		
+		
+		<?php // print_r ($set_info); ?>
+		
+		<h1><?php echo $set_info["title"];?></h1>
+		<p><?php echo $set_info["count_photos"];?> Photos, <?php echo $set_info["count_videos"];?> Videos</p>
+		<p><?php echo $set_info["description"];?></p>
+		
 		<nav class="paging cf">
 			
 			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong> (<?php echo $total; ?> photos in the gallery)</p>
@@ -68,17 +74,18 @@
 	
 	
 	
-	
+		<h2></h2>
+		
 		<ul class="thumbs cf">
 		<?php
-			foreach ($photos['photos']['photo'] as $photo) {
+			foreach ($photos['photoset']['photo'] as $photo) {
 				
 				$id = $photo["id"];
+				
 
 				$photosize = $f->photos_getSizes($id, $secret = NULL);
 				
-				
-				include ("inc/snippet-thumbs.php");
+				include ("../../inc/snippet-thumbs.php");
 		 } ?>
 		</ul><!-- thumbs -->
 

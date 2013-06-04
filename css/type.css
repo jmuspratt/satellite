@@ -26,8 +26,10 @@
 	a:hover 		{color:#aaa; }
 
 
-	header.primary h1 a {color:#888;}
-	
+/*	Header & Nav ------------------ */
+
+	header.primary h1 a 		{color:#888;}
+	nav.primary li.current a	{color:#000; border-bottom:2px solid #eaeaea;}
 	
 /*	Home Page ------------------ */
 	
