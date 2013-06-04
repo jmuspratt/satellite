@@ -7,10 +7,15 @@ Requirements
 
 
 Configuration and Setup
--------------
+-----------------------
 
-1. Open config/config.php and fill in your gallery title, username, and API key. Close and Save the file.
-2. Upload the contents of /satellite/ files to a web server. You can put them into a sub-folder like yourdomain.com/photos/
-3. Set the permissions of yourdomain.com/photos/cache to 777.
+1. Open config/config.php and fill in your gallery title, username, API key, etc. Close and Save the file.
+2. Upload the contents of /satellite/ files to a web server. You can put them in a domain root or a sub-folder like http://yourdomain.com/photos/
+3. Set the permissions of the `cache` directory to `777`.
 
 
+To Do 
+-----
+- Support Videos (will be HTML5 only)
+- More layout options
+- Separate CSS into type.css and layout.css
