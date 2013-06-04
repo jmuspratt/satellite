@@ -53,11 +53,11 @@
 				$next = $page + 1; 
 
 				if($page > 1) { ?>
-			 	   <li class="button"><a href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
+			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
 				<?php } 
 				// if not last page
 				if($page != $pages) { ?>
-		 	 	   <li class="button"><a href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
+		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
 				<?php } ?>
 				</ul>
 		
@@ -72,7 +72,6 @@
 		<?php
 		
 			foreach ($photosets["photoset"] as $set) { ?>
-				
 
 				<?php 
 				

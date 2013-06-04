@@ -37,13 +37,16 @@
 
 /*	View Page ------------------ */
 	
-	.button			{font-size:.8em; font-weight:bold;}
-	.button a		{display:inline-block; color:#aaa; padding:2px 8px; background:#eaeaea; }
-	.button a:hover	{color:#555;}
+	a.button		{font-size:.8em; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:#eaeaea; }
+	a.button:hover	{color:#555;}
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}
 	
 	.meta {font-size:.8em; line-height:1.2em;}
+	
+	nav.photo-prev-next li	{display:inline-block;} 
+	nav.photo-prev-next li a {font-size:.8em; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:#eaeaea; }
+	nav.photo-prev-next li img {display:inline-block;}
 	
 /*	Footer ------------------ */
 	footer p {font-size:.8em; color:#888;}

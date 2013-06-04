@@ -61,11 +61,11 @@
 				$next = $page + 1; 
 
 				if($page > 1) { ?>
-			 	   <li class="button"><a href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
+			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
 				<?php } 
 				// if not last page
 				if($page != $pages) { ?>
-		 	 	   <li class="button"><a href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
+		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
 				<?php } ?>
 				</ul>
 		
@@ -74,7 +74,7 @@
 	
 	
 	
-		<h2></h2>
+		<h2>Set Name here</h2>
 		
 		<ul class="thumbs cf">
 		<?php

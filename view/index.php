@@ -59,7 +59,7 @@
 				
 			</div>
 			
-			<p class="button"><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
+			<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
 			
 			
 			<nav class="photo-prev-next">
@@ -67,7 +67,8 @@
 			<?php if ($context['prevphoto']['id']){ ?>
 				<li>
 					<a href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
-						<img src="<?php echo $context['prevphoto']['thumb'];?>" />
+						<img src="<?php echo $context['prevphoto']['thumb'];?>" /><br />
+						<span>‹</span> Previous
 					</a>
 				</li>
 
@@ -79,7 +80,9 @@
 			<?php if ($context['nextphoto']['id']){ ?>
 					<li>
 						<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
-							<img src="<?php echo $context['nextphoto']['thumb']; ?>" />
+							<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
+							Next <span>›</span>
+							
 						</a>
 					</li>
 

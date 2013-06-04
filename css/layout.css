@@ -78,9 +78,10 @@
 	
 	.photo-title-desc				{margin-bottom:1em;   max-width:175px;}
 	
-	nav.photo-prev-next				{margin-bottom:2em; max-width:175px; }
-	
 	.meta 							{margin-bottom:2em;}
+
+	nav.photo-prev-next				{border-top:1px solid #eaeaea; padding-top:2em; margin-bottom:2em; max-width:175px; }
+
 	
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
