@@ -1,4 +1,4 @@
-![Satellite](/screenshot.jpg)
+![Satellite](screenshot.jpg)
 
 Overview
 -------------
