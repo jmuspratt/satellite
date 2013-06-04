@@ -20,7 +20,7 @@
 
 
 
-	$photos = $f->photosets_getPhotos($set_id, NULL, NULL, $config['photos_per_page'], $page);
+	$photos = $f->photosets_getPhotos($set_id, NULL, NULL, 999, $page);
 
 	$set_info = $f->photosets_getInfo($set_id);
 

@@ -21,7 +21,7 @@
 
 
 	// get photosets
-	$photosets = $f->photosets_getList($nsid, NULL, NULL, 12, $page);
+	$photosets = $f->photosets_getList($nsid, NULL, NULL, 999, $page);
 
 	// Some bits for paging
 	$pages = $photos[photos][pages]; // returns total number of pages
