@@ -26,23 +26,24 @@
 
 <?php require_once("inc/doc-head.php"); ?>
 
-<body>
+<body class="view">
 
 	<?php require_once("inc/header.php"); ?>
 	
-	<section class="main" role="main">
-	
-		<?php require_once("inc/snippet-item.php"); ?>
+	<section class="main cf" role="main">
+		
+		<section class="item">
+			<?php require_once("inc/snippet-item.php"); ?>
+		</section>
 
-
-		<div class="context">
+		<section class="meta">
 		<?php if ($context['prevphoto']['id']){ ?>
 			<a href="?id=<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 				<img src="<?php echo $context['prevphoto']['thumb'];?>" />
 			</a>
 
 			<?php } else { ?>
-				<img src="images/no-img.png" alt="No Image" />";
+				<img src="images/no-img.png" alt="No Image" />
 			<?php } ?>
 
 
@@ -52,13 +53,17 @@
 			</a>
 
 			<?php } else { ?>
-				<img src="images/no-img.png" alt="No Image" />";
+				<img src="images/no-img.png" alt="No Image" />
 			<?php } ?>
 
 			<p><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
 
+		</section> <!-- meta -->
 
 </section> <!-- main  -->
+
+
+<?php require_once ("inc/footer.php"); ?>
 
 
 

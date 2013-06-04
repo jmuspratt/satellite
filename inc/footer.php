@@ -1,5 +1,7 @@
+<?php ?>
+
 <footer>
 
-<p class="note">This product uses the Flickr API but is not endorsed or certified by Flickr.</p>
+	<p>Built with <a href="http://github.com/jmuspratt/satellite">Satellite</a> and <a href="http://phpflickr.com">PHPFlickr</a>.</p>
 
-</footer><!-- end footer -->
+</footer><!-- footer -->

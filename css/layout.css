@@ -43,7 +43,7 @@
 	
 	body {padding:0 5%;}
 	
-	header.primary, .main	{max-width:900px; margin:0 auto; }
+	header.primary, .main	{max-width:1400px; margin:0 auto; }
 	header.primary			{min-height:60px; padding:20px 0; }
 	
 	
@@ -68,6 +68,10 @@
 /*	View Page (individual photo) ------------------ */
 
 
+/*	Footer (individual photo) ------------------ */
+	
+	footer {clear:both; margin-top:2em;}
+
 
 
 
@@ -87,7 +91,9 @@
 		@media screen and (min-width: 1000px) {
 			body:after		{content: "3"; display:none;} /* flag for javascript */
 			body 			{padding:0 1%;}
-				
+			
+			.item		 	{float:left; width:70%;}
+			.meta 			{float:right; width:28%;}
 
 			} /* 3 */
 	
