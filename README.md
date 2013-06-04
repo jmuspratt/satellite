@@ -1,6 +1,6 @@
 Overview
 -------------
-Satellite is a straightforward, responsive template for displaying a Flickr stream on your own website, perhaps at `http://yourdomain.com/photos`. Satellite uses no lightboxes, Flash code or heavy styling. Videos are served as HTML5 .mp4 files; sorry, Firefox.
+Satellite is a minimal, responsive template based on [phpFlickr](http://phpflickr.com). Use it to display your Flickr photos and Sets on your own website, perhaps at `http://yourdomain.com/photos/`. Satellite uses no lightboxes, Flash code or heavy styling. Videos are served as HTML5 .mp4 files; sorry, Firefox.
 
 Requirements
 -------------
