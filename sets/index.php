@@ -49,10 +49,10 @@
 			foreach ($photosets["photoset"] as $set) { ?>
 
 				<?php 
-				
-				$set_cover_url = "http://farm" . $set['farm'] . ".static.flickr.com/" . $set['server'] . "/" . $set[id] . "_" . $set['secret'] . "_m" . ".jpg"; ?>
+								
+				$set_cover_url = "http://farm" . $set['farm'] . ".static.flickr.com/" . $set['server'] . "/" . $set["primary"] . "_" . $set['secret'] . "_m" . ".jpg"; ?>
 
-				<li><a href="<?php echo $config[root_url];?>/sets/view/?<?php echo $set["id"];?>">
+				<li><a href="<?php echo $config["root_url"];?>/sets/view/?<?php echo $set["id"];?>">
 					<img src="<?php echo $set_cover_url;?>" /></a><br />
 					
 					
