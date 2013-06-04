@@ -1,3 +1,7 @@
+Overview
+-------------
+Satellite is a straightforward, responsive template for displaying a Flickr stream on your own website, perhaps at `http://yourdomain.com/photos`. Satellite uses no lightboxes, Flash code or heavy styling.
+
 Requirements
 -------------
 
