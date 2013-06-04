@@ -42,16 +42,10 @@
 	
 	<section class="main" role="main">
 	
-		<ul class="thumbs cf">
-		<?php
-			foreach ($photos['photos']['photo'] as $photo) {
-				include ("inc/snippet-thumbs.php");
-		 } ?>
-		</ul><!-- thumbs -->
-
-
-	
-		<nav class="paging">
+		<nav class="paging cf">
+			
+			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong> (<?php echo $total; ?> photos in the gallery)</p>
+			
 			<ul>
 				<?php
 				// Some simple paging code to add Prev/Next to scroll through the thumbnails
@@ -66,10 +60,25 @@
 		 	 	   <li class="button"><a href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
 				<?php } ?>
 				</ul>
-				</nav>
 		
-		<p>Page <?php echo $page;?> of <?php echo $pages; ?><br />
-		(<?php echo $total; ?> photos in the gallery)</p>
+
+		</nav> <!-- paging -->
+	
+	
+	
+	
+		<ul class="thumbs cf">
+		<?php
+			foreach ($photos['photos']['photo'] as $photo) {
+				
+				$id = $photo["id"];
+
+				$photosize = $f->photos_getSizes($id, $secret = NULL);
+				
+				
+				include ("inc/snippet-thumbs.php");
+		 } ?>
+		</ul><!-- thumbs -->
 
 
 

@@ -29,6 +29,10 @@
 	header.primary h1 a {color:#888;}
 	
 	
+/*	Home Page ------------------ */
+	
+	.paging p {font-size:.8em; line-height:1.5em;}
+
 /*	View Page ------------------ */
 	
 	.button			{font-size:.8em; font-weight:bold;}

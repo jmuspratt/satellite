@@ -55,11 +55,16 @@
 
 /*	Home ------------------ */
 
-	.thumbs {list-style:none;}
-	.thumbs li {float:left; width:240px; height:140px; margin-right:.5em; margin-bottom:.5em; overflow:hidden;}
+	.thumbs 		{list-style:none;}
+	.thumbs li 		{float:left; display:blokc; width:240px; height:140px; margin-right:10px; margin-bottom:10px; overflow:hidden; position:relative;}
+	
+	.thumbs li.video:after	{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
+	
 	
 	.paging 		{margin:20px 0; }
-	.paging ul 		{list-style:none; margin;}
+	.paging p		{float:left; width:45%;}
+
+	.paging ul 		{list-style:none; float:right; width:45%; text-align:right;}
 	.paging li 		{display:inline-block;}
 
 
