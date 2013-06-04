@@ -6,7 +6,11 @@
 
 	<head>
 
-	<title><?php echo $config["gallery_title"]; ?><?php if ($photo['photo']['title']) {echo " - " . $photo['photo']['title'];} ?></title>
+	<title>
+		<?php echo $config["gallery_title"]; ?>
+		<?php if ($photo['photo']['title']) {echo " - " . $photo['photo']['title'];} ?>
+		<?php if ($this_page == "sets") {echo " - Sets";} ?>
+	</title>
 
 	</head>
 	

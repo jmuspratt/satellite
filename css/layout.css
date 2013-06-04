@@ -32,7 +32,7 @@
 
 /*	Transitions ------------------ */
 
-	a	{
+	a		{
 		-webkit-transition: 	all .3s ease;
 		-moz-transition: 		all .3s ease;
 		-o-transition:  		all .3s ease;
@@ -58,6 +58,8 @@
 	.thumbs 		{list-style:none;}
 	.thumbs li 		{float:left; display:blokc; width:240px; height:140px; margin-right:10px; margin-bottom:10px; overflow:hidden; position:relative;}
 	
+	.thumbs li:hover	{bottom:2px; }
+	
 	.thumbs.photosets li {height:240px;}
 	
 	.thumbs li.video:after	{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
@@ -72,9 +74,14 @@
 
 /*	View Page (individual photo) ------------------ */
 	
-	.photo-title-desc				{margin-bottom:4em;   max-width:175px;}
+	.item							{margin-bottom:1em;}
 	
-	nav.photo-prev-next				{margin-bottom:4em; max-width:175px; }
+	.photo-title-desc				{margin-bottom:1em;   max-width:175px;}
+	
+	nav.photo-prev-next				{margin-bottom:2em; max-width:175px; }
+	
+	.meta 							{margin-bottom:2em;}
+	
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
@@ -103,8 +110,8 @@
 		@media screen and (min-width: 1000px) {
 			body:after		{content: "3"; display:none;} /* flag for javascript */
 			
-			.item		 	{float:left; width:70%;}
-			.meta 			{float:right; width:28%;}
+			.item		 			{float:left; width:70%;}
+			aside.sidebar 			{float:right; width:28%;}
 
 			} /* 3 */
 	

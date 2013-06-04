@@ -38,17 +38,28 @@
 
 
 
-		<section class="meta">
+		<aside class="sidebar">
 			
 			<div class="photo-title-desc">
 				<h2 class="photo-title"><?php echo $photo["photo"]["title"];?></h2>
 				<p class="photo-desc"><?php echo $photo["photo"]["description"]; ?></p>
-				<p class="button"><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
+				
 			
 			</div>
 			
+			<div class="meta">
+				
+				
+				<?php // print_r ($photo["photo"]["dates"]); ?>
+				<?php date_default_timezone_set('UTC');?>
+				<p>
+					<strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photo["photo"]["dates"]["taken"])));?><br />
+					<strong>Uploaded:</strong> <?php echo date("F j, Y", ($photo["photo"]["dates"]["posted"]));?><br />
+				</p>
+				
+			</div>
 			
-			
+			<p class="button"><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
 			
 			
 			<nav class="photo-prev-next">
@@ -79,7 +90,9 @@
 			</nav>
 
 
-		</section> <!-- meta -->
+			
+
+		</aside> <!-- meta -->
 
 </section> <!-- main  -->
 

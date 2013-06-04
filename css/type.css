@@ -41,8 +41,9 @@
 	.button a		{display:inline-block; color:#aaa; padding:2px 8px; background:#eaeaea; }
 	.button a:hover	{color:#555;}
 	
-	.meta .title-desc {margin-bottom:3em;}
+	aside.sidebar .title-desc {margin-bottom:3em;}
 	
+	.meta {font-size:.8em; line-height:1.2em;}
 	
 /*	Footer ------------------ */
 	footer p {font-size:.8em; color:#888;}

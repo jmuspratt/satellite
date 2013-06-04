@@ -1,12 +1,7 @@
-<?php
-?>
-
 	<?php 
 	
 
 	if ($photosize[13]['source']) { ?>
-	
-	
 	
 	<video controls>
 		<source src="<?php echo ($photosize[13]['source']);?>"  type="video/mp4" />
