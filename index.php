@@ -8,14 +8,14 @@ require_once('lib/phpFlickr.php');
 require_once('config/config.php');
 
 // Fire up the phpFlickr class
-$f = new phpFlickr($key);
+$f = new phpFlickr($config["key"]);
 
 // phpFlickr needs a cache folder
 // in this case we have a writable folder on the root of our site, with permissions set to 777
 $f->enableCache("fs", "cache");
 
 //returns an array
-$result = $f->people_findByUsername($username);
+$result = $f->people_findByUsername($config["username"]);
 
 // grab our unique user id from the $result array
 $nsid = $result["id"];
@@ -48,13 +48,8 @@ $total = $photos[photos][total]; // returns how many photos there are in total
 		<ul class="thumbs cf">
 		<?php
 			foreach ($photos['photos']['photo'] as $photo) {
-				?>
-			   	 	<li>
-			         <a href="view.php?id=<?php echo $photo[id];?>" title="<?php echo $photo[title];?>">
-						<img alt="<?php echo $photo[title]?>" src="<?php echo $f->buildPhotoURL($photo, $thumb_size);?>"/>
-					 </a>
-				 </li>
-		<?php } ?>
+				include ("inc/snippet-thumbs.php");
+		 } ?>
 		</ul><!-- thumbs -->
 
 

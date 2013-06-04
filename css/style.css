@@ -36,8 +36,8 @@
 	p + h2			{margin-top:20px;}
 	ul + h3			{margin-top:10px;}
 
-	a				{color:#646464;}
-	a:hover 		{border-color:#aaa; color:#888}
+	a				{color:#2d9af6;}
+	a:hover 		{color:#aaa; }
 
 /*	Transitions ------------------ */
 
