@@ -13,7 +13,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/layout.css" rel="stylesheet" type="text/css">
+	<link href="css/type.css" rel="stylesheet" type="text/css">
 	
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>

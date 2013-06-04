@@ -26,8 +26,6 @@
 
 <?php require_once("inc/doc-head.php"); ?>
 
-
-
 <body>
 
 	<?php require_once("inc/header.php"); ?>
@@ -38,31 +36,26 @@
 
 
 		<div class="context">
-		<?php 
-		if($context['prevphoto']['id']){echo"<a href=\"?id=".$context['prevphoto']['id']."\" title=\"Prev: ".$context['prevphoto']['title']."\"><img src=\"".$context['prevphoto']['thumb']."\" width=\"75\" height=\"75\" /></a>";
+		<?php if ($context['prevphoto']['id']){ ?>
+			<a href="?id=<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+				<img src="<?php echo $context['prevphoto']['thumb'];?>" />
+			</a>
 
-		} else {
+			<?php } else { ?>
+				<img src="images/no-img.png" alt="No Image" />";
+			<?php } ?>
 
-		echo"<img src=\"/noimg.png\" width=\"75\" height=\"75\" alt=\"No photo\" class=\"noimg\" />";
-		};
 
+		<?php if ($context['nextphoto']['id']){ ?>
+			<a href="?id=<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+				<img src="<?php echo $context['nextphoto']['thumb']; ?>" />
+			</a>
 
-		if($context['nextphoto']['id']){echo "<a href=\"?id=".$context['nextphoto']['id']."\" title=\"Next: ".$context['nextphoto']['title']."\"><img src=\"".$context['nextphoto']['thumb']."\" width=\"75\" height=\"75\" /></a>";
-		} else {
-		echo"<img src=\"/noimg.png\" width=\"75\" height=\"75\" alt=\"No photo\" class=\"noimg\" />";
-		};
+			<?php } else { ?>
+				<img src="images/no-img.png" alt="No Image" />";
+			<?php } ?>
 
-		//////////// CONTEXT
-
-		echo"<p>";
-		if($context['prevphoto']['id']){echo"<a href=\"?id=".$context['prevphoto']['id']."\" title=\"Prev: ".$context['prevphoto']['title']."\">&laquo; Prev</a>";} else {echo"&laquo; Prev";};
-		echo" | ";
-		if($context['nextphoto']['id']){echo"<a href=\"?id=".$context['nextphoto']['id']."\" title=\"Next: ".$context['nextphoto']['title']."\">Next &raquo;</a>";}else {echo"Next &raquo;";};
-		echo"</p>";
-		?>
-		</div><!-- end context -->
-		
-		<p><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View '<?php echo $photo[title] ?>' on Flickr</a> &raquo;</p>
+			<p><a href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
 
 
 </section> <!-- main  -->

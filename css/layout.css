@@ -25,19 +25,6 @@
 	nav.local-nav ul li.invisible 		{display:none;}
 
 
-/*	Type ------------------ */
-
-
- 	h1, h2, h3, h4	{font-weight:400; font-size:14px; line-height:20px; clear:both; margin:0 0 10px 0 ;}
- 	h2 				{color:#000; font-weight:700; }
- 	h3				{font-style:italic; margin-bottom:0;}
- 	p 				{margin-bottom:10px;}
-
-	p + h2			{margin-top:20px;}
-	ul + h3			{margin-top:10px;}
-
-	a				{color:#2d9af6;}
-	a:hover 		{color:#aaa; }
 	
 /*	Responsive Media ------------------ */
 	img, video, embed 			{max-width:100%;}
@@ -46,10 +33,10 @@
 /*	Transitions ------------------ */
 
 	a, section	{
-		-webkit-transition: 	all .5s ease;
-		-moz-transition: 		all .5s ease;
-		-o-transition:  		all .5s ease;
-		transition: 			all .5s ease;
+		-webkit-transition: 	all .3s ease;
+		-moz-transition: 		all .3s ease;
+		-o-transition:  		all .3s ease;
+		transition: 			all .3s ease;
 		}
 
 /*	Layout ------------------ */
@@ -60,12 +47,18 @@
 
 /*	Home ------------------ */
 
-		.thumbs {list-style:none;}
-		.thumbs li {float:left; width:240px; height:140px; margin-right:.5em; margin-bottom:.5em; overflow:hidden;}
+	.thumbs {list-style:none;}
+	.thumbs li {float:left; width:240px; height:140px; margin-right:.5em; margin-bottom:.5em; overflow:hidden;}
+	
+	.paging 		{margin:20px 0; }
+	.paging ul 		{list-style:none; margin;}
+	.paging li 		{display:inline-block;}
+	.paging li a 	{padding:3px 8px; background:#eaeaea; color:#555;}
+	.paging li a:hover	{background:#bbb;}
 
 /*	View Page (individual photo) ------------------ */
 
-
+	
 
 
 		/* --------------- Breakpoint 2:  --------------- */
