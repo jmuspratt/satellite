@@ -31,12 +31,10 @@ $total = $photos[photos][total]; // returns how many photos there are in total
 
 <!doctype html>
 
-<head>
 
-<title><?php echo $gallery_title; ?></title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<?php require_once("inc/doc-head.php"); ?>
 
-</head>
+
 
 <body>
 	

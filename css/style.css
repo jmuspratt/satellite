@@ -38,6 +38,10 @@
 
 	a				{color:#2d9af6;}
 	a:hover 		{color:#aaa; }
+	
+/*	Responsive Media ------------------ */
+	img, video, embed 			{max-width:100%;}
+	
 
 /*	Transitions ------------------ */
 
@@ -47,6 +51,9 @@
 		-o-transition:  		all .5s ease;
 		transition: 			all .5s ease;
 		}
+
+/*	Layout ------------------ */
+	.main	{max-width:900px; margin:0 auto; }
 
 /*	Nav ------------------ */
 
