@@ -73,7 +73,9 @@
 				</li>
 
 				<?php } else { ?>
-					<li class="prev"><img src="images/no-img.png" alt="No Image" /></li>
+					<li class="prev"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+						<span>‹</span> Previous
+					</a></li>
 				<?php } ?>
 
 
@@ -87,7 +89,9 @@
 					</li>
 
 				<?php } else { ?>
-					<li class="next"><img src="images/no-img.png" alt="No Image" /></li>
+					<li class="next"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+						Next <span>›</span>
+					</a></li>
 				<?php } ?>
 				</ul>
 			</nav>
