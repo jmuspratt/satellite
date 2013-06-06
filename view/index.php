@@ -69,35 +69,42 @@
 			
 			<nav class="photo-prev-next">
 			<ul>
+			
+				<?php if ($context['nextphoto']['id']){ ?>
+						<li class="next">
+							<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+								<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
+								<span>‹</span> Newer 
+							
+							</a>
+						</li>
+
+					<?php } else { ?>
+						<li class="next"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+							<span>‹</span> Newer 
+						</a></li>
+					<?php } ?>
+					
+					
+					
 			<?php if ($context['prevphoto']['id']){ ?>
 				<li class="prev">
 					<a href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 						<img src="<?php echo $context['prevphoto']['thumb'];?>" /><br />
-						<span>‹</span> Previous
+						Older <span>›</span>
 					</a>
 				</li>
 
 				<?php } else { ?>
 					<li class="prev"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
-						<span>‹</span> Previous
+						Older <span>›</span>
 					</a></li>
 				<?php } ?>
 
 
-			<?php if ($context['nextphoto']['id']){ ?>
-					<li class="next">
-						<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
-							<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
-							Next <span>›</span>
-							
-						</a>
-					</li>
 
-				<?php } else { ?>
-					<li class="next"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
-						Next <span>›</span>
-					</a></li>
-				<?php } ?>
+				
+				
 				</ul>
 			</nav>
 

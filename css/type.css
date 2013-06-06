@@ -48,7 +48,7 @@
 	nav.photo-prev-next li a 		{font-size:.8em; font-weight:bold; display:inline-block; color:#aaa; padding:8px 8px 2px 8px; background:#eee; }
 	nav.photo-prev-next li a:hover	{color:#555;}
 	nav.photo-prev-next li img 	{display:inline-block;}
-	nav.photo-prev-next li.next 	{text-align:right;}
+	nav.photo-prev-next li.prev 	{text-align:right;}
 	
 	
 /*	Footer ------------------ */

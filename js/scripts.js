@@ -38,16 +38,17 @@ $(document).keydown(function(e){
 
 		// Left Arrow key is 37
 		if (e.keyCode == 37) { 
-			window.location.href = $(".photo-prev-next li.prev a").attr("href");
-	 	 	event.preventDefault();
-		}
-
-		// Right arrow key is 39
-		if (e.keyCode == 39) { 
 			// alert("right");
 			window.location.href = $(".photo-prev-next li.next a").attr("href");
 			event.preventDefault();
 		}
+
+		// Right arrow key is 39
+		if (e.keyCode == 39) { 
+			window.location.href = $(".photo-prev-next li.prev a").attr("href");
+	 	 	event.preventDefault();
+		}
+
 			
 }); // document.keydown
 
@@ -58,13 +59,15 @@ $(document).keydown(function(e){
 function widescreen_toggle() {
 	var wide_trigger = $("p.wide-trigger a");
 	
+	
+	$("aside.sidebar").toggle();
+	
 	wide_trigger.toggleClass("active");
 	
 	if (wide_trigger.text() == "Wide Format")
 			wide_trigger.text("Normal Format")
 	else
 			wide_trigger.text("Wide Format");
-	$("aside.sidebar").toggle();
 	$("body").toggleClass('wide');
 	$("section.item").toggleClass('wide');
 }
