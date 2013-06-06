@@ -18,8 +18,6 @@
 	// grab our unique user id from the $result array
 	$nsid = $result["id"];
 
-
-
 	$photos = $f->photosets_getPhotos($set_id, NULL, NULL, 999, $page);
 
 	$set_info = $f->photosets_getInfo($set_id);
@@ -50,9 +48,6 @@
 		<ul class="thumbs cf">
 		<?php
 			foreach ($photos['photoset']['photo'] as $photo) {
-				
-				$id = $photo["id"];
-				$photosize = $f->photos_getSizes($id, $secret = NULL);
 				
 				include ("../../inc/snippet-thumbs.php");
 		 } ?>
