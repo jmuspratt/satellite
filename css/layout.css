@@ -31,24 +31,25 @@
 
 	a, body		{
 		-webkit-transition: 	all .3s ease;
-		-moz-transition: 		all .3s ease;
-		-o-transition:  		all .3s ease;
-		transition: 			all .3s ease;
+		-moz-transition: 			all .3s ease;
+		-o-transition:  			all .3s ease;
+		transition: 					all .3s ease;
 		}
-/*	section.item.wide {
-		-webkit-transition: 	all .5s ease;
-		-moz-transition: 		all .5s ease;
-		-o-transition:  		all .5s ease;
-		transition: 			all .5s ease;
-	}*/
+		
+	section.item, aside.sidebar {
+		-webkit-transition: 	all .7s ease;
+		-moz-transition: 			all .7s ease;
+		-o-transition:  			all .7s ease;
+		transition: 					all .7s ease;
+	}
 
 /*	Layout ------------------ */
 	
 	body 	{padding:0 8%;}
 	.main 	{position:relative;}
 	
-	header.primary, .main	{max-width:1200px; margin:0 auto; }
-	header.primary			{ padding:1em 0 .5em 0; margin-bottom:20px; border-bottom:1px solid rgba(0,0,0,.05);}
+	header.primary, .main, footer	{max-width:1300px; margin:0 auto; }
+	header.primary			{ padding:1em 0 .5em 0; margin-bottom:20px;}
 	
 	
 /*	Nav ------------------ */
@@ -60,10 +61,8 @@
 
 /*	Home ------------------ */
 
-	.thumbs 		{list-style:none;}
-	.thumbs li 		{float:left; display:blokc; width:240px; height:140px; margin-right:10px; margin-bottom:10px; overflow:hidden; position:relative;}
-	
-/*	.thumbs li:hover	{bottom:2px; }*/
+	.thumbs 			{list-style:none;}
+	.thumbs li 		{float:left; display:block; width:240px; height:140px; margin-right:10px; margin-bottom:10px; overflow:hidden; position:relative;}
 	
 	.thumbs.photosets li {height:240px;}
 	
@@ -84,10 +83,14 @@
 	.photo-title-desc				{margin-bottom:1em; }
 	.meta 							{margin-bottom:2em; padding-bottom:1em;}
 
-	nav.photo-prev-next				{border-top:1px solid rgba(0,0,0,.05); margin:2em 0; padding-top:2em;  }
+	nav.photo-prev-next					{border-top:1px solid rgba(0,0,0,.05); margin:2em 0; padding-top:2em;  }
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
+	
+	body.wide 																										{background:#333;}
+	body.wide header.primary, body.wide .main, body.wide footer		{max-width:1000px;}
+	body.wide section.item 																				{width:100%;}
 
 
 /*	Footer (individual photo) ------------------ */
@@ -101,7 +104,7 @@
 
 		/* --------------- Breakpoint 2:  --------------- */
 
-			@media screen and (min-width: 500px) {
+			@media screen and (min-width: 750px) {
 			body:after {content: "2"; display:none;} /* flag for javascript */
 			body {padding:0 5%;}
 			
@@ -112,22 +115,17 @@
 	
 	
 		/* ---------------  Breakpoint 3:  --------------- */
-		@media screen and (min-width: 1000px) {
+		@media screen and (min-width: 1030px) {
 			body:after							{content: "3"; display:none;} /* flag for javascript */
 			
 			.item		 									{width:78%;}
 			aside.sidebar 						{width:20%;}
 		
 			p.wide-trigger 						{display:block; /*position:absolute; top:70px; left:0*/}
-/*			p.wide-trigger						{overflow:hidden; white-space:nowrap; width:100px;}*/
 			p.wide-trigger a:before				{content:"❑ ";}
 			p.wide-trigger a.active:before		{content:"❒ ";}
 			
-			body.wide 								{background:#333;}
-			header.primary, .main			{max-width:1000px;}
-			section.item.wide 				{width:100%;}
-			
-			body.wide header.primary 	{border-color:rgba(255,255,255,.05);}
+	
 			
 			} /* 3 */
 	
