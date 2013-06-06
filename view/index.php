@@ -72,7 +72,7 @@
 			
 				<?php if ($context['nextphoto']['id']){ ?>
 						<li class="next">
-							<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
+							<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['nextphoto']['title']; ?>">
 								<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
 								<span>‹</span> Newer 
 							
