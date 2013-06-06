@@ -34,6 +34,6 @@
 
 
 		<!-- scripts -->
-		<script src="/js/scripts.js"></script>
+		<script src="<?php echo $config["root_url"]; ?>/js/scripts.js"></script>
 
 </head>

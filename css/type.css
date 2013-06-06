@@ -29,7 +29,7 @@
 /*	Header & Nav ------------------ */
 
 	header.primary h1 a 		{color:#888;}
-	nav.primary li.current a	{color:#000; border-bottom:2px solid #eaeaea;}
+	nav.primary li.current a	{color:#000; border-bottom:2px solid rgba(0,0,0,.08);}
 	
 /*	Home Page ------------------ */
 	
@@ -37,7 +37,7 @@
 
 /*	View Page ------------------ */
 	
-	a.button		{font-size:.8em; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:#eee; }
+	a.button		{font-size:.8em; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:rgba(0,0,0,.08); }
 	a.button:hover	{color:#555;}
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}

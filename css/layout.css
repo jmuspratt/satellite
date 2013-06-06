@@ -20,9 +20,6 @@
 
 	.clear 		{clear:both;}
 	.cf:after	{content: " "; display: block; font-size: 0; clear: both; visibility: hidden;}
-	.scroll 	{overflow-x:scroll;  -webkit-overflow-scrolling: touch;}
-	.scroll:before {font-size:10px; content: "Scroll â†’"; display:block; padding:3px 5px;  background:#eaeaea; color:#888; letter-spacing:1px; text-transform:uppercase; text-align:center; width:80px; }
-	nav.local-nav ul li.invisible 		{display:none;}
 	
 	
 /*	Responsive Media ------------------ */
@@ -32,19 +29,20 @@
 
 /*	Transitions ------------------ */
 
-	a		{
+	a, body, section.item		{
 		-webkit-transition: 	all .3s ease;
 		-moz-transition: 		all .3s ease;
 		-o-transition:  		all .3s ease;
 		transition: 			all .3s ease;
 		}
 
+
 /*	Layout ------------------ */
 	
 	body {padding:0 8%;}
 	
-	header.primary, .main	{max-width:1400px; margin:0 auto; }
-	header.primary			{min-height:60px; padding:20px 0; margin-bottom:20px; border-bottom:1px solid #eee;}
+	header.primary, .main	{max-width:1200px; margin:0 auto; }
+	header.primary			{min-height:60px; padding:20px 0; margin-bottom:20px; border-bottom:1px solid rgba(0,0,0,.05);}
 	
 	
 /*	Nav ------------------ */
@@ -74,18 +72,16 @@
 
 /*	View Page (individual photo) ------------------ */
 	
+	p.full-trigger					{display:none;}
 	.item							{margin-bottom:1em;}
-	
 	.photo-title-desc				{margin-bottom:1em; }
-	
 	.meta 							{margin-bottom:2em;}
 
-	nav.photo-prev-next				{border-top:1px solid #eaeaea; padding-top:2em; margin-bottom:2em;  }
-
-	
+	nav.photo-prev-next				{border-top:1px solid rgba(0,0,0,.05); padding-top:2em; margin-bottom:2em;  }
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
+
 
 /*	Footer (individual photo) ------------------ */
 	
@@ -110,9 +106,17 @@
 		@media screen and (min-width: 1000px) {
 			body:after		{content: "3"; display:none;} /* flag for javascript */
 			
-			.item		 			{float:left; width:75%;}
-			aside.sidebar 			{float:right; width:23%;}
-
+			.item		 				{float:left; width:75%;}
+			aside.sidebar 				{float:right; width:23%;}
+		
+			p.full-trigger 				{display:block; position:absolute; top:70px; right:21%;}
+			p.full-trigger.active a		{background:rgba();}
+			
+			body.full {background:#333;}
+			section.item.wide {width:100%;}
+			
+			body.full header.primary {border-color:rgba(255,255,255,.05);}
+			
 			} /* 3 */
 	
 	

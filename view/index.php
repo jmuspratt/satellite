@@ -31,10 +31,12 @@
 	
 	<section class="main cf" role="main">
 		
+		<p class="full-trigger"><a href="#" class="button">Full screen</a></p>
 		
 		<section class="item">
 			<?php require_once("../inc/snippet-item.php"); ?>
 		</section>
+
 
 
 
@@ -47,7 +49,10 @@
 			
 			</div>
 			
+			
+			
 			<div class="meta">
+			
 				
 				
 				<?php // print_r ($photo["photo"]["dates"]); ?>
