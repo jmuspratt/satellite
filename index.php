@@ -27,11 +27,10 @@
 	$photos = $f->people_getPublicPhotos($nsid, NULL, NULL, $config['photos_per_page'], $page);
 
 	// Some bits for paging
-	$pages = $photos[photos][pages]; // returns total number of pages
-	$total = $photos[photos][total]; // returns how many photos there are in total
+	$pages = $photos["photos"]["pages"]; // returns total number of pages
+	$total = $photos["photos"]["total"]; // returns how many photos there are in total
 	?>
 
-<!doctype html>
 
 
 <?php require_once("inc/doc-head.php"); ?>
@@ -55,11 +54,11 @@
 				$next = $page + 1; 
 
 				if($page > 1) { ?>
-			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</strong></a></li> 
+			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</a></li> 
 				<?php } 
 				// if not last page
 				if($page != $pages) { ?>
-		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</strong></a></li> 
+		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</a></li> 
 				<?php } ?>
 				</ul>
 		
@@ -72,10 +71,6 @@
 		<ul class="thumbs cf">
 		<?php
 			foreach ($photos['photos']['photo'] as $photo) {
-				
-				$id = $photo["id"];
-
-				$photosize = $f->photos_getSizes($id, $secret = NULL);
 				
 				
 				include ("inc/snippet-thumbs.php");

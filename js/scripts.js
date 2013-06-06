@@ -54,8 +54,6 @@ $(document).keydown(function(e){
 
 
 
-
-
 function widescreen_toggle() {
 	var wide_trigger = $("p.wide-trigger a");
 	
@@ -69,5 +67,4 @@ function widescreen_toggle() {
 	else
 			wide_trigger.text("Wide Format");
 	$("body").toggleClass('wide');
-	$("section.item").toggleClass('wide');
 }

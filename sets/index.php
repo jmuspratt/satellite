@@ -49,6 +49,8 @@
 			foreach ($photosets["photoset"] as $set) { ?>
 
 				<?php 
+				$photo_count = $set["photos"];
+				$vid_count = $set["videos"];
 								
 				$set_cover_url = "http://farm" . $set['farm'] . ".static.flickr.com/" . $set['server'] . "/" . $set["primary"] . "_" . $set['secret'] . "_m" . ".jpg"; ?>
 
@@ -57,9 +59,9 @@
 					
 					
 					<h4><a href="<?php echo $config[root_url]; ?>/sets/view/?<?php echo $set["id"];?>"><?php echo $set["title"]; ?></a><br />
-						<?php echo $set["photos"]; ?> photos, <?php echo $set["videos"]; ?> videos
+						<?php if ($photo_count > 0 ) : ?><?php echo $set["photos"]; ?> photos<?php endif; ?><?php if ($vid_count > 0 ) : ?>, <?php echo $set["videos"]; ?> videos<?php endif; ?>
+								
 					</h4>
-					<p><?php echo $set["description"] ?></p>
 				</li>
 					
 		 <?php } ?> 

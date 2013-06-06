@@ -12,7 +12,8 @@
 
 	$f->enableCache("fs", "../cache");
 
-	$photo = $f->photos_getInfo($id, $secret = NULL);
+	// Get info and size for this photo
+	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
 	$size = $photosize[8];
 
@@ -43,8 +44,8 @@
 		<aside class="sidebar">
 			
 			<div class="photo-title-desc">
-				<h2 class="photo-title"><?php echo $photo["photo"]["title"];?></h2>
-				<p class="photo-desc"><?php echo $photo["photo"]["description"]; ?></p>
+				<h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2>
+				<p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p>
 				
 			
 			</div>
@@ -55,16 +56,15 @@
 			
 				
 				
-				<?php // print_r ($photo["photo"]["dates"]); ?>
 				<?php date_default_timezone_set('UTC');?>
 				<p>
-					<strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photo["photo"]["dates"]["taken"])));?><br />
-					<strong>Uploaded:</strong> <?php echo date("F j, Y", ($photo["photo"]["dates"]["posted"]));?><br />
+					<strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><br />
+					<strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?><br />
 				</p>
 				
 			</div>
 			
-			<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo[id] ?>/">View on Flickr</a></p>
+			<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photoInfo["id"] ?>/">View on Flickr</a></p>
 			
 			
 			<nav class="photo-prev-next">
