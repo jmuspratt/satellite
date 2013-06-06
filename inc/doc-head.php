@@ -34,6 +34,8 @@
 
 
 		<!-- scripts -->
+		
+		<script src="<?php echo $config["root_url"]; ?>/js/jquery.cookie.js"></script>
 		<script src="<?php echo $config["root_url"]; ?>/js/scripts.js"></script>
 
 </head>

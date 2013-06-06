@@ -31,7 +31,7 @@
 	
 	<section class="main cf" role="main">
 		
-		<p class="full-trigger"><a href="#" class="button">Full screen</a></p>
+		<p class="wide-trigger"><a href="#" class="button">Wide Format</a></p>
 		
 		<section class="item">
 			<?php require_once("../inc/snippet-item.php"); ?>

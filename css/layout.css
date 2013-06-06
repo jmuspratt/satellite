@@ -72,7 +72,7 @@
 
 /*	View Page (individual photo) ------------------ */
 	
-	p.full-trigger					{display:none;}
+	p.wide-trigger					{display:none;}
 	.item							{margin-bottom:1em;}
 	.photo-title-desc				{margin-bottom:1em; }
 	.meta 							{margin-bottom:2em;}
@@ -109,13 +109,13 @@
 			.item		 				{float:left; width:75%;}
 			aside.sidebar 				{float:right; width:23%;}
 		
-			p.full-trigger 				{display:block; position:absolute; top:70px; right:21%;}
-			p.full-trigger.active a		{background:rgba();}
+			p.wide-trigger 				{display:block; position:absolute; top:70px; right:21%;}
+			p.wide-trigger.active a		{background:rgba();}
 			
-			body.full {background:#333;}
+			body.wide {background:#333;}
 			section.item.wide {width:100%;}
 			
-			body.full header.primary {border-color:rgba(255,255,255,.05);}
+			body.wide header.primary {border-color:rgba(255,255,255,.05);}
 			
 			} /* 3 */
 	
