@@ -19,7 +19,7 @@
 			}
 												
 		?>
-		<source src="<?php echo $video_source; ?>" type="video/mp4" />
+		<source src="<?php echo $video_source; ?>" type="video/mp4" poster="<?php echo $photoUrl;?>" />
 	</video>
 
 
