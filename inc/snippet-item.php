@@ -7,7 +7,7 @@
 
 <?php if ($is_video) { ?>
 	
-	<video controls>
+	<video controls poster="<?php echo $photoUrl;?>">
 		<?php
 		// Ideally we want the HD MP4 format (at index 13 (1280x720)). 
 		// If it's not there fall back then 10 (640x360)
@@ -19,7 +19,7 @@
 			}
 												
 		?>
-		<source src="<?php echo $video_source; ?>" type="video/mp4" poster="<?php echo $photoUrl;?>" />
+		<source src="<?php echo $video_source; ?>" type="video/mp4" />
 	</video>
 
 
