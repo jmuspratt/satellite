@@ -62,7 +62,11 @@
 /*	Home ------------------ */
 
 	.thumbs 			{list-style:none;}
-	.thumbs li 		{float:left; display:block; width:240px; height:140px; margin-right:10px; margin-bottom:10px; overflow:hidden; position:relative;}
+	.thumbs li 		{float:left; display:block; overflow:hidden; position:relative;}
+	
+	.thumbs li 								{width:48%; /*height:140px;*/  margin-right:2.5%; margin-bottom:10px;}
+	.thumbs li:nth-child(2n) 	{margin-right:0;}
+	.thumbs li img						{max-height:140px;}
 	
 	.thumbs.photosets li {height:240px;}
 	
@@ -110,6 +114,9 @@
 			
 			.item		 							{float:left; width:70%;}
 			aside.sidebar 				{float:right; width:28%;}
+			
+			.thumbs li 								{/*width:240px;*/ width:auto; height:140px; margin-right:10px; margin-bottom:10px;}
+			.thumbs li:nth-child(2n) 	{margin-right:10px;}
 
 			} /* 2 */
 	
