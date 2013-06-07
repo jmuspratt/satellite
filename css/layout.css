@@ -115,11 +115,11 @@
 	
 	
 		/* ---------------  Breakpoint 3:  --------------- */
-		@media screen and (min-width: 1030px) {
+		@media screen and (min-width: 1000px) {
 			body:after							{content: "3"; display:none;} /* flag for javascript */
 			
-			.item		 									{width:78%;}
-			aside.sidebar 						{width:20%;}
+			.item		 						{width:76%;}
+			aside.sidebar 						{width:22%;}
 		
 			p.wide-trigger 						{display:block; /*position:absolute; top:70px; left:0*/}
 			p.wide-trigger a:before				{content:"❑ ";}
