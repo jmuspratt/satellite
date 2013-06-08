@@ -44,60 +44,57 @@
 		<aside class="sidebar">
 			
 			<div class="photo-title-desc">
-				<h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2>
-				<p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p>
+				<?php if ($photoInfo["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2><?php endif;?>
+				<?php if ($photoInfo["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p><?php endif;?>
 				
-			
 			</div>
 			
 			
 			
 			<div class="meta">
 			
+					<?php date_default_timezone_set('UTC');?>
 				
+					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><p><?php endif; ?>
+					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?></p><?php endif; ?>
 				
-				<?php date_default_timezone_set('UTC');?>
-				<p>
-					<strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><br />
-					<strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?><br />
-				</p>
+					<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photoInfo["id"] ?>/">View on Flickr</a></p>
 				
 			</div>
 			
-			<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photoInfo["id"] ?>/">View on Flickr</a></p>
 			
 			
 			<nav class="photo-prev-next">
 			<ul>
 			
 				<?php if ($context['nextphoto']['id']){ ?>
-						<li class="next">
+						<li class="newer">
 							<a href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['nextphoto']['title']; ?>">
 								<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
-								<span>‹</span> Newer 
+								<span>Newer</span> 
 							
 							</a>
 						</li>
 
 					<?php } else { ?>
-						<li class="next"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
-							<span>‹</span> Newer 
+						<li class="newer"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+							<span>Newer</span> 
 						</a></li>
 					<?php } ?>
 					
 					
 					
 			<?php if ($context['prevphoto']['id']){ ?>
-				<li class="prev">
+				<li class="older">
 					<a href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
 						<img src="<?php echo $context['prevphoto']['thumb'];?>" /><br />
-						Older <span>›</span>
+						<span>Older</span> 
 					</a>
 				</li>
 
 				<?php } else { ?>
-					<li class="prev"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
-						Older <span>›</span>
+					<li class="older"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+						<span>Older</span>
 					</a></li>
 				<?php } ?>
 

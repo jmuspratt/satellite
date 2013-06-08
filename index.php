@@ -50,15 +50,15 @@
 			<ul>
 				<?php
 				// Some simple paging code to add Prev/Next to scroll through the thumbnails
-				$back = $page - 1; 
+				$prev = $page - 1; 
 				$next = $page + 1; 
 
 				if($page > 1) { ?>
-			 	   <li><a class="button" href="?page=<?php echo $back; ?>">Previous Page</a></li> 
+			 	   <li class="newer"><a class="button" href="?page=<?php echo $prev; ?>"><span>Newer</span></a></li> 
 				<?php } 
 				// if not last page
 				if($page != $pages) { ?>
-		 	 	   <li><a class="button" href="?page=<?php echo $next; ?>">Next Page</a></li> 
+		 	 	   <li class="older"><a class="button" href="?page=<?php echo $next; ?>"><span>Older</span></a></li> 
 				<?php } ?>
 				</ul>
 		
