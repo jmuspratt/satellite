@@ -33,9 +33,6 @@ $(document).keydown(function(e){
 		var older_url =  $("li.older a").attr("href");
 		var	single_view = $("body").hasClass("view");
 		
-
-		console.log(single_view);
-		
 		
 		// Newer: Left Arrow key is 37
 		if ( (e.keyCode == 37) && (typeof newer_url != 'undefined') ) { 
