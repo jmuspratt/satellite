@@ -61,6 +61,24 @@ $(document).keydown(function(e){
 			event.preventDefault();
 		}
 		
+		// Play: P key is 87 
+		if ( (e.keyCode == 80) && (single_view) ) { 
+			
+			var player = $("video").get(0);
+			
+			if (player.paused) {
+	      player.play();
+			}
+			else {
+	      player.pause();
+				
+			}
+			
+			var status 
+			
+			event.preventDefault();
+		}
+		
 			
 }); // document.keydown
 

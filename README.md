@@ -18,7 +18,7 @@ Features
 - Sets page shows "cover" thumbnail of each photo set in reverse-chronological order.
 - Thumbnails of videos are clearly labelled with "Video".
 - Single item view has a **Wide Format** option: (dark background, no title/captions/metadata). Mode persists via a cookie.
-- Keyboard Navigation: use **w** to toggle the wide format, and use the left and right arrow keys for older/newer photos and thumbnail paging.
+- Keyboard Navigation: use **w** to toggle the wide format, and use the left and right arrow keys for older/newer photos and thumbnail paging. Use **p** to pause/play a video.
 
 
 Limitations
