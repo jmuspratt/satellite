@@ -36,12 +36,12 @@
 		transition: 					all .3s ease;
 		}
 		
-	section.item, aside.sidebar {
+/*	section.item, aside.sidebar {
 		-webkit-transition: 	all .7s ease;
 		-moz-transition: 			all .7s ease;
 		-o-transition:  			all .7s ease;
 		transition: 					all .7s ease;
-	}
+	}*/
 
 /*	Layout ------------------ */
 	
