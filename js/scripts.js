@@ -6,8 +6,6 @@ $(document).ready(function(){
 	// Get wide screen cookie and apply ------------------
 	var widescreen_state = $.cookie("widescreen");
 	
-	console.log(widescreen_state);
-	
 	if (widescreen_state == "on") {
 		widescreen_on();
 	}
@@ -30,24 +28,33 @@ $(document).ready(function(){
 // Keyboard Navigation ------------------
 
 $(document).keydown(function(e){
+	
+		var newer_url =  $("li.newer a").attr("href");
+		var older_url =  $("li.older a").attr("href");
+		var	single_view = $("body").hasClass("view");
+		
 
-		// NEXT: Left Arrow key is 37
-		if (e.keyCode == 37) { 
+		console.log(single_view);
+		
+		
+		// Newer: Left Arrow key is 37
+		if ( (e.keyCode == 37) && (typeof newer_url != 'undefined') ) { 
 			// alert("right");
-			window.location.href = $(".photo-prev-next li.older a").attr("href");
+			window.location.href = newer_url;
 			event.preventDefault();
 		}
 
-		// PREV: Right arrow key is 39
-		if (e.keyCode == 39) { 
-			window.location.href = $(".photo-prev-next li.newer a").attr("href");
+		// Older: Right arrow key is 39
+		if ( (e.keyCode == 39) && (typeof older_url != 'undefined') ) {  
+			window.location.href = older_url;
 	 	 	event.preventDefault();
 		}
 
+
 		// WIDE: W key (for widescreen) is 87 
-		if (e.keyCode == 87) { 
+		if ( (e.keyCode == 87) && (single_view) ) { 
 			widescreen_toggle();
-			 	 	event.preventDefault();
+			event.preventDefault();
 		}
 		
 			
