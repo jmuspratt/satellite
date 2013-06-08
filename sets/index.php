@@ -53,15 +53,17 @@
 				$vid_count = $set["videos"];
 				
 				$show_comma = false;
-				if ( ($photo_count > 0) && ($vid_count > 0) ) {$show_comma = true;}
+				if ( ($photo_count > 0) && ($vid_count > 0) ) {$show_comma = true; }
+
 								
 				$set_cover_url = "http://farm" . $set['farm'] . ".static.flickr.com/" . $set['server'] . "/" . $set["primary"] . "_" . $set['secret'] . "_m" . ".jpg"; ?>
 
-				<li><a href="<?php echo $config["root_url"];?>/sets/view/?<?php echo $set["id"];?>">
+				<li>
+					<a href="<?php echo $config["root_url"];?>/sets/view/?<?php echo $set["id"];?>">
 					<img src="<?php echo $set_cover_url;?>" /></a><br />
 					
 					<h4><a href="<?php echo $config[root_url]; ?>/sets/view/?<?php echo $set["id"];?>"><?php echo $set["title"]; ?></a><br />
-						<?php if ($photo_count > 0 ) : ?><?php echo $set["photos"]; ?> photos<?php endif; ?><?if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $set["videos"]; ?> videos<?php endif; ?>
+						<?php if ($photo_count > 0 ) : ?><?php echo $set["photos"]; ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $set["videos"]; ?> videos<?php endif; ?>
 								
 					</h4>
 				</li>
