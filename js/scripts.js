@@ -20,6 +20,13 @@ $(document).ready(function(){
 	});
 	
 
+
+	// Video ------------------
+	// apply height:auto; to all agents except iPad
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	if (!isiPad) {
+		$("video").css("height", "auto");
+		}
 	
 	
 }); // document.ready
