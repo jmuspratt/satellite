@@ -24,8 +24,7 @@
 	
 /*	Responsive Media ------------------ */
 	
-	img, video, embed 			{max-width:100%;}
-	video										{height:auto;}
+	img, video 			{max-width:100%;}
 	
 
 /*	Transitions ------------------ */

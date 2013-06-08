@@ -1,32 +1,51 @@
 <?php
-	$is_portrait = true; $is_video = false;
-	if ($photosize[3]['width'] < $photosize['3']['height']) {$is_portrait = true;}
+	$is_portrait = false; 
+	if ( $largest_size['width'] < $largest_size['height'] ) {$is_portrait = true;}
+	
+	$is_video = false;
 	if ($photoInfo['photo']['media'] == "video") {$is_video = true;}
 	
 ?>
 
-<?php if ($is_video) { ?>
+<?php if ($is_video) { 
 	
-	<video controls poster="<?php echo $photoUrl;?>">
-		<?php
 		// Ideally we want the HD MP4 format (at index 13 (1280x720)). 
-		// If it's not there fall back then 10 (640x360)
-		if 	(isset($photosize[13])) {$video_source = $photosize[13]['source'];}
-														else 	{$video_source = $photosize[10]['source'];}
-		//	But if 10 is a swf, fall back to 12 (480x360)
-		if (strpos($video_source,'swf') !== false) {
-			$video_source = $photosize[12]['source'];
-			}
-												
-		?>
-		<source src="<?php echo $video_source; ?>" type="video/mp4" />
+		// Sort array by [width] key Loop up through all available sizes and set $largest_video_size each time if it's a video and not a swf
+		
+		foreach ($photosize as $available_size) {
+			if ( ($available_size["media"] == "video") && (strpos($available_size["source"], 'swf')== false) ) {
+				$video_count = 0;
+				
+				// only overwrite largest_video_size if it's the first time through OR 
+				// this one is bigger than the current largest.
+				if ($count =  0 || ($available_size["width"] > $largest_video_size['width']) ) {
+					$largest_video_size = $available_size;
+				
+				} // endif
+			$video_count ++;
+			
+			} // endif
+		} // end foreach
+	?>
+	
+	<video controls preload="metadata" poster="<?php echo $photoUrl;?>" width="<?php echo $largest_video_size['width'];?>" height="<?php echo $largest_video_size['height'];?>">
+
+		<source src="<?php echo $largest_video_size['source']; ?>" type="video/mp4" />
 	</video>
 
-
-
-	<p><a class="button" href="<?php echo $video_source;?>">Video File</a></p>
+	<p><a class="button" href="<?php echo $largest_video_size['source'];?>">Video File</a></p>
 	
 	<?php }	else { ?>
 		<a href="?<?php echo $context['prevphoto']['id'];?>"><img src="<?php echo $photoUrl;?>" alt="<?php echo $photoInfo["photo"]["title"];?>" /></a>
 		<?php }?>
 	
+	
+			
+			<?php 
+			// DEBUG
+			
+			// echo "<code class=\"clear\">";
+			// print_r($photosize);
+			// echo "</code>";
+			 ?>
+			

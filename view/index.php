@@ -15,7 +15,19 @@
 	// Get info and size for this photo
 	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
-	$size = $photosize[8];
+	
+	
+	// get highest resolution image in this order of availability
+	// Large (1024), Medium (800), Medium (640), Medium (500), Small (320), Small (240)
+
+	if ($photosize[3] && ($photosize[3]["media"] == "photo") ) {	$largest_size = $photosize[3]; }
+	if ($photosize[4] && ($photosize[4]["media"] == "photo") ) {	$largest_size = $photosize[4]; }
+	if ($photosize[5] && ($photosize[5]["media"] == "photo") ) {	$largest_size = $photosize[5]; }
+	if ($photosize[6] && ($photosize[6]["media"] == "photo") ) {	$largest_size = $photosize[6]; }
+	if ($photosize[7] && ($photosize[7]["media"] == "photo") ) {	$largest_size = $photosize[7]; }
+	if ($photosize[8] && ($photosize[8]["media"] == "photo") ) {	$largest_size = $photosize[8]; }
+
+	$size = $largest_size;
 
 	//$allcontexts = $f->photos_getAllContexts("$id");
 	$context = $f->photos_getContext($id);
