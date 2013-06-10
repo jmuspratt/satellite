@@ -42,8 +42,8 @@
 
 /*	View Page ------------------ */
 	
-	a.button		{font-size:10px; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:rgba(0,0,0,.05); }
-	a.button:hover	{color:#555;}
+	a.button				{font-size:10px; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:rgba(0,0,0,.05); position:relative;}
+	a.button:hover	{color:#555; top:-.2em;}
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}
 	
@@ -59,3 +59,16 @@
 	
 /*	Footer ------------------ */
 	footer p {font-size:.8em; color:#888;}
+	
+	/*	Credit/Logo */
+	.sat-credit				{position:relative;  width:30em; position:relative;}
+	.sat-logo					{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em; background:rgba(0,0,0,.08); text-align:center; font-weight:bold; font-size:1.75em; }
+	.sat-logo sup 		{position:absolute; right:.35em; top:.35em; }
+	.sat-built-with		{left:0; position:absolute; opacity:0; display:inline-block;/* background:rgba(0,0,0,.05); */padding:0 2em;}
+	.sat-credit:hover	.sat-logo 			{/*width:1.5em; height:1.5em; */background:rgba(0,0,0,.02);}
+	.sat-credit:hover .sat-logo sup		{opacity:0;}
+	.sat-credit:hover .sat-built-with {opacity:1; left:2.25em;}}
+	
+	
+	
+	

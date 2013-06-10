@@ -35,6 +35,14 @@
 		-o-transition:  			all .3s ease;
 		transition: 					all .3s ease;
 		}
+	
+	.sat-credit, .sat-logo, .sat-built-with		{
+		-webkit-transition: 	all .3s ease;
+		-moz-transition: 			all .3s ease;
+		-o-transition:  			all .3s ease;
+		transition: 					all .3s ease;
+		}
+
 		
 /*	section.item, aside.sidebar {
 		-webkit-transition: 	all .7s ease;
