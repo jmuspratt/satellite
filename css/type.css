@@ -43,7 +43,7 @@
 /*	View Page ------------------ */
 	
 	a.button				{font-size:10px; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:rgba(0,0,0,.05); position:relative;}
-	a.button:hover	{color:#555; top:-.2em;}
+	a.button:hover	{color:#555;}
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}
 	
@@ -55,6 +55,12 @@
 	nav.photo-prev-next li a:hover	{color:#2d9af6;}
 	nav.photo-prev-next li img 			{display:inline-block;}
 	nav.photo-prev-next li.prev 		{text-align:right;}
+
+
+	/*	Sets Page ------------------ */
+	
+	.thumbs.photosets li h4						{margin-bottom:0;}
+	.thumbs.photosets li h5					{ color:#aaa; font-size:.8em; line-height:1.2em; font-weight:normal;}
 	
 	
 /*	Footer ------------------ */

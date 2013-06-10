@@ -56,29 +56,26 @@
 	body 	{padding:0 8%;}
 	.main 	{position:relative;}
 	
-	header.primary, .main, footer	{max-width:1300px; margin:0 auto; }
-	header.primary			{ padding:2em 0 .5em 0; margin-bottom:20px;}
+	header.primary, .main, footer	{max-width:1300px; margin:0 auto; position:relative; }
+	header.primary								{padding:2em 0 .5em 0; margin-bottom:20px;}
 	
 	
 /*	Nav ------------------ */
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:1em;}
-	nav.primary ul 			{list-style:none; display:inline-block;}
-	nav.primary li 			{display:inline-block; margin-right:1em;}
+	nav.primary												{margin-bottom:1em;}
+	nav.primary ul 										{list-style:none; display:inline-block;}
+	nav.primary li 										{display:inline-block; margin-right:1em;}
 	
 
 /*	Home ------------------ */
 
-	.thumbs 			{list-style:none;}
-	.thumbs li 		{float:left; display:block; overflow:hidden; position:relative;}
-	
+	.thumbs 									{list-style:none;}
+	.thumbs li 								{float:left; display:block; overflow:hidden; position:relative;}
 	.thumbs li 								{width:48%;  margin-right:2.5%; margin-bottom:10px;}
 	.thumbs li:nth-child(2n) 	{margin-right:0;}
 	.thumbs li img						{max-height:140px;}
-	
-	
 	.thumbs li.video:after	{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
-	
 	
 	.paging 					{margin:20px 0; }
 	.paging p					{float:left; width:45%;}
@@ -88,7 +85,6 @@
 
 /*	View Page (individual photo) ------------------ */
 	
-	p.wide-trigger								{display:none;}
 	.item												{margin-bottom:1em;}
 	.photo-title-desc						{margin-bottom:1em; }
 	.meta 											{margin-bottom:2em; padding-bottom:1em;}
@@ -98,14 +94,16 @@
 	nav.photo-prev-next li			{display:inline-block;}
 	nav.photo-prev-next li a 		{display:block;}
 	
+
 	
 	/*	wide format  */
 	body.wide 																										{background:#333;}
 	body.wide header.primary, body.wide .main, body.wide footer		{max-width:1000px;}
 	body.wide section.item																				{width:100%;}
 
+	body.wide .thumbs.photosets li h4, .thumbs.photosets li h5 {display:none;}
 	
-	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-50px; right:0;}
+	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
 	aside.sidebar.compact nav.photo-prev-next img,  
 		aside.sidebar.compact nav.photo-prev-next br 		{display:none;}
 	aside.sidebar.compact nav.photo-prev-next	li a 		{padding-top:2px;}
@@ -120,21 +118,23 @@
 
 
 
-
-
 		/* --------------- Breakpoint 2:  --------------- */
 
 			@media screen and (min-width: 750px) {
 			body:after {content: "2"; display:none;} /* flag for javascript */
 			body {padding:0 5%;}
 			
-			.item		 							{float:left; width:70%;}
-			aside.sidebar 				{float:right; width:28%;}
+			nav.primary								{float:left; width:70%;}
+			p.wide-trigger 						{float:right; width:28%; text-align:right;}
+			                    			
+			.item		 									{float:left; width:70%;}
+			aside.sidebar 						{float:right; width:28%;}
 			
 			.thumbs li 								{width:auto; height:140px; margin-right:10px; margin-bottom:10px;}
 			.thumbs li:nth-child(2n) 	{margin-right:10px;}
+			.thumbs.photosets li	 		{height:185px;}
 			
-			.thumbs.photosets li	 		{height:200px;}
+			
 			
 
 			} /* 2 */
@@ -144,11 +144,11 @@
 		@media screen and (min-width: 1000px) {
 			body:after							{content: "3"; display:none;} /* flag for javascript */
 			
-			.item		 									{width:76%;}
-			aside.sidebar 						{width:22%;}
+			.item		 													{width:76%;}
+			aside.sidebar 										{width:22%;}
 		
-			p.wide-trigger 						{display:block; /*position:absolute; top:70px; left:0*/}
-			p.wide-trigger a:before				{content:"❑ ";}
+			p.wide-trigger 										{display:block; }
+			p.wide-trigger a:before						{content:"❑ ";}
 			p.wide-trigger a.active:before		{content:"❒ ";}
 			
 	
