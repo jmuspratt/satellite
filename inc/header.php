@@ -10,5 +10,4 @@
 	
 		<p class="wide-trigger"><a href="#" class="button">Wide Format</a></p>
 	
-	
 	</header>
