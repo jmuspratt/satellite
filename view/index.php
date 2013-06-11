@@ -106,7 +106,7 @@
 						</li>
 
 					<?php } else { ?>
-						<li class="newer"><a href="#"><img src="<?php echo $config["root_page-section"];?>/images/no-img.png" alt="No Image" /><br />
+						<li class="newer"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
 							<span>Newer</span> 
 						</a></li>
 					<?php } ?>
