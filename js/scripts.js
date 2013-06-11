@@ -56,7 +56,7 @@ $(document).keydown(function(e){
 
 
 		// WIDE: W key (for widescreen) is 87 
-		if ( (e.keyCode == 87) && (single_view) ) { 
+		if ( e.keyCode == 87  && !(e.metaKey) ) { 
 			widescreen_toggle();
 			event.preventDefault();
 		}
