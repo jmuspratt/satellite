@@ -37,6 +37,8 @@
 	<p><a class="button" href="<?php echo $largest_video_size['source'];?>">Video File</a></p>
 	
 	<?php }	else {
+		
+		// Output Picturefill Image
 	
 	 ?>
 		<a href="?<?php echo $context['prevphoto']['id'];?>">
@@ -47,7 +49,7 @@
 				$exclude = array("Square", "Large Square", "Thumbnail", "Small", "Original");
 				foreach ($confirmed_sizes as $confirmed_size) {
 					if (!(in_array($confirmed_size["label"], $exclude))) { ?>
-						<span class="<?php echo $confirmed_size["label"]; ?>" data-src="<?php echo $confirmed_size["source"]; ?>"  data-media="(min-width: <?php echo ($confirmed_size["width"] - 600) ; ?>px)"></span>
+						<span class="<?php echo $confirmed_size["label"]; ?>" data-src="<?php echo $confirmed_size["source"]; ?>"  data-media="(min-width: <?php echo (round (.9 * $confirmed_size["width"])) ; ?>px)"></span>
 				<?php }	}	?>
 				
 				
@@ -67,8 +69,8 @@
 			<?php 
 			// DEBUG
 			
-			// echo "<code class=\"clear\">";
-			// print_r($photosize);
-			// echo "</code>";
+			echo "<code class=\"clear\">";
+			print_r($photosize);
+			echo "</code>";
 			 ?>
 			
