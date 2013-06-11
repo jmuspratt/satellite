@@ -40,38 +40,31 @@ $(document).keydown(function(e){
 		var older_url =  $("li.older a").attr("href");
 		var	single_view = $("body").hasClass("view");
 		
-		
 		// Newer: Left Arrow key is 37
 		if ( (e.keyCode == 37) && (typeof newer_url != 'undefined') ) { 
 			// alert("right");
 			window.location.href = newer_url;
-			event.preventDefault();
 		}
 
 		// Older: Right arrow key is 39
 		if ( (e.keyCode == 39) && (typeof older_url != 'undefined') ) {  
 			window.location.href = older_url;
-	 	 	event.preventDefault();
 		}
 
 
 		// Viewing Mode: V key (for view) is 86 
 		if ( e.keyCode == 86  && !(e.metaKey) ) { 
 			mode_toggle();
-			event.preventDefault();
 		}
 		
 		// Play/Pause: P key is 87 
 		if ( (e.keyCode == 80) && (single_view) ) { 
-			
 			var player = $("video").get(0);
-			
 			if (player.paused) {player.play();}
 			else {player.pause();}
-						
-			e.preventDefault();
 		}
 		
+		e.preventDefault();
 			
 }); // document.keydown
 
