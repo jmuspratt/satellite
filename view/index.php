@@ -15,26 +15,19 @@
 	// Get info and size for this photo
 	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
-	
-	
-	// get highest resolution image in this order of availability
-	// Large (1024), Medium (800), Medium (640), Medium (500), Small (320), Small (240)
-
-	$size = $largest_size;
 	$context = $f->photos_getContext($id);
 
-	// Loop through array of sizes and filter for photos
-	
+
+	// Loop through array of sizes and construct $confirmed_sizes array.
+	// Pick up $largest_size along the way.
 	$last_item = $photosize[0];
 	foreach ($photosize as $item) {
 		if ($item["media"] == "photo") {
 			$confirmed_sizes[] = $item;
-			
 			// update largest size if this one's bigger than the last
 			if ($item["width"] > $last_item["width"]) {
 				$largest_size = $item;
 			} 
-
 			$last_item = $item;
 		}
 	}
@@ -54,8 +47,6 @@
 		</section>
 
 
-
-
 		<aside class="sidebar">
 			
 			<?php // print_r ($photosize); ?>
@@ -65,7 +56,6 @@
 				<?php if ($photoInfo["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p><?php endif;?>
 				
 			</div>
-			
 			
 			
 			<div class="meta">
