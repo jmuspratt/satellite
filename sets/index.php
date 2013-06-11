@@ -2,7 +2,6 @@
 
 	$this_page  = "sets";
 
-
 	require_once('../lib/phpFlickr.php');
 	require_once('../config/config.php');
 
