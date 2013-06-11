@@ -104,7 +104,8 @@
 	body.wide header.primary, body.wide .main, body.wide footer		{max-width:1600px;}
 	body.wide section.item																				{width:100%;}
 
-	body.wide .thumbs.photosets li h4, .thumbs.photosets li h5 {display:none;}
+	body.wide .thumbs.photosets li h4, 
+	body.wide .thumbs.photosets li h5 {display:none;}
 	
 	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
 	aside.sidebar.compact nav.photo-prev-next img,  
