@@ -47,9 +47,14 @@
 					
 				<?php
 				$exclude = array("Square", "Large Square", "Thumbnail", "Small", "Original");
+				
+				// Set default "last size", which will be used in foreach loop to set media query (bigger image kicks in just as last image reaches 100% width)
+				$last_size = $confirmed_sizes[3];
+				// Output Picturefill <span>s for each confirmed size of the photo, excluding any of the sizes listed above
 				foreach ($confirmed_sizes as $confirmed_size) {
 					if (!(in_array($confirmed_size["label"], $exclude))) { ?>
-						<span class="<?php echo $confirmed_size["label"]; ?>" data-src="<?php echo $confirmed_size["source"]; ?>"  data-media="(min-width: <?php echo (round (.9 * $confirmed_size["width"])) ; ?>px)"></span>
+						<span class="<?php echo $confirmed_size["label"]; ?>" data-src="<?php echo $confirmed_size["source"]; ?>"  data-media="(min-width: <?php echo (($last_size["width"])) ; ?>px)"></span>
+						<?php $last_size = $confirmed_size; ?> 
 				<?php }	}	?>
 				
 				
