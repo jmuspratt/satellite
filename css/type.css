@@ -37,6 +37,7 @@
 	.paging p {font-size:.8em; line-height:1.5em;}
 
 	li.newer a span:before	{content: "‹ ";}
+	li.older a {text-align:right;}
 	li.older a span:after	{content: " ›";}
 
 
