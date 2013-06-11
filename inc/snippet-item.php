@@ -29,7 +29,7 @@
 		} // end foreach
 	?>
 	
-	<video controls preload="metadata" poster="<?php echo $photoUrl;?>" width="<?php echo $largest_video_size['width'];?>" height="<?php echo $largest_video_size['height'];?>">
+	<video controls preload="metadata" poster="<?php echo $largest_size["source"];?>" width="<?php echo $largest_video_size['width'];?>" height="<?php echo $largest_video_size['height'];?>">
 
 		<source src="<?php echo $largest_video_size['source']; ?>" type="video/mp4" />
 	</video>

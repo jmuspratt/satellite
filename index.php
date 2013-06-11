@@ -44,12 +44,9 @@
 	<section class="main" role="main">
 	
 		<nav class="paging cf">
-			
-			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong> (<?php echo $total; ?> photos in the gallery)</p>
-			
+			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong></p>
 			<ul>
 				<?php
-				// Some simple paging code to add Prev/Next to scroll through the thumbnails
 				$prev = $page - 1; 
 				$next = $page + 1; 
 
@@ -61,25 +58,17 @@
 		 	 	   <li class="older"><a class="button" href="?page=<?php echo $next; ?>"><span>Older</span></a></li> 
 				<?php } ?>
 				</ul>
-		
-
 		</nav> <!-- paging -->
-	
-	
 	
 	
 		<ul class="thumbs cf">
 		<?php
 			foreach ($photos['photos']['photo'] as $photo) {
-				
-				
 				include ("inc/snippet-thumbs.php");
 		 } ?>
 		</ul><!-- thumbs -->
 
-
-
-</section> <!-- main -->
+	</section> <!-- main -->
 
 <?php require_once ("inc/footer.php"); ?>
 

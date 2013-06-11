@@ -20,37 +20,25 @@
 	// get highest resolution image in this order of availability
 	// Large (1024), Medium (800), Medium (640), Medium (500), Small (320), Small (240)
 
-	if ($photosize[3] && ($photosize[3]["media"] == "photo") ) {	$largest_size = $photosize[3]; }
-	if ($photosize[4] && ($photosize[4]["media"] == "photo") ) {	$largest_size = $photosize[4]; }
-	if ($photosize[5] && ($photosize[5]["media"] == "photo") ) {	$largest_size = $photosize[5]; }
-	if ($photosize[6] && ($photosize[6]["media"] == "photo") ) {	$largest_size = $photosize[6]; }
-	if ($photosize[7] && ($photosize[7]["media"] == "photo") ) {	$largest_size = $photosize[7]; }
-	if ($photosize[8] && ($photosize[8]["media"] == "photo") ) {	$largest_size = $photosize[8]; }
-	if ($photosize[9] && ($photosize[8]["media"] == "photo") ) {	$largest_size = $photosize[9]; }
-	
-	
-
 	$size = $largest_size;
 	$context = $f->photos_getContext($id);
 
 	// Loop through array of sizes and filter for photos
 	
+	$last_item = $photosize[0];
 	foreach ($photosize as $item) {
 		if ($item["media"] == "photo") {
 			$confirmed_sizes[] = $item;
+			
+			// update largest size if this one's bigger than the last
+			if ($item["width"] > $last_item["width"]) {
+				$largest_size = $item;
+			} 
 
+			$last_item = $item;
 		}
 	}
 	
-	// print_r($confirmed_sizes);
-	
-
-	
-
-	// $large_1600
-
-	$photoUrl = $size['source'];
-
 ?>
 
 <?php require_once("../inc/doc-head.php"); ?>

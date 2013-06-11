@@ -62,8 +62,8 @@
 	
 /*	Nav ------------------ */
 	
-	header.primary h1, nav.primary		{display:inline-block; margin-right:1em;}
-	nav.primary												{margin-bottom:1em;}
+	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
+	nav.primary												{margin-bottom:1em;padding-top:.2em;}
 	nav.primary ul 										{list-style:none; display:inline-block;}
 	nav.primary li 										{display:inline-block; margin-right:1em;}
 	
@@ -149,7 +149,6 @@
 			.item		 													{width:76%;}
 			aside.sidebar 										{width:22%;}
 		
-			p.mode-trigger 										{display:block; }
 			
 	
 			
