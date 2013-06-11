@@ -29,7 +29,7 @@
 
 /*	Transitions ------------------ */
 
-	a, body		{
+	a		{
 		-webkit-transition: 	all .3s ease;
 		-moz-transition: 			all .3s ease;
 		-o-transition:  			all .3s ease;
@@ -104,6 +104,7 @@
 	body.wide header.primary, body.wide .main, body.wide footer		{max-width:1600px;}
 	body.wide section.item																				{width:100%;}
 
+	body.wide .thumbs.photosets	li		{height:140px;}
 	body.wide .thumbs.photosets li h4, 
 	body.wide .thumbs.photosets li h5 {display:none;}
 	
