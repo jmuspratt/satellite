@@ -132,9 +132,9 @@
 			.item		 									{float:left; width:70%;}
 			aside.sidebar 						{float:right; width:28%;}
 			
-			.thumbs li 								{width:auto; height:140px; margin-right:10px; margin-bottom:10px;}
+			.thumbs li 								{width:200px; height:140px; overflow:hidden; margin-right:10px; margin-bottom:10px;}
 			.thumbs li:nth-child(2n) 	{margin-right:10px;}
-			.thumbs.photosets li	 		{height:185px;}
+			.thumbs.photosets li	 		{height:185px; }
 			
 			
 			
