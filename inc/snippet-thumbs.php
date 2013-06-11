@@ -11,7 +11,7 @@
 
 ?>
 		   	 	<li class="<?php if ($is_portrait) {echo "portrait";}?> <?php if ( $is_video ) {echo "video";}?>">
-			         <a href="<?php echo $root_url;?>/view/?<?php echo $photo["id"];?>" title="<?php echo $photo["title"];?>">
+			         <a href="<?php echo $root_url;?>view/?<?php echo $photo["id"];?>" title="<?php echo $photo["title"];?>">
 						<img alt="<?php echo $photo["title"]?>" src="<?php echo $f->buildPhotoURL($photo, "Small");?>"/>
 					 </a>
 				</li>
