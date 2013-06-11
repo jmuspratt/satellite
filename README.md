@@ -29,6 +29,7 @@ Limitations
 -----------
 - Video: No ogv files or Flash fallback. Sorry, Firefox.
 - No Previous/Next links within a set.
+- No Tags implementation (yet).
 
 
 Configuration
