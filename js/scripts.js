@@ -61,21 +61,14 @@ $(document).keydown(function(e){
 			event.preventDefault();
 		}
 		
-		// Play: P key is 87 
+		// Play/Pause: P key is 87 
 		if ( (e.keyCode == 80) && (single_view) ) { 
 			
 			var player = $("video").get(0);
 			
-			if (player.paused) {
-	      player.play();
-			}
-			else {
-	      player.pause();
-				
-			}
-			
-			var status 
-			
+			if (player.paused) {player.play();}
+			else {player.pause();}
+						
 			event.preventDefault();
 		}
 		
@@ -114,6 +107,7 @@ function widescreen_toggle() {
 // wish I could avoid doing this, but for page load it seems necessary
 function widescreen_on() {
 	var wide_trigger = $("p.wide-trigger a");
+	wide_trigger.text("Normal Format")
 	$("aside.sidebar").addClass("compact");
 	wide_trigger.addClass("active");
 	$("body").toggleClass('wide');
