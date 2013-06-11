@@ -59,10 +59,10 @@
 				$set_cover_url = "http://farm" . $set['farm'] . ".static.flickr.com/" . $set['server'] . "/" . $set["primary"] . "_" . $set['secret'] . "_m" . ".jpg"; ?>
 
 				<li>
-					<a href="<?php echo $config["root_url"];?>/sets/view/?<?php echo $set["id"];?>">
+					<a href="<?php echo $root_url;?>sets/view/?<?php echo $set["id"];?>">
 					<img src="<?php echo $set_cover_url;?>" /></a><br />
 					
-					<h4><a href="<?php echo $config[root_url]; ?>/sets/view/?<?php echo $set["id"];?>"><?php echo $set["title"]; ?></a></h4>
+					<h4><a href="<?php echo $root_url; ?>sets/view/?<?php echo $set["id"];?>"><?php echo $set["title"]; ?></a></h4>
 					<h5><?php if ($photo_count > 0 ) : ?><?php echo $set["photos"]; ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $set["videos"]; ?> videos<?php endif; ?></h5>
 								
 					</h4>

@@ -1,3 +1,5 @@
+<?php include ("functions.php"); ?>
+<?php include ("config-process.php"); ?>
 <!doctype html>
 	<head>
 		<title>
@@ -11,8 +13,8 @@
 	<meta name="author" content="<?php echo $config['username'];?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link href="<?php echo $config[root_url];?>/css/layout.css" rel="stylesheet" type="text/css">
-	<link href="<?php echo $config[root_url];?>/css/type.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo $root_url; ?>/css/layout.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo $root_url; ?>/css/type.css" rel="stylesheet" type="text/css">
 	
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>

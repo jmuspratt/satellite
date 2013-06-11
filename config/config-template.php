@@ -9,7 +9,6 @@ $config = array(
 	"gallery_title" => "",
 
 	// Insert your API key, copied from http://www.flickr.com/services/apps/create/apply (choose non-commercial)
-	// Example 
 	"key" => "",
 
 	// Insert your Flickr username. This is not your Yahoo sign in username, or your Flickr screename - but the username you use for Flickr itself. To double check, sign in to Flickr and look at the top of the page where it says 'Signed in as...'. that is your username.

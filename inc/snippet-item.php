@@ -69,8 +69,8 @@
 			<?php 
 			// DEBUG
 			
-			echo "<code class=\"clear\">";
-			print_r($photosize);
-			echo "</code>";
+			// echo "<code class=\"clear\">";
+			// print_r($photosize);
+			// echo "</code>";
 			 ?>
 			

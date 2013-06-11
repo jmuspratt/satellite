@@ -122,7 +122,7 @@
 				</li>
 
 				<?php } else { ?>
-					<li class="older"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+					<li class="older"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
 						<span>Older</span>
 					</a></li>
 				<?php } ?>
