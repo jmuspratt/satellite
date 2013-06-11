@@ -1,6 +1,7 @@
 <?php
 	$is_portrait = false; 
-	if ( $largest_size['width'] < $largest_size['height'] ) {$is_portrait = true;}
+	// check Thumbnail size for portrait vs landscape
+	if ( $confirmed_sizes[2]['width'] < $confirmed_sizes[2]['height'] ) {$is_portrait = true;}
 	
 	$is_video = false;
 	if ($photoInfo['photo']['media'] == "video") {$is_video = true;}
@@ -35,8 +36,30 @@
 
 	<p><a class="button" href="<?php echo $largest_video_size['source'];?>">Video File</a></p>
 	
-	<?php }	else { ?>
-		<a href="?<?php echo $context['prevphoto']['id'];?>"><img src="<?php echo $photoUrl;?>" alt="<?php echo $photoInfo["photo"]["title"];?>" /></a>
+	<?php }	else {
+	
+	 ?>
+		<a href="?<?php echo $context['prevphoto']['id'];?>">
+				<span data-picture data-alt="<?php echo $photoInfo["photo"]["title"];?>">
+				<span data-src="<?php echo $confirmed_sizes[3]["source"]; ?>"></span>
+					
+				<?php
+				$exclude = array("Square", "Large Square", "Thumbnail", "Small", "Original");
+				foreach ($confirmed_sizes as $confirmed_size) {
+					if (!(in_array($confirmed_size["label"], $exclude))) { ?>
+						<span class="<?php echo $confirmed_size["label"]; ?>" data-src="<?php echo $confirmed_size["source"]; ?>"  data-media="(min-width: <?php echo ($confirmed_size["width"] - 600) ; ?>px)"></span>
+				<?php }	}	?>
+				
+				
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+				<noscript>
+					<img src="<?php echo $confirmed_sizes[3]["source"]; ?>" alt="<?php echo $photoInfo["photo"]["title"];?>">
+				</noscript>
+			</span>
+		</a>
+		
+		
+		
 		<?php }?>
 	
 	

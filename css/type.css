@@ -13,7 +13,7 @@
 
 /*	Type ------------------ */
 
-	body 			{font: .8em/1.5em arial, sans-serif; color:#666;}
+	body 			{font: .8em/1.5em arial, sans-serif; color:rgb(150,150,150);}
 
  	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
 	h1				{font-size:1em; font-weight:bold;}
@@ -57,24 +57,30 @@
 	nav.photo-prev-next li.prev 		{text-align:right;}
 
 
-	/*	Sets Page ------------------ */
+/*	Sets Page ------------------ */
 	
 	.thumbs.photosets li h4						{margin-bottom:0;}
 	.thumbs.photosets li h5					{ color:#aaa; font-size:.8em; line-height:1.2em; font-weight:normal;}
 	
 	
 /*	Footer ------------------ */
+
 	footer p {font-size:.8em; color:#888;}
 	
 	/*	Credit/Logo */
-	.sat-credit				{position:relative;  width:30em; position:relative;}
-	.sat-logo					{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em; background:rgba(0,0,0,.08); text-align:center; font-weight:bold; font-size:1.75em; }
-	.sat-logo sup 		{position:absolute; right:.35em; top:.35em; }
-	.sat-built-with		{left:0; position:absolute; opacity:0; display:inline-block;/* background:rgba(0,0,0,.05); */padding:0 2em;}
-	.sat-credit:hover	.sat-logo 			{/*width:1.5em; height:1.5em; */background:rgba(0,0,0,.02);}
+	.sat-credit												{position:relative;  width:30em; position:relative;}
+	.sat-logo													{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em; background:rgba(0,0,0,.08); text-align:center; font-weight:bold; font-size:1.75em; }
+	.sat-logo sup 										{position:absolute; right:.35em; top:.35em; }
+	.sat-built-with										{left:0; position:absolute; opacity:0; display:inline-block;/* background:rgba(0,0,0,.05); */padding:0 2em;}
+	.sat-credit:hover	.sat-logo 			{background:rgba(0,0,0,.2);}
 	.sat-credit:hover .sat-logo sup		{opacity:0;}
-	.sat-credit:hover .sat-built-with {opacity:1; left:2.25em;}}
+	.sat-credit:hover .sat-built-with {opacity:1; left:2.25em;}
 	
 	
 	
+	/*	Wide Format ------------------ */
 	
+		body.wide nav.primary li.current a	{color:#fff; border-color:rgba(255,255,255,.2);}
+
+
+

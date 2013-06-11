@@ -26,11 +26,28 @@
 	if ($photosize[6] && ($photosize[6]["media"] == "photo") ) {	$largest_size = $photosize[6]; }
 	if ($photosize[7] && ($photosize[7]["media"] == "photo") ) {	$largest_size = $photosize[7]; }
 	if ($photosize[8] && ($photosize[8]["media"] == "photo") ) {	$largest_size = $photosize[8]; }
+	if ($photosize[9] && ($photosize[8]["media"] == "photo") ) {	$largest_size = $photosize[9]; }
+	
+	
 
 	$size = $largest_size;
-
-	//$allcontexts = $f->photos_getAllContexts("$id");
 	$context = $f->photos_getContext($id);
+
+	// Loop through array of sizes and filter for photos
+	
+	foreach ($photosize as $item) {
+		if ($item["media"] == "photo") {
+			$confirmed_sizes[] = $item;
+
+		}
+	}
+	
+	// print_r($confirmed_sizes);
+	
+
+	
+
+	// $large_1600
 
 	$photoUrl = $size['source'];
 
@@ -52,6 +69,8 @@
 
 
 		<aside class="sidebar">
+			
+			<?php // print_r ($photosize); ?>
 			
 			<div class="photo-title-desc">
 				<?php if ($photoInfo["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2><?php endif;?>
@@ -87,7 +106,7 @@
 						</li>
 
 					<?php } else { ?>
-						<li class="newer"><a href="#"><img src="<?php echo $config["root_url"];?>/images/no-img.png" alt="No Image" /><br />
+						<li class="newer"><a href="#"><img src="<?php echo $config["root_page-section"];?>/images/no-img.png" alt="No Image" /><br />
 							<span>Newer</span> 
 						</a></li>
 					<?php } ?>
