@@ -69,7 +69,7 @@ $(document).keydown(function(e){
 			if (player.paused) {player.play();}
 			else {player.pause();}
 						
-			event.preventDefault();
+			e.preventDefault();
 		}
 		
 			
