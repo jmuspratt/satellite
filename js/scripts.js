@@ -95,7 +95,7 @@ function mode_on() {
 	mode_trigger.addClass("active");
 	$("aside.sidebar").addClass("compact");
 	mode_trigger.addClass("active");
-	$("body").toggleClass('mode');
+	$("body").addClass('mode');
 	$.cookie("mode", "on");
 
 	}
