@@ -44,17 +44,20 @@ $(document).keydown(function(e){
 		if ( (e.keyCode == 37) && (typeof newer_url != 'undefined') ) { 
 			// alert("right");
 			window.location.href = newer_url;
+			e.preventDefault();
 		}
 
 		// Older: Right arrow key is 39
 		if ( (e.keyCode == 39) && (typeof older_url != 'undefined') ) {  
 			window.location.href = older_url;
+			e.preventDefault();
 		}
 
 
 		// Viewing Mode: V key (for view) is 86 
 		if ( e.keyCode == 86  && !(e.metaKey) ) { 
 			mode_toggle();
+			e.preventDefault();
 		}
 		
 		// Play/Pause: P key is 87 
@@ -62,9 +65,9 @@ $(document).keydown(function(e){
 			var player = $("video").get(0);
 			if (player.paused) {player.play();}
 			else {player.pause();}
+			e.preventDefault();
 		}
 		
-		e.preventDefault();
 			
 }); // document.keydown
 
