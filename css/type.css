@@ -10,7 +10,6 @@
 
 
 
-
 /*	Type ------------------ */
 
 	body 			{font: .8em/1.5em arial, sans-serif; color:rgb(150,150,150);}
@@ -32,12 +31,16 @@
 	header.primary h1 a 		{color:#888;}
 	nav.primary li.current a	{color:#000; border-bottom:2px solid rgba(0,0,0,.08);}
 	
+	p.mode-trigger a:before						{content:"❑ "; }
+	p.mode-trigger a.active:before		{content:"❒ ";}
+	
+	
 /*	Home Page ------------------ */
 	
 	.paging p {font-size:.8em; line-height:1.5em;}
 
 	li.newer a span:before	{content: "‹ ";}
-	li.older a {text-align:right;}
+	li.older a							{text-align:right;}
 	li.older a span:after	{content: " ›";}
 
 
@@ -77,9 +80,9 @@
 	
 	
 	
-	/*	Wide Format ------------------ */
+	/*	View Mode ------------------ */
 	
-		body.wide nav.primary li.current a	{color:#fff; border-color:rgba(255,255,255,.2);}
+		body.mode nav.primary li.current a	{color:#fff; border-color:rgba(255,255,255,.2);}
 
 
 

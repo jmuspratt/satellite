@@ -67,8 +67,6 @@
 	nav.primary ul 										{list-style:none; display:inline-block;}
 	nav.primary li 										{display:inline-block; margin-right:1em;}
 	
-	p.wide-trigger a:before						{content:"❑ ";}
-	p.wide-trigger a.active:before		{content:"❒ ";}
 	
 
 /*	Home ------------------ */
@@ -99,14 +97,14 @@
 	
 
 	
-	/*	wide format  */
-	body.wide 																										{background:#333;}
-	body.wide header.primary, body.wide .main, body.wide footer		{max-width:1600px;}
-	body.wide section.item																				{width:100%;}
+	/*	view mode   */
+	body.mode 																										{background:#333;}
+	body.mode header.primary, body.mode .main, body.mode footer		{max-width:1600px;}
+	body.mode section.item																				{width:100%;}
 
-	body.wide .thumbs.photosets	li		{height:140px;}
-	body.wide .thumbs.photosets li h4, 
-	body.wide .thumbs.photosets li h5 {display:none;}
+	body.mode .thumbs.photosets	li		{height:140px;}
+	body.mode .thumbs.photosets li h4, 
+	body.mode .thumbs.photosets li h5 {display:none;}
 	
 	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
 	aside.sidebar.compact nav.photo-prev-next img,  
@@ -130,7 +128,7 @@
 			body {padding:0 5%;}
 			
 			nav.primary								{float:left; width:70%;}
-			p.wide-trigger 						{float:right; width:28%; text-align:right;}
+			p.mode-trigger 						{float:right; width:28%; text-align:right;}
 			                    			
 			.item		 									{float:left; width:70%;}
 			aside.sidebar 						{float:right; width:28%;}
@@ -152,7 +150,7 @@
 			.item		 													{width:76%;}
 			aside.sidebar 										{width:22%;}
 		
-			p.wide-trigger 										{display:block; }
+			p.mode-trigger 										{display:block; }
 			
 	
 			

@@ -39,11 +39,19 @@
 	<section class="main" role="main">
 		
 		
-		<?php // print_r ($set_info); ?>
+		<?php 
+		
+		$photo_count = $set_info["count_photos"];
+		$vid_count = $set_info["count_videos"];
+		
+		$show_comma = false;
+		if ( ($photo_count > 0) && ($vid_count > 0) ) {$show_comma = true; }
+		?>
 		
 		<h1><?php echo $set_info["title"];?></h1>
-		<p><?php echo $set_info["count_photos"];?> Photos, <?php echo $set_info["count_videos"];?> Videos</p>
-		<p><?php echo $set_info["description"];?></p>
+		
+		<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> videos<?php endif; ?></h5>
+			<p><?php echo $set_info["description"];?></p>
 		
 		<ul class="thumbs cf">
 		<?php

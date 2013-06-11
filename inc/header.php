@@ -8,6 +8,6 @@
 			</ul>
 		</nav>
 	
-		<p class="wide-trigger"><a href="#" class="button">Wide Format</a></p>
+		<p class="mode-trigger"><a href="#" class="button">Toggle Viewing Mode</a></p>
 	
 	</header>

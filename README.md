@@ -17,8 +17,8 @@ Design Features
 - Home page shows thumbnails of recent photos (number configurable) in reverse-chronological order.
 - Sets pages show "cover" thumbnail of each photo set in reverse-chronological order.
 - Thumbnails of videos are clearly labelled with "Video".
-- All pages have a **Wide Format** option: (dark background, no title/captions/metadata). This mode persists via a cookie.
-- Keyboard Navigation: use **w** to toggle the wide format, and use the left and right arrow keys for older/newer photos and thumbnail paging. Use **p** to play and pause a video.
+- All pages have a **Toggle Viewing Mode** button to switch to a darker background, less text/metadata, and wider images. This mode persists via a cookie.
+- Keyboard Navigation: use **v** to toggle the viewing mode, and use the left and right arrow keys for older/newer photos and thumbnail paging. Use **p** to play and pause a video.
 
 Tech Features
 -------------

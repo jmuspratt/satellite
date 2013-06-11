@@ -3,18 +3,18 @@ $(document).ready(function(){
 	// Get screensize ------------------
 	var screen_size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
 
-	// Get wide screen cookie and apply ------------------
-	var widescreen_state = $.cookie("widescreen");
+	// Get screen mode cookie and apply ------------------
+	var mode_state = $.cookie("mode");
 	
-	if (widescreen_state == "on") {
-		widescreen_on();
+	if (mode_state == "on") {
+		mode_on();
 	}
 		
 	
 
 	// Wide screen trigger ------------------
-	$("p.wide-trigger a").click(function(event){
-		widescreen_toggle();
+	$("p.mode-trigger a").click(function(event){
+		mode_toggle();
 		// defeat link
 		event.preventDefault();
 	});
@@ -55,9 +55,9 @@ $(document).keydown(function(e){
 		}
 
 
-		// WIDE: W key (for widescreen) is 87 
-		if ( e.keyCode == 87  && !(e.metaKey) ) { 
-			widescreen_toggle();
+		// Viewing Mode: V key (for view) is 86 
+		if ( e.keyCode == 86  && !(e.metaKey) ) { 
+			mode_toggle();
 			event.preventDefault();
 		}
 		
@@ -77,40 +77,32 @@ $(document).keydown(function(e){
 
 
 
-function widescreen_toggle() {
-	var wide_trigger = $("p.wide-trigger a");
-	
+function mode_toggle() {
+	var mode_trigger = $("p.mode-trigger a");
 	
 	$("aside.sidebar").toggleClass("compact");
 	
 	// toggle button class
-	wide_trigger.toggleClass("active");
+	mode_trigger.toggleClass("active");
 	
-	// toggle the button text
-	if (wide_trigger.text() == "Wide Format")
-			wide_trigger.text("Normal Format")
-	else
-			wide_trigger.text("Wide Format");
-
-	// toggle body class
-	$("body").toggleClass('wide');
+	$("body").toggleClass('mode');
 	
 	// toggle the cookie
-	if ($.cookie("widescreen") == "on")
-		$.cookie("widescreen", "off");
+	if ($.cookie("mode") == "on")
+		$.cookie("mode", "off");
 	else
-		$.cookie("widescreen", "on");
+		$.cookie("mode", "on");
 }
 
 
 
 // wish I could avoid doing this, but for page load it seems necessary
-function widescreen_on() {
-	var wide_trigger = $("p.wide-trigger a");
-	wide_trigger.text("Normal Format")
+function mode_on() {
+	var mode_trigger = $("p.mode-trigger a");
+	mode_trigger.addClass("active");
 	$("aside.sidebar").addClass("compact");
-	wide_trigger.addClass("active");
-	$("body").toggleClass('wide');
-	$.cookie("widescreen", "on");
+	mode_trigger.addClass("active");
+	$("body").toggleClass('mode');
+	$.cookie("mode", "on");
 
 	}
