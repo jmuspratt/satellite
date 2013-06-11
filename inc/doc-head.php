@@ -5,7 +5,8 @@
 		<title>
 			<?php echo $config["gallery_title"]; ?>
 			<?php if ($photoInfo['photo']['title']) {echo " - " . $photoInfo['photo']['title'];} ?>
-			<?php if ($this_page == "sets") {echo " - Sets";} ?>
+			<?php if ($this_page == "sets") 				{echo " - Sets";} ?>
+			<?php if ($set_info["title"]) 					{echo " - " . $set_info["title"];} ?>
 		</title>
 
 	<meta charset="utf-8">
