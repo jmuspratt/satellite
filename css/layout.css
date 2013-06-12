@@ -53,7 +53,7 @@
 
 /*	Layout ------------------ */
 	
-	body 	{padding:0 8%;}
+	body 	{padding:0 8%; background:#eaeaea}
 	.main 	{position:relative;}
 	
 	header.primary, .main, footer	{max-width:1500px; margin:0 auto; position:relative; }
@@ -63,22 +63,24 @@
 /*	Nav ------------------ */
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
-	nav.primary												{margin-bottom:1em;padding-top:.2em;}
+	nav.primary												{margin-bottom:1em; padding-top:.2em;}
 	nav.primary ul 										{list-style:none; display:inline-block;}
-	nav.primary li 										{display:inline-block; margin-right:1em;}
+	nav.primary li 										{display:inline-block; }
 	
 	
 
 /*	Home ------------------ */
 
-	.thumbs 									{list-style:none;}
-	.thumbs li 								{float:left; display:block; overflow:hidden; position:relative;}
-	.thumbs li 								{width:48%;  margin-right:2.5%; margin-bottom:10px;}
-	.thumbs li:nth-child(2n) 	{margin-right:0;}
-	.thumbs li img						{max-height:140px;}
-	.thumbs li.video:after	{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
+	.thumbs 										{list-style:none;}
+	.thumbs li 									{float:left; display:block; overflow:hidden; position:relative;}
+	.thumbs li 									{width:48%;  margin-right:4%; margin-bottom:10px;}
+	.thumbs li:nth-child(2n-1)	{clear:both;}
+	.thumbs li:nth-child(2n) 		{margin-right:0;}
 	
-	.paging 					{margin:20px 0; }
+	.thumbs li img							{max-height:130px;}
+	.thumbs li.video:after			{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
+	
+	.paging 					{margin:0; }
 	.paging p					{float:left; width:45%;}
 	.paging ul 				{list-style:none; float:right; width:45%; text-align:right;}
 	.paging li 				{display:inline-block;}
@@ -90,27 +92,41 @@
 	.photo-title-desc						{margin-bottom:1em; }
 	.meta 											{margin-bottom:2em; padding-bottom:1em;}
 
-	nav.photo-prev-next					{border-top:1px solid rgba(0,0,0,.05); margin:2em 0; padding-top:2em;  }
+	nav.photo-prev-next					{border-top:1px solid rgba(0,0,0,.1); margin:2em 0; padding-top:2em;  }
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
-	nav.photo-prev-next li a 		{display:block;}
+	nav.photo-prev-next li a 		{display:block; background: rgba(255,255,255,1); padding-left:0; padding-right:0; padding-top:0;}
 	
+/*	Sets Page ------------------ */
+
+	.thumbs.photosets	li	img	{display:block;}
+	.set-text 								{margin:0; padding:1em 5% 1em 5%%; background: #fff;}
+
+
+
+/*	Tags Page  ------------------ */
+
+	.tag-list 		{list-style:none; -moz-column-count:2; -webkit-column-count:2; column-count:2;}
+	.tag-list li 	{font-size:1.5em; line-height:2em;}
 
 	
-	/*	view mode   */
+/*	Viewing Mode------------------ */
 	body.mode 																										{background:#333;}
 	body.mode section.item																				{width:100%;}
 
-	body.mode .thumbs.photosets	li		{height:140px;}
+	body.mode .thumbs.photosets	li		{height:140px; padding:0; background:none;}
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 {display:none;}
 	
 	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
+	aside.sidebar.compact	nav.photo-prev-next li a 		{background:rgba(0,0,0,.05);}
 	aside.sidebar.compact nav.photo-prev-next img,  
 		aside.sidebar.compact nav.photo-prev-next br 		{display:none;}
 	aside.sidebar.compact nav.photo-prev-next	li a 		{padding-top:2px;}
 	aside.sidebar.compact .photo-title-desc,
 		aside.sidebar.compact .meta						 					{display:none;}
+
+
 
 
 /*	Footer (individual photo) ------------------ */
@@ -133,10 +149,11 @@
 			aside.sidebar 						{float:right; width:28%;}
 			
 			.thumbs li 								{width:200px; height:140px; overflow:hidden; margin-right:10px; margin-bottom:10px;}
+			.thumbs li:nth-child(2n-1)	{clear:none;}
 			.thumbs li:nth-child(2n) 	{margin-right:10px;}
-			.thumbs.photosets li	 		{height:185px; }
+			.thumbs.photosets li	 		{height:220px; }
 			
-			
+			.tag-list 		{-moz-column-count:3; -webkit-column-count:3; column-count:3;}
 			
 
 			} /* 2 */
@@ -150,6 +167,7 @@
 			aside.sidebar 										{width:22%;}
 		
 			
+			.tag-list 		{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
 	
 			
 			} /* 3 */
@@ -166,11 +184,13 @@
 				}  /* end retina */
 
 		
+		
+		
 			/*	Clean up ------------------ */
-			/* 	Fix iOS and Windows Mobile font-size changes */
 	
 			@media screen and (max-device-width: 480px), screen and (max-width: 600px) {
 	
+				/* 	Fix iOS and Windows Mobile font-size changes */
 				html {-ms-text-size-adjust: none;-webkit-text-size-adjust: none;}
 		
 			} /* clean up */

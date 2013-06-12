@@ -28,8 +28,7 @@
 
 /*	Header & Nav ------------------ */
 
-	header.primary h1 a 		{color:#888;}
-	nav.primary li.current a	{color:#000; border-bottom:2px solid rgba(0,0,0,.08);}
+	nav.primary li.current a	{color:#000;}
 	
 	p.mode-trigger a:before						{content:"❑ "; }
 	p.mode-trigger a.active:before		{content:"❒ ";}
@@ -44,25 +43,33 @@
 	li.older a span:after	{content: " ›";}
 
 
+/*	General ------------------ */
+	.page-header {margin-bottom:1em;}
+
 /*	View Page ------------------ */
 	
-	a.button				{font-size:10px; font-weight:bold; display:inline-block; color:#aaa; padding:2px 8px; background:rgba(0,0,0,.05); position:relative;}
-	a.button:hover	{color:#555;}
+	nav a, a.button							{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	nav h1 a 										{padding-left:0;}
+	a.button										{background:rgba(0,0,0,.05);}
+	
+	nav a.active 						{border-bottom:2px solid rgba(0,0,0,.05); }
+	
+	
+	nav a:hover, a.button:hover	{color:#555;}
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}
 	
 	.meta p {font-size:.8em; /*line-height:1.2em;*/}
 	
-	
 	nav.photo-prev-next li					{display:inline-block;} 
-	nav.photo-prev-next li img 			{display:inline-block;  padding:8px 0 0 0;}
+	nav.photo-prev-next li img 			{display:inline-block;  padding:0 0 0 0;}
 	nav.photo-prev-next li.prev 		{text-align:right;}
 
 
 /*	Sets Page ------------------ */
 	
-	.thumbs.photosets li h4						{margin-bottom:0;}
-	.thumbs.photosets li h5					{ color:#aaa; font-size:.8em; line-height:1.2em; font-weight:normal;}
+	.thumbs.photosets li h4					{margin-bottom:0;}
+	.thumbs.photosets li h5					{color:#979797; font-size:.8em; line-height:1.2em; font-weight:normal;}
 	
 	
 /*	Footer ------------------ */
@@ -71,10 +78,10 @@
 	
 	/*	Credit/Logo */
 	.sat-credit												{position:relative;  width:30em; position:relative;}
-	.sat-logo													{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em; background:rgba(0,0,0,.08); text-align:center; font-weight:bold; font-size:1.75em; }
+	.sat-logo													{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em;  text-align:center; font-weight:bold; font-size:1.75em; }
 	.sat-logo sup 										{position:absolute; right:.35em; top:.35em; }
 	.sat-built-with										{left:0; position:absolute; opacity:0; display:inline-block;/* background:rgba(0,0,0,.05); */padding:0 2em;}
-	.sat-credit:hover	.sat-logo 			{background:#2d9af6; color:#fff;}
+	.sat-credit:hover	.sat-logo 			{background:rgba(0,0,0,.05); }
 	.sat-credit:hover .sat-logo sup		{opacity:0;}
 	.sat-credit:hover .sat-built-with {opacity:1; left:2.25em;}
 	
