@@ -7,6 +7,7 @@
 			<?php if ($photoInfo['photo']['title']) {echo " - " . $photoInfo['photo']['title'];} ?>
 			<?php if ($this_page == "sets") 				{echo " - Sets";} ?>
 			<?php if ($set_info["title"]) 					{echo " - " . $set_info["title"];} ?>
+			<?php if ($tag_name) 					{echo " - " . $tag_name;} ?>
 		</title>
 
 	<meta charset="utf-8">

@@ -37,7 +37,10 @@
 		<ul class="tag-list">
 		<?php
 		
-			foreach ($tag_list as $tag) { ?>
+			foreach ($tag_list as $tag) { 
+				$tag_safe = str_replace(' ','',$tag);
+				
+				?>
 
 				<li>
 					<a href="view/?<?php echo $tag; ?>"><?php echo $tag; ?></a>

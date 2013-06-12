@@ -59,7 +59,7 @@
 	
 	aside.sidebar .title-desc {margin-bottom:3em;}
 	
-	.meta p {font-size:.8em; /*line-height:1.2em;*/}
+	.meta p {font-size:.8em; margin-bottom:.5em; /*line-height:1.2em;*/}
 	
 	nav.photo-prev-next li					{display:inline-block;} 
 	nav.photo-prev-next li img 			{display:inline-block;  padding:0 0 0 0;}

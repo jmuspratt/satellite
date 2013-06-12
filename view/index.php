@@ -16,7 +16,8 @@
 	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
 	$context = $f->photos_getContext($id);
-
+	
+	$this_photo_tags = $f->tags_getListPhoto($id);
 
 	// Loop through array of sizes and construct $confirmed_sizes array.
 	// Pick up $largest_size along the way.
@@ -64,6 +65,19 @@
 				
 					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><p><?php endif; ?>
 					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?></p><?php endif; ?>
+				
+						<p><strong>Tags:</strong> 
+							<?php
+							
+							$counter = 1;
+							$total = count($this_photo_tags);
+							foreach ($this_photo_tags as $tag) { 
+									$tag_safe = str_replace(' ','',$tag["raw"]);
+								?>
+								
+							<a href="<?php echo $root_url;?>tags/view/?<?php echo $tag_safe;?>"><?php echo $tag["raw"];?></a><?php if ( $counter !== $total ) {echo ", ";} ?> 
+								<?php $counter++; } ?>
+						</p>
 				
 					<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photoInfo["id"] ?>/">View on Flickr</a></p>
 				
