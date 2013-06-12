@@ -12,8 +12,8 @@
 /*	Reset ------------------ */
 
 	html					{margin:0; padding:0;}
-	body, body * 	{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
-	body img			{border:0;}
+	body, body * 			{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
+	body img				{border:0;}
 	
 
 /*	Utility Classes ------------------ */
@@ -29,35 +29,36 @@
 
 /*	Transitions ------------------ */
 
-	a		{
+	a, .page-header, section.item	{
 		-webkit-transition: 	all .3s ease;
-		-moz-transition: 			all .3s ease;
-		-o-transition:  			all .3s ease;
-		transition: 					all .3s ease;
+		-moz-transition: 		all .3s ease;
+		-o-transition:  		all .3s ease;
+		transition: 			all .3s ease;
 		}
 	
+	body {
+		-webkit-transition: 	background .75s ease;
+		-moz-transition: 		background .75s ease;
+		-o-transition:  		background .75s ease;
+		transition: 			background .75s ease;
+	}
 	.sat-credit, .sat-logo, .sat-built-with		{
 		-webkit-transition: 	all .3s ease;
-		-moz-transition: 			all .3s ease;
-		-o-transition:  			all .3s ease;
-		transition: 					all .3s ease;
+		-moz-transition: 		all .3s ease;
+		-o-transition:  		all .3s ease;
+		transition: 			all .3s ease;
 		}
 
-		
-/*	section.item, aside.sidebar {
-		-webkit-transition: 	all .7s ease;
-		-moz-transition: 			all .7s ease;
-		-o-transition:  			all .7s ease;
-		transition: 					all .7s ease;
-	}*/
+
 
 /*	Layout ------------------ */
 	
-	body 	{padding:0 8%; background:#eaeaea}
+	body 	{padding:0 8%;}
 	.main 	{position:relative;}
 	
+	
 	header.primary, .main, footer	{max-width:1500px; margin:0 auto; position:relative; }
-	header.primary								{padding:2em 0 .5em 0; margin-bottom:20px;}
+	header.primary					{padding:2em 0 .5em 0; margin-bottom:20px;}
 	
 	
 /*	Nav ------------------ */
@@ -74,10 +75,10 @@
 	.thumbs 										{list-style:none;}
 	.thumbs li 									{float:left; display:block; overflow:hidden; position:relative;}
 	.thumbs li 									{width:48%;  margin-right:4%; margin-bottom:10px;}
-	.thumbs li:nth-child(2n-1)	{clear:both;}
+	.thumbs li:nth-child(2n-1)		{clear:both;}
 	.thumbs li:nth-child(2n) 		{margin-right:0;}
 	
-	.thumbs li img							{max-height:135px;}
+	.thumbs li img					{max-height:135px;}
 	.thumbs li.video:after			{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:bold .7em/1em arial, sans-serif;; text-transform:uppercase;}
 	
 	.paging 					{margin:0; }
@@ -92,15 +93,16 @@
 	.photo-title-desc						{margin-bottom:1em; }
 	.meta 											{margin-bottom:2em; padding-bottom:1em;}
 
-	nav.photo-prev-next					{border-top:1px solid rgba(0,0,0,.1); margin:2em 0; padding-top:2em;  }
+	nav.photo-prev-next				{border-top:1px solid rgba(0,0,0,.1); border-bottom:1px solid rgba(0,0,0,.1); margin:2em 0; padding:2em 0;  }
 	nav.photo-prev-next ul			{list-style:none;}
-	nav.photo-prev-next li			{display:inline-block;}
-	nav.photo-prev-next li a 		{display:block; background: rgba(255,255,255,.5); }
+	nav.photo-prev-next li			{display:inline-block; margin-right:20px;}
+	nav.photo-prev-next li a.button	{display:block; padding:0; background:none; }
 	
 /*	Sets Page ------------------ */
 
-	.thumbs.photosets	li img	{display:block;}
-	.set-text 								{margin:0; line-height:1.4em; padding:.5em 5% 0 5%; min-height:4.5em; background: #fff;}
+	.thumbs.photosets li		{box-shadow: 2px 2px 2px rgba(0,0,0,.1); margin-bottom:20px; background:#fff;}
+	.thumbs.photosets li img	{display:block;}
+	.set-text 					{margin:0; line-height:1.4em; padding:.5em 5% .5em 5%; }
 
 
 
@@ -112,19 +114,18 @@
 	
 /*	Viewing Mode------------------ */
 	body.mode 																										{background:#333;}
-	body.mode section.item																				{width:100%;}
+	body.mode section.item				{width:100%;}
 
-	body.mode .thumbs.photosets	li		{height:145px; padding:0; background:none;}
+	body.mode .thumbs.photosets	li		{height:145px; padding:0; background:none; box-shadow:none;}
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 {display:none;}
 	
 	body.mode .set-text 		{background:none;}
 	
 	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
-	body.mode	nav.photo-prev-next li a 		{background:rgba(0,0,0,.05);}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
-	body.mode nav.photo-prev-next	li a 		{padding-top:2px;}
+	body.mode nav.photo-prev-next li a 		{padding-top:2px;}
 	body.mode .photo-title-desc,
 		body.mode .meta						 					{display:none;}
 	
@@ -154,7 +155,8 @@
 			.thumbs li 								{width:200px; height:140px; overflow:hidden; margin-right:10px; margin-bottom:10px;}
 			.thumbs li:nth-child(2n-1)	{clear:none;}
 			.thumbs li:nth-child(2n) 	{margin-right:10px;}
-			.thumbs.photosets li	 		{height:220px; }
+			
+			.thumbs.photosets li	 	{height:200px; }
 			
 			.tag-list 		{-moz-column-count:3; -webkit-column-count:3; column-count:3;}
 			

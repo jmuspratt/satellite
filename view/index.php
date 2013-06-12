@@ -109,7 +109,7 @@
 				<?php if ($context['nextphoto']['id']){ ?>
 						<li class="newer">
 							<a class="button" href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['nextphoto']['title']; ?>">
-								<img src="<?php echo $context['nextphoto']['thumb']; ?>" /><br />
+								<img src="<?php echo $context['nextphoto']['thumb']; ?>" alt="<?php echo $context['nextphoto']['title']; ?>"/><br />
 								<span>Newer</span> 
 							
 							</a>
@@ -126,7 +126,7 @@
 			<?php if ($context['prevphoto']['id']){ ?>
 				<li class="older">
 					<a class="button" href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
-						<img src="<?php echo $context['prevphoto']['thumb'];?>" /><br />
+						<img src="<?php echo $context['prevphoto']['thumb'];?>" alt="<?php echo $context['prevphoto']['title']; ?>" /><br />
 						<span>Older</span> 
 					</a>
 				</li>

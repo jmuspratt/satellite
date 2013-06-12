@@ -14,9 +14,6 @@
 
 	?>
 
-<!doctype html>
-
-
 <?php require_once("../../inc/doc-head.php"); ?>
 
 

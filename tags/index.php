@@ -18,9 +18,6 @@
 	$total = $photos["photos"]["total"]; // returns how many photos there are in total
 	?>
 
-<!doctype html>
-
-
 <?php require_once("../inc/doc-head.php"); ?>
 
 <body class="sets">

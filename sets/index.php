@@ -18,9 +18,6 @@
 	
 	?>
 
-<!doctype html>
-
-
 <?php require_once("../inc/doc-head.php"); ?>
 
 <body class="sets">
@@ -51,7 +48,7 @@
 
 				<li>
 					<a href="<?php echo $root_url;?>sets/view/?<?php echo $set["id"];?>">
-					<img src="<?php echo $set_cover_url;?>" /></a>
+					<img src="<?php echo $set_cover_url;?>" alt="<?php echo $set["title"]; ?>" /></a>
 					<div class="set-text">
 						<h4><a href="<?php echo $root_url; ?>sets/view/?<?php echo $set["id"];?>"><?php echo $set["title"]; ?></a></h4>
 						<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> videos<?php endif; ?></h5>

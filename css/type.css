@@ -12,7 +12,7 @@
 
 /*	Type ------------------ */
 
-	body 			{font: .8em/1.5em helvetica, arial, sans-serif; color:rgb(150,150,150);}
+	body 			{font: .8em/1.5em helvetica, arial, sans-serif; color:rgb(100,100,100);  background:#eee;}
 
  	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
 	h1				{font-size:1em; font-weight:bold;}
@@ -30,7 +30,7 @@
 
 	nav.primary li.current a	{color:#000;}
 	
-	p.mode-trigger a:before						{content:"❑ "; }
+	p.mode-trigger a:before				{content:"❑ "; }
 	p.mode-trigger a.active:before		{content:"❒ ";}
 	
 	
@@ -49,7 +49,7 @@
 
 /*	View Page ------------------ */
 	
-	nav a, a.button							{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	header.primary a, a.button							{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
 	nav h1 a 										{padding-left:0;}
 	a.button										{background:rgba(0,0,0,.05);}
 	
