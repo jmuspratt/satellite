@@ -6,6 +6,7 @@ $(document).ready(function(){
 	// Get screen mode cookie and apply ------------------
 	var mode_state = $.cookie("mode");
 	
+	
 	if (mode_state == "on") {
 		mode_on();
 	}

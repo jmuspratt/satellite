@@ -95,7 +95,7 @@
 	nav.photo-prev-next					{border-top:1px solid rgba(0,0,0,.1); margin:2em 0; padding-top:2em;  }
 	nav.photo-prev-next ul			{list-style:none;}
 	nav.photo-prev-next li			{display:inline-block;}
-	nav.photo-prev-next li a 		{display:block; background: rgba(255,255,255,1); padding-left:0; padding-right:0; padding-top:0;}
+	nav.photo-prev-next li a 		{display:block; background: rgba(255,255,255,.5); }
 	
 /*	Sets Page ------------------ */
 
@@ -117,6 +117,8 @@
 	body.mode .thumbs.photosets	li		{height:140px; padding:0; background:none;}
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 {display:none;}
+	
+	body.mode .set-text 		{background:none;}
 	
 	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
 	aside.sidebar.compact	nav.photo-prev-next li a 		{background:rgba(0,0,0,.05);}
