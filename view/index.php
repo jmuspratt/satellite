@@ -17,6 +17,8 @@
 	$photosize = $f->photos_getSizes($id, $secret = NULL);
 	$context = $f->photos_getContext($id);
 	
+	$sets_and_pools = $f->photos_getAllContexts($id);
+	
 	$this_photo_tags = $f->tags_getListPhoto($id);
 
 	// Loop through array of sizes and construct $confirmed_sizes array.
@@ -49,9 +51,7 @@
 
 
 		<aside class="sidebar">
-			
-			<?php // print_r ($photosize); ?>
-			
+						
 			<div class="photo-title-desc">
 				<?php if ($photoInfo["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2><?php endif;?>
 				<?php if ($photoInfo["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p><?php endif;?>
@@ -66,6 +66,22 @@
 					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><p><?php endif; ?>
 					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?></p><?php endif; ?>
 				
+				
+						<?php 
+						if ($sets_and_pools) { ?>
+							<p>
+								<strong>Sets:</strong>
+								<?php
+								$counter = 1;
+								$total = count($sets_and_pools["set"]);
+								
+								foreach ($sets_and_pools["set"] as $item) { ?>
+								<a href="<?php echo $root_url;?>sets/view/?<?php echo $item["id"];?>"><?php echo $item["title"];?></a><?php if ( $counter !== $total ) {echo ", ";} ?>
+								<?php $counter++; } ?>
+							</p>
+							<?php } ?>
+						
+							
 						<?php if ($this_photo_tags) { ?>
 						<p><strong>Tags:</strong> 
 							<?php
@@ -85,7 +101,7 @@
 				
 			</div>
 			
-			
+						
 			
 			<nav class="photo-prev-next">
 			<ul>
