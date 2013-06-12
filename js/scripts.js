@@ -74,26 +74,26 @@ $(document).keydown(function(e){
 
 
 function mode_toggle() {
-	var mode_trigger = $("p.mode-trigger a");
 	
 	// toggle button class
-	mode_trigger.toggleClass("active");
+	$("p.mode-trigger a").toggleClass("active");
 	
 	// toggle body class
 	$("body").toggleClass('mode');
 	
 	// toggle the cookie
-	if ($.cookie("mode") == "on")
+	if ($.cookie("mode") == "on") {
 		$.cookie("mode", "off");
-	else
+		}
+	else {
 		$.cookie("mode", "on");
+	}
 }
 
 
 
 // wish I could avoid doing this, but for page load it seems necessary
 function mode_on() {
-	var mode_trigger = $("p.mode-trigger a");
-	mode_trigger.addClass("active");
+	$("p.mode-trigger a").addClass("active");
 	$("body").addClass('mode');
 	}
