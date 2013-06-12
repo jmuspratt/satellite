@@ -5,8 +5,7 @@ $(document).ready(function(){
 
 	// Get screen mode cookie and apply ------------------
 	var mode_state = $.cookie("mode");
-	
-	
+		
 	if (mode_state == "on") {
 		mode_on();
 	}
@@ -77,11 +76,10 @@ $(document).keydown(function(e){
 function mode_toggle() {
 	var mode_trigger = $("p.mode-trigger a");
 	
-	$("aside.sidebar").toggleClass("compact");
-	
 	// toggle button class
 	mode_trigger.toggleClass("active");
 	
+	// toggle body class
 	$("body").toggleClass('mode');
 	
 	// toggle the cookie
@@ -97,9 +95,5 @@ function mode_toggle() {
 function mode_on() {
 	var mode_trigger = $("p.mode-trigger a");
 	mode_trigger.addClass("active");
-	$("aside.sidebar").addClass("compact");
-	mode_trigger.addClass("active");
 	$("body").addClass('mode');
-	$.cookie("mode", "on");
-
 	}

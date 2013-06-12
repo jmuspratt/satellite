@@ -120,14 +120,15 @@
 	
 	body.mode .set-text 		{background:none;}
 	
-	aside.sidebar.compact nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
-	aside.sidebar.compact	nav.photo-prev-next li a 		{background:rgba(0,0,0,.05);}
-	aside.sidebar.compact nav.photo-prev-next img,  
-		aside.sidebar.compact nav.photo-prev-next br 		{display:none;}
-	aside.sidebar.compact nav.photo-prev-next	li a 		{padding-top:2px;}
-	aside.sidebar.compact .photo-title-desc,
-		aside.sidebar.compact .meta						 					{display:none;}
-
+	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
+	body.mode	nav.photo-prev-next li a 		{background:rgba(0,0,0,.05);}
+	body.mode nav.photo-prev-next img,  
+		body.mode nav.photo-prev-next br 		{display:none;}
+	body.mode nav.photo-prev-next	li a 		{padding-top:2px;}
+	body.mode .photo-title-desc,
+		body.mode .meta						 					{display:none;}
+	
+	body.mode .page-header							{display:none;}
 
 
 

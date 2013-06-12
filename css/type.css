@@ -12,7 +12,7 @@
 
 /*	Type ------------------ */
 
-	body 			{font: .8em/1.5em arial, sans-serif; color:rgb(150,150,150);}
+	body 			{font: .8em/1.5em helvetica, arial, sans-serif; color:rgb(150,150,150);}
 
  	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
 	h1				{font-size:1em; font-weight:bold;}
@@ -45,7 +45,7 @@
 
 /*	General ------------------ */
 	.page-header 					{margin-bottom:1em;}
-	.page-header h1 			{font-size:3em; line-height:3em; font-weight:normal;}
+	.page-header h1 			{font-size:1.5em; line-height:1.5em; font-weight:normal;}
 
 /*	View Page ------------------ */
 	
