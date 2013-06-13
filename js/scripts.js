@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 	// Wide screen trigger ------------------
 	$("p.mode-trigger a").click(function(event){
+		$("body").addClass("transition");
 		mode_toggle();
 		// defeat link
 		event.preventDefault();
@@ -83,10 +84,10 @@ function mode_toggle() {
 	
 	// toggle the cookie
 	if ($.cookie("mode") == "on") {
-		$.cookie("mode", "off");
+		$.cookie("mode", null,{ path: '/' });
 		}
 	else {
-		$.cookie("mode", "on");
+		$.cookie("mode", "on",{ path: '/' });
 	}
 }
 
