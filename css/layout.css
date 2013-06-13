@@ -152,8 +152,8 @@
 			nav.primary								{float:left; width:70%;}
 			p.mode-trigger 						{float:right; width:28%; text-align:right;}
 			                    			
-			.item		 									{float:left; width:70%;}
-			aside.sidebar 						{float:right; width:28%;}
+			.item		 									{float:left; width:68%;}
+			aside.sidebar 						{float:right; width:30%;}
 			
 			.thumbs li 								{width:200px; height:140px; overflow:hidden; margin-right:10px; margin-bottom:10px;}
 			.thumbs li:nth-child(2n-1)	{clear:none;}
@@ -170,17 +170,23 @@
 		/* ---------------  Breakpoint 3:  --------------- */
 		@media screen and (min-width: 1000px) {
 			body:after							{content: "3"; display:none;} /* flag for javascript */
-			
-			.item		 													{width:76%;}
-			aside.sidebar 										{width:22%;}
-		
-			
-			.tag-list 		{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
+			.item		 								{width:74%;}
+			aside.sidebar 					{width:24%;}
+			.tag-list 							{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
 	
 			
 			} /* 3 */
-	
-	
+
+
+		/* ---------------  Breakpoint 4  --------------- */
+		@media screen and (min-width: 1300px) {
+			body:after							{content: "4"; display:none;} /* flag for javascript */
+			.item		 								{width:78%;}
+			aside.sidebar 					{width:20%;}
+			.tag-list 							{-moz-column-count:5; -webkit-column-count:5; column-count:5;}
+
+		
+			} /* 4 */	
 	
 
 	
