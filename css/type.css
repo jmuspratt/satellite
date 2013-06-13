@@ -49,7 +49,7 @@
 
 /*	View Page ------------------ */
 	
-	header.primary a, a.button							{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	header.primary a, a.button	{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
 	nav h1 a 										{padding-left:0;}
 	a.button										{background:rgba(0,0,0,.05);}
 	
