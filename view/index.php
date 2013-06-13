@@ -114,14 +114,7 @@
 							
 							</a>
 						</li>
-
-					<?php } else { ?>
-						<li class="newer"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
-							<span>Newer</span> 
-						</li>
-					<?php } ?>
-					
-					
+					<?php }  ?>
 					
 			<?php if ($context['prevphoto']['id']){ ?>
 				<li class="older">
@@ -130,18 +123,8 @@
 						<span>Older</span> 
 					</a>
 				</li>
-
-				<?php } else { ?>
-					<li class="older"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
-						<span>Older</span>
-					</li>
 				<?php } ?>
-
-
-
-				
-				
-				</ul>
+			</ul>
 			</nav>
 
 

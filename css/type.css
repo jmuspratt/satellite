@@ -38,9 +38,9 @@
 	
 	.paging p {font-size:.8em; line-height:1.5em;}
 
-	li.newer a span:before	{content: "‹ ";}
-	li.older a							{text-align:right;}
-	li.older a span:after	{content: " ›";}
+	li.newer  span:before	{content: "‹ ";}
+	li.older 							{text-align:right;}
+	li.older  span:after		{content: " ›";}
 
 
 /*	General ------------------ */
@@ -49,9 +49,9 @@
 
 /*	View Page ------------------ */
 	
-	header.primary a, a.button	{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	header.primary a, .button	{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
 	nav h1 a 										{padding-left:0;}
-	a.button										{background:rgba(0,0,0,.05);}
+	.button										{background:rgba(0,0,0,.05);}
 	
 	nav a.active 						{border-bottom:2px solid rgba(0,0,0,.05); }
 	
