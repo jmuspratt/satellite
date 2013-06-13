@@ -36,7 +36,7 @@
 		transition: 			all .3s ease;
 		}
 	
-	body {
+	body.transition {
 		-webkit-transition: 	background .75s ease;
 		-moz-transition: 		background .75s ease;
 		-o-transition:  		background .75s ease;

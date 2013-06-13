@@ -57,6 +57,7 @@ $(document).keydown(function(e){
 
 		// Viewing Mode: V key (for view) is 86 
 		if ( e.keyCode == 86  && !(e.metaKey) ) { 
+			$("body").addClass("transition");
 			mode_toggle();
 			e.preventDefault();
 		}
