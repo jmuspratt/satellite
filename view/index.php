@@ -118,7 +118,7 @@
 					<?php } else { ?>
 						<li class="newer"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
 							<span>Newer</span> 
-						</a></li>
+						</li>
 					<?php } ?>
 					
 					
@@ -134,7 +134,7 @@
 				<?php } else { ?>
 					<li class="older"><a href="#"><img src="<?php echo $root_url;?>images/no-img.png" alt="No Image" /><br />
 						<span>Older</span>
-					</a></li>
+					</li>
 				<?php } ?>
 
 
