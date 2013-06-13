@@ -91,12 +91,13 @@
 	
 	.item												{margin-bottom:1em;}
 	.photo-title-desc						{margin-bottom:1em; }
-	.meta 											{margin-bottom:2em; padding-bottom:1em;}
+	.meta 											{padding-bottom:.5em;}
 
-	nav.photo-prev-next				{border-top:1px solid rgba(0,0,0,.1); border-bottom:1px solid rgba(0,0,0,.1); margin:2em 0; padding:2em 0;  }
-	nav.photo-prev-next ul			{list-style:none;}
-	nav.photo-prev-next li			{display:inline-block; margin-right:20px;}
-	nav.photo-prev-next li a.button	{display:block; padding:0; background:none; }
+	nav.photo-prev-next								{border-top:3px solid rgba(0,0,0,.03); margin:1.0em 0; padding:2em 0;  }
+	nav.photo-prev-next ul						{list-style:none;}
+	nav.photo-prev-next li						{display:inline-block;}
+	nav.photo-prev-next li:first-child	{margin-right:20px;}
+	nav.photo-prev-next li a.button		{display:block;}
 	
 /*	Sets Page ------------------ */
 
@@ -122,10 +123,12 @@
 	
 	body.mode .set-text 		{background:none;}
 	
-	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0;}
+	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0; border:0; ;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
-	body.mode nav.photo-prev-next li a 		{padding-top:2px;}
+	body.mode nav.photo-prev-next li a.button 		{padding-top:2px;background:rgba(0,0,0,.05); }
+	
+	
 	body.mode .photo-title-desc,
 		body.mode .meta						 					{display:none;}
 	
