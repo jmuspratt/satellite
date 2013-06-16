@@ -51,6 +51,22 @@
 
 
 
+	/*	Type ------------------ */
+
+		body 			{font: .8em/1.5em helvetica, arial, sans-serif; color:rgb(100,100,100);  background:#eee;}
+
+	 	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
+		h1							{font-size:1em; font-weight:bold;}
+	 	h2 							{ font-weight:bold; color:#999;}
+	 	h3							{font-style:italic; margin-bottom:0;}
+		h4							{display:inline;}
+	 	p 							{font-size:1em; margin-bottom:1em;}
+
+
+		a				{color:#2d9af6;}
+		a:hover 		{color:#aaa; }
+
+
 /*	Layout ------------------ */
 	
 	body 	{padding:0 8%;}
@@ -61,15 +77,33 @@
 	header.primary					{padding:2em 0 .5em 0; margin-bottom:20px;}
 	
 	
-/*	Nav ------------------ */
+	/*	Header & Nav ------------------ */
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
 	nav.primary												{margin-bottom:1em; padding-top:.2em;}
 	nav.primary ul 										{list-style:none; display:inline-block;}
 	nav.primary li 										{display:inline-block; }
+	nav.primary li.current a					{color:#000;}
+	p.mode-trigger a:before						{content:"❑ "; }
+	p.mode-trigger a.active:before		{content:"❒ ";}
 	
 	
+/*	General ------------------ */
 
+	.page-header 								{margin-bottom:1em;}
+	.page-header h1 						{font-size:1.5em; line-height:1.5em; font-weight:normal;}
+	header.primary a, .button		{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	.button											{background:rgba(0,0,0,.05);}
+
+
+/*	Home Page ------------------ */
+
+	.paging p {font-size:.8em; line-height:1.5em;}
+	li.newer  span:before	{content: "‹ ";}
+	li.older 							{text-align:right;}
+	li.older  span:after		{content: " ›";}
+	
+	
 /*	Home ------------------ */
 
 	.thumbs 										{list-style:none;}
@@ -92,18 +126,35 @@
 	.item												{margin-bottom:1em;}
 	.photo-title-desc						{margin-bottom:1em; }
 	.meta 											{padding-bottom:.5em;}
+	.meta p {font-size:.8em; margin-bottom:.5em; /*line-height:1.2em;*/}
 
 	nav.photo-prev-next								{border-top:3px solid rgba(0,0,0,.03); margin:1.0em 0; padding:2em 0;  }
 	nav.photo-prev-next ul						{list-style:none;}
 	nav.photo-prev-next li						{display:inline-block;}
+	nav.photo-prev-next li img 			{display:inline-block;  padding:8px 0 0 0;}
+	nav.photo-prev-next li.prev 		{text-align:right;}
 	nav.photo-prev-next li:first-child	{margin-right:20px;}
 	nav.photo-prev-next li a.button		{display:block;}
+
+
+	nav h1 a 										{padding-left:0;}
+
+	nav a.active 						{border-bottom:2px solid rgba(0,0,0,.05); }
+	nav a:hover, a.button:hover	{color:#555;}
+
+	aside.sidebar .title-desc {margin-bottom:3em;}
+
+
+
+
 	
 /*	Sets Page ------------------ */
 
 	.thumbs.photosets li		{box-shadow: 2px 2px 2px rgba(0,0,0,.1); margin-bottom:20px; background:#fff;}
 	.thumbs.photosets li img	{display:block;}
 	.set-text 					{margin:0; line-height:1.4em; padding:.5em 5% .5em 5%; }
+	.thumbs.photosets li h4					{margin-bottom:0;}
+	.thumbs.photosets li h5					{color:#979797; font-size:.8em; line-height:1.2em; font-weight:normal;}
 
 
 
@@ -112,7 +163,22 @@
 	.tag-list 		{list-style:none; -moz-column-count:2; -webkit-column-count:2; column-count:2;}
 	.tag-list li 	{font-size:1.5em; line-height:2em;}
 
-	
+
+/*	Footer (individual photo) ------------------ */
+
+	footer {clear:both; margin-top:2em;}
+	footer p {font-size:.8em; color:#888;}
+
+	/*	Credit/Logo */
+	.sat-credit												{position:relative;  width:30em; position:relative;}
+	.sat-logo													{position:relative; display:inline-block; color:#999; margin-left:-1em; width:1em; height:1em; padding:1em; border-radius:3em;  text-align:center; font-weight:bold; font-size:1.75em; }
+	.sat-logo sup 										{position:absolute; right:.35em; top:.35em; }
+	.sat-built-with										{left:0; position:absolute; opacity:0; display:inline-block;/* background:rgba(0,0,0,.05); */padding:0 2em;}
+	.sat-credit:hover	.sat-logo 			{background:rgba(0,0,0,.05); }
+	.sat-credit:hover .sat-logo sup		{opacity:0;}
+	.sat-credit:hover .sat-built-with {opacity:1; left:2.25em;}
+
+
 /*	Viewing Mode------------------ */
 	body.mode 												{background:#222;}
 	body.mode section.item						{width:100%;}
@@ -135,11 +201,13 @@
 	body.mode .page-header							{display:none;}
 
 
+	body.mode nav.primary li.current a	{color:#fff; border-color:rgba(255,255,255,.2);}
 
-/*	Footer (individual photo) ------------------ */
+
+
+
+
 	
-	footer {clear:both; margin-top:2em;}
-
 
 
 
