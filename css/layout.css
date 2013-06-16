@@ -114,8 +114,8 @@
 
 	
 /*	Viewing Mode------------------ */
-	body.mode 																										{background:#333;}
-	body.mode section.item				{width:100%;}
+	body.mode 												{background:#222;}
+	body.mode section.item						{width:100%;}
 
 	body.mode .thumbs.photosets	li		{height:145px; padding:0; background:none; box-shadow:none;}
 	body.mode .thumbs.photosets li h4, 

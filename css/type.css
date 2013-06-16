@@ -15,11 +15,11 @@
 	body 			{font: .8em/1.5em helvetica, arial, sans-serif; color:rgb(100,100,100);  background:#eee;}
 
  	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
-	h1				{font-size:1em; font-weight:bold;}
- 	h2 				{ font-weight:bold; color:#999;}
- 	h3				{font-style:italic; margin-bottom:0;}
-	h4				{display:inline;}
- 	p 				{font-size:1em; margin-bottom:1em;}
+	h1							{font-size:1em; font-weight:bold;}
+ 	h2 							{ font-weight:bold; color:#999;}
+ 	h3							{font-style:italic; margin-bottom:0;}
+	h4							{display:inline;}
+ 	p 							{font-size:1em; margin-bottom:1em;}
 
 
 	a				{color:#2d9af6;}
