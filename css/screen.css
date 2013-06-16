@@ -76,24 +76,33 @@
 	header.primary, .main, footer	{max-width:1500px; margin:0 auto; position:relative; }
 	header.primary					{padding:2em 0 .5em 0; margin-bottom:20px;}
 	
-	
-	/*	Header & Nav ------------------ */
-	
-	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
-	nav.primary												{margin-bottom:1em; padding-top:.2em;}
-	nav.primary ul 										{list-style:none; display:inline-block;}
-	nav.primary li 										{display:inline-block; }
-	nav.primary li.current a					{color:#000;}
-	p.mode-trigger a:before						{content:"❑ "; }
-	p.mode-trigger a.active:before		{content:"❒ ";}
-	
-	
 /*	General ------------------ */
 
 	.page-header 								{margin-bottom:1em;}
 	.page-header h1 						{font-size:1.5em; line-height:1.5em; font-weight:normal;}
 	header.primary a, .button		{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
 	.button											{background:rgba(0,0,0,.05);}
+
+
+	/*	Header & Nav ------------------ */
+	
+	header.primary h1, nav.primary ul {border-bottom:2px solid rgba(0,0,0,.1); padding-left:0;}
+	
+	header.primary h1 a							 {padding-left:0;}
+	
+	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
+	nav.primary												{margin-bottom:1em; padding-top:.2em; }
+	nav.primary ul 										{list-style:none; display:inline-block; }
+	nav.primary li 										{display:inline-block; }
+	
+	nav.primary li.current a					{color:#000;}
+	nav h1 a 													{padding-left:0;}
+	nav a.active 											{border-bottom:2px solid rgba(0,0,0,.05); }
+	nav a:hover, a.button:hover				{color:#555;}
+	p.mode-trigger a:before						{content:"❑ "; }
+	p.mode-trigger a.active:before		{content:"❒ ";}
+	
+	
 
 
 /*	Home Page ------------------ */
@@ -123,40 +132,32 @@
 
 /*	View Page (individual photo) ------------------ */
 	
-	.item												{margin-bottom:1em;}
-	.photo-title-desc						{margin-bottom:1em; }
-	.meta 											{padding-bottom:.5em;}
-	.meta p {font-size:.8em; margin-bottom:.5em; /*line-height:1.2em;*/}
+	.item																{margin-bottom:1em;}
+	.photo-title-desc										{margin-bottom:1em; }
+	.meta 															{padding-bottom:.5em;}
+	.meta p 														{font-size:.8em; margin-bottom:.5em; /*line-height:1.2em;*/}
 
-	nav.photo-prev-next								{border-top:3px solid rgba(0,0,0,.03); margin:1.0em 0; padding:2em 0;  }
-	nav.photo-prev-next ul						{list-style:none;}
-	nav.photo-prev-next li						{display:inline-block;}
-	nav.photo-prev-next li img 			{display:inline-block;  padding:8px 0 0 0;}
-	nav.photo-prev-next li.prev 		{text-align:right;}
+	nav.photo-prev-next									{border-top:3px solid rgba(0,0,0,.03); margin:1.0em 0; padding:2em 0;  }
+	nav.photo-prev-next ul							{list-style:none;}
+	nav.photo-prev-next li							{display:inline-block;}
+	nav.photo-prev-next li img 					{display:inline-block;  padding:8px 0 0 0;}
+	nav.photo-prev-next li.prev 				{text-align:right;}
 	nav.photo-prev-next li:first-child	{margin-right:20px;}
-	nav.photo-prev-next li a.button		{display:block;}
+	nav.photo-prev-next li a.button			{display:block;}
 
-
-	nav h1 a 										{padding-left:0;}
-
-	nav a.active 						{border-bottom:2px solid rgba(0,0,0,.05); }
-	nav a:hover, a.button:hover	{color:#555;}
-
-	aside.sidebar .title-desc {margin-bottom:3em;}
-
-
+	aside.sidebar .title-desc						{margin-bottom:3em;}
 
 
 	
 /*	Sets Page ------------------ */
 
-	.thumbs.photosets li		{box-shadow: 2px 2px 2px rgba(0,0,0,.1); margin-bottom:20px; background:#fff;}
-	.thumbs.photosets li img	{display:block;}
-	.set-text 					{margin:0; line-height:1.4em; padding:.5em 5% .5em 5%; }
-	.thumbs.photosets li h4					{margin-bottom:0;}
-	.thumbs.photosets li h5					{color:#979797; font-size:.8em; line-height:1.2em; font-weight:normal;}
-	.thumbs.photosets li a:hover		{color:#aaa;}
-	
+	.thumbs.photosets li								{box-shadow: 0 0 2px rgba(0,0,0,.1); margin-bottom:20px; background:#fff;}
+	.thumbs.photosets li img						{display:block;}
+	.thumbs.photosets li a							{display:block;}
+	.set-text 													{margin:0; line-height:1.4em; padding:.5em 5% .5em 5%; }
+	.thumbs.photosets li h4							{margin-bottom:0;}
+	.thumbs.photosets li h5							{color:#979797; font-size:.8em; line-height:1.2em; font-weight:normal;}
+	.thumbs.photosets li a:hover				{color:#aaa;}
 	
 
 /*	Tags Page  ------------------ */
@@ -165,7 +166,7 @@
 	.tag-list li 	{font-size:1.5em; line-height:2em;}
 
 
-/*	Footer (individual photo) ------------------ */
+/*	Footer ------------------ */
 
 	footer {clear:both; margin-top:2em;}
 	footer p {font-size:.8em; color:#888;}
@@ -181,34 +182,21 @@
 
 
 /*	Viewing Mode------------------ */
-	body.mode 												{background:#222;}
-	body.mode section.item						{width:100%;}
 
-	body.mode .thumbs.photosets	li		{height:145px; padding:0; background:none; box-shadow:none;}
+	body.mode 														{background:#222;}
+	body.mode nav.primary li.current a		{color:#fff; border-color:rgba(255,255,255,.2);}
+	body.mode section.item								{width:100%;}
+	body.mode .thumbs.photosets	li				{height:145px; padding:0; background:none; box-shadow:none;}
 	body.mode .thumbs.photosets li h4, 
-	body.mode .thumbs.photosets li h5 {display:none;}
-	
-	body.mode .set-text 		{background:none;}
-	
+	body.mode .thumbs.photosets li h5 		{display:none;}
+	body.mode .set-text 									{background:none;}
 	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0; border:0; ;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
 	body.mode nav.photo-prev-next li a.button 		{padding-top:2px;background:rgba(0,0,0,.05); }
-	
-	
-	body.mode .photo-title-desc,
-		body.mode .meta						 					{display:none;}
-	
-	body.mode .page-header							{display:none;}
+	body.mode .photo-title-desc, body.mode .page-header, 	body.mode .meta				{display:none;}
 
 
-	body.mode nav.primary li.current a	{color:#fff; border-color:rgba(255,255,255,.2);}
-
-
-
-
-
-	
 
 
 
@@ -238,6 +226,7 @@
 	
 		/* ---------------  Breakpoint 3:  --------------- */
 		@media screen and (min-width: 1000px) {
+			
 			body:after							{content: "3"; display:none;} /* flag for javascript */
 			.item		 								{width:74%;}
 			aside.sidebar 					{width:24%;}
@@ -249,6 +238,7 @@
 
 		/* ---------------  Breakpoint 4  --------------- */
 		@media screen and (min-width: 1300px) {
+		
 			body:after							{content: "4"; display:none;} /* flag for javascript */
 			.item		 								{width:78%;}
 			aside.sidebar 					{width:20%;}
@@ -266,7 +256,6 @@
 
 				}  /* end retina */
 
-		
 		
 		
 			/*	Clean up ------------------ */
