@@ -78,26 +78,26 @@
 	
 /*	General ------------------ */
 
-	.page-header 								{margin-bottom:1em;}
+	.page-header 								{margin-bottom:2em;}
 	.page-header h1 						{font-size:1.5em; line-height:1.5em; font-weight:normal;}
+	.page-header h5							{margin-bottom:1em;}
 	header.primary a, .button		{font-size:10px; font-weight:bold; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
 	.button											{background:rgba(0,0,0,.05);}
 
 
 	/*	Header & Nav ------------------ */
-	
-	header.primary h1, nav.primary ul {border-bottom:2px solid rgba(0,0,0,.1); padding-left:0;}
-	
-	header.primary h1 a							 {padding-left:0;}
-	
+		
 	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
+	header.primary h1 a 							{padding-left:0; padding-right:0; }
 	nav.primary												{margin-bottom:1em; padding-top:.2em; }
 	nav.primary ul 										{list-style:none; display:inline-block; }
-	nav.primary li 										{display:inline-block; }
+	nav.primary li 										{display:inline-block; margin:0;}
 	
-	nav.primary li.current a					{color:#000;}
-	nav h1 a 													{padding-left:0;}
-	nav a.active 											{border-bottom:2px solid rgba(0,0,0,.05); }
+	header.primary nav a							{border-bottom:2px solid rgba(0,0,0,.1); }
+	header.primary nav li.current a		{color:#000; border-color:rgba(0,0,0,.3);}
+	
+	header.primary nav li:first-child a			{padding-left:0;}
+	header.primary nav li:last-child a			{padding-right:0;}
 	nav a:hover, a.button:hover				{color:#555;}
 	p.mode-trigger a:before						{content:"❑ "; }
 	p.mode-trigger a.active:before		{content:"❒ ";}
@@ -147,7 +147,6 @@
 
 	aside.sidebar .title-desc						{margin-bottom:3em;}
 
-
 	
 /*	Sets Page ------------------ */
 
@@ -184,7 +183,9 @@
 /*	Viewing Mode------------------ */
 
 	body.mode 														{background:#222;}
-	body.mode nav.primary li.current a		{color:#fff; border-color:rgba(255,255,255,.2);}
+	body.mode header.primary nav a							{border-color:rgba(255,255,255,.1);}
+	body.mode header.primary nav li.current a		{color:#fff; border-color:rgba(255,255,255,.3);}
+	
 	body.mode section.item								{width:100%;}
 	body.mode .thumbs.photosets	li				{height:145px; padding:0; background:none; box-shadow:none;}
 	body.mode .thumbs.photosets li h4, 
@@ -193,7 +194,7 @@
 	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0; border:0; ;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
-	body.mode nav.photo-prev-next li a.button 		{padding-top:2px;background:rgba(0,0,0,.05); }
+	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(0,0,0,.05); }
 	body.mode .photo-title-desc, body.mode .page-header, 	body.mode .meta				{display:none;}
 
 
