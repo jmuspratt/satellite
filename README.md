@@ -4,6 +4,7 @@ Overview
 ---------
 Satellite is a minimal, responsive template based on [phpFlickr](http://phpflickr.com). Use it to display your Flickr photos and photo sets on your own website, perhaps at `http://yourdomain.com/photos/`. Satellite uses no lightboxes, Flash code or heavy styling. 
 
+View a demo at [http://jamesmuspratt.com/satellite/](http://jamesmuspratt.com/satellite/).
 
 Requirements
 -------------
