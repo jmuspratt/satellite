@@ -69,7 +69,7 @@
 				
 						<?php 
 						if ($sets_and_pools) { ?>
-							<p>
+							<p class="photo-sets">
 								<strong>Sets:</strong>
 								<?php
 								$counter = 1;
@@ -83,7 +83,7 @@
 						
 							
 						<?php if ($this_photo_tags) { ?>
-						<p><strong>Tags:</strong> 
+						<p class="photo-tags"><strong>Tags:</strong> 
 							<?php
 							
 							$counter = 1;
