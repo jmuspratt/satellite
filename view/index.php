@@ -68,7 +68,7 @@
 				
 				
 						<?php 
-						if ($sets_and_pools) { ?>
+						if (isset($sets_and_pools["set"])) { ?>
 							<p class="photo-sets">
 								<strong>Sets:</strong>
 								<?php
