@@ -4,7 +4,7 @@
 	<head>
 		<title>
 			<?php echo $config["gallery_title"]; ?>
-			<?php if ($photoInfo['photo']['title']) {echo " - " . $photoInfo['photo']['title'];} ?>
+			<?php if ($photo_info['photo']['title']) {echo " - " . $photo_info['photo']['title'];} ?>
 			<?php if ($this_page == "sets") 				{echo " - Sets";} ?>
 			<?php if ($set_info["title"]) 					{echo " - " . $set_info["title"];} ?>
 			<?php if ($tag_name) 					{echo " - " . $tag_name;} ?>

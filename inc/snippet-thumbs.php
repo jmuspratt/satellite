@@ -1,13 +1,13 @@
 <?php
 	$id = $photo['id'];
-	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
+	$photo_info = $f->photos_getInfo($id, $secret = NULL);
 
-	$photosize = $f->photos_getSizes($id, $secret = NULL);
+	$photo_size = $f->photos_getSizes($id, $secret = NULL);
 	$is_portrait = false; 
 	if ( $largest_size['width'] < $largest_size['height'] ) {$is_portrait = true;}
 	
 	$is_video = false;
-	if ($photoInfo['photo']['media'] == "video") {$is_video = true;}
+	if ($photo_info['photo']['media'] == "video") {$is_video = true;}
 
 ?>
 		   	 	<li class="<?php if ($is_portrait) {echo "portrait";}?> <?php if ( $is_video ) {echo "video";}?>">

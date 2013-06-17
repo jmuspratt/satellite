@@ -4,7 +4,7 @@
 	if ( $confirmed_sizes[2]['width'] < $confirmed_sizes[2]['height'] ) {$is_portrait = true;}
 	
 	$is_video = false;
-	if ($photoInfo['photo']['media'] == "video") {$is_video = true;}
+	if ($photo_info['photo']['media'] == "video") {$is_video = true;}
 	
 ?>
 
@@ -13,7 +13,7 @@
 		// Ideally we want the HD MP4 format (at index 13 (1280x720)). 
 		// Loop up through all available sizes and set $largest_video_size each time if it's a video and not a swf
 		
-		foreach ($photosize as $available_size) {
+		foreach ($photo_size as $available_size) {
 			if ( ($available_size["media"] == "video") && (strpos($available_size["source"], 'swf')== false) ) {
 				$video_count = 0;
 				// only overwrite $largest_video_size if it's the first time through OR 
@@ -39,8 +39,8 @@
 		// Output Picturefill Image
 	
 	 ?>
-		<a href="?<?php echo $context['prevphoto']['id'];?>">
-				<span data-picture data-alt="<?php echo $photoInfo["photo"]["title"];?>">
+		<a href="?<?php echo $photo_context['prevphoto']['id'];?>">
+				<span data-picture data-alt="<?php echo $photo_info["photo"]["title"];?>">
 				<span data-src="<?php echo $confirmed_sizes[3]["source"]; ?>"></span>
 					
 				<?php
@@ -58,7 +58,7 @@
 				
 			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 				<noscript>
-					<img src="<?php echo $confirmed_sizes[3]["source"]; ?>" alt="<?php echo $photoInfo["photo"]["title"];?>">
+					<img src="<?php echo $confirmed_sizes[3]["source"]; ?>" alt="<?php echo $photo_info["photo"]["title"];?>">
 				</noscript>
 			</span>
 		</a>
@@ -73,7 +73,7 @@
 			// DEBUG
 			
 			// echo "<code class=\"clear\">";
-			// print_r($photosize);
+			// print_r($photo_size);
 			// echo "</code>";
 			 ?>
 			

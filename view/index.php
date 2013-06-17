@@ -13,9 +13,9 @@
 	$f->enableCache("fs", "../cache");
 
 	// Get info and size for this photo
-	$photoInfo = $f->photos_getInfo($id, $secret = NULL);
-	$photosize = $f->photos_getSizes($id, $secret = NULL);
-	$context = $f->photos_getContext($id);
+	$photo_info = $f->photos_getInfo($id, $secret = NULL);
+	$photo_size = $f->photos_getSizes($id, $secret = NULL);
+	$photo_context = $f->photos_getContext($id);
 	
 	$sets_and_pools = $f->photos_getAllContexts($id);
 	
@@ -23,8 +23,8 @@
 
 	// Loop through array of sizes and construct $confirmed_sizes array.
 	// Pick up $largest_size along the way.
-	$last_item = $photosize[0];
-	foreach ($photosize as $item) {
+	$last_item = $photo_size[0];
+	foreach ($photo_size as $item) {
 		if ($item["media"] == "photo") {
 			$confirmed_sizes[] = $item;
 			// update largest size if this one's bigger than the last
@@ -53,8 +53,8 @@
 		<aside class="sidebar">
 						
 			<div class="photo-title-desc">
-				<?php if ($photoInfo["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photoInfo["photo"]["title"];?></h2><?php endif;?>
-				<?php if ($photoInfo["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photoInfo["photo"]["description"]; ?></p><?php endif;?>
+				<?php if ($photo_info["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photo_info["photo"]["title"];?></h2><?php endif;?>
+				<?php if ($photo_info["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photo_info["photo"]["description"]; ?></p><?php endif;?>
 				
 			</div>
 			
@@ -63,8 +63,8 @@
 			
 					<?php date_default_timezone_set('UTC');?>
 				
-					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photoInfo["photo"]["dates"]["taken"])));?><p><?php endif; ?>
-					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photoInfo["photo"]["dates"]["posted"]));?></p><?php endif; ?>
+					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photo_info["photo"]["dates"]["taken"])));?><p><?php endif; ?>
+					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photo_info["photo"]["dates"]["posted"]));?></p><?php endif; ?>
 				
 				
 						<?php 
@@ -97,7 +97,7 @@
 						</p>
 						<?php } ?>
 				
-					<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photoInfo["id"] ?>/">View on Flickr</a></p>
+					<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["id"] ?>/">View on Flickr</a></p>
 				
 			</div>
 			
@@ -106,20 +106,20 @@
 			<nav class="photo-prev-next">
 			<ul>
 			
-				<?php if ($context['nextphoto']['id']){ ?>
+				<?php if ($photo_context['nextphoto']['id']){ ?>
 						<li class="newer">
-							<a class="button" href="?<?php echo $context['nextphoto']['id'];?>" title="<?php echo $context['nextphoto']['title']; ?>">
-								<img src="<?php echo $context['nextphoto']['thumb']; ?>" alt="<?php echo $context['nextphoto']['title']; ?>"/><br />
+							<a class="button" href="?<?php echo $photo_context['nextphoto']['id'];?>" title="<?php echo $photo_context['nextphoto']['title']; ?>">
+								<img src="<?php echo $photo_context['nextphoto']['thumb']; ?>" alt="<?php echo $photo_context['nextphoto']['title']; ?>"/><br />
 								<span>Newer</span> 
 							
 							</a>
 						</li>
 					<?php }  ?>
 					
-			<?php if ($context['prevphoto']['id']){ ?>
+			<?php if ($photo_context['prevphoto']['id']){ ?>
 				<li class="older">
-					<a class="button" href="?<?php echo $context['prevphoto']['id'];?>" title="<?php echo $context['prevphoto']['title']; ?>">
-						<img src="<?php echo $context['prevphoto']['thumb'];?>" alt="<?php echo $context['prevphoto']['title']; ?>" /><br />
+					<a class="button" href="?<?php echo $photo_context['prevphoto']['id'];?>" title="<?php echo $photo_context['prevphoto']['title']; ?>">
+						<img src="<?php echo $photo_context['prevphoto']['thumb'];?>" alt="<?php echo $photo_context['prevphoto']['title']; ?>" /><br />
 						<span>Older</span> 
 					</a>
 				</li>

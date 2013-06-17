@@ -1189,14 +1189,14 @@ if ( !class_exists('phpFlickr') ) {
 			return $this->parsed_response ? true : false;
 		}
 
-		function photos_geo_setContext ($photo_id, $context) {
+		function photos_geo_setContext ($photo_id, $photo_context) {
 			/* http://www.flickr.com/services/api/flickr.photos.geo.setContext.html */
-			return $this->call('flickr.photos.geo.setContext', array('photo_id' => $photo_id, 'context' => $context));
+			return $this->call('flickr.photos.geo.setContext', array('photo_id' => $photo_id, 'context' => $photo_context));
 		}
 
-		function photos_geo_setLocation ($photo_id, $lat, $lon, $accuracy = NULL, $context = NULL, $bookmark_id = NULL) {
+		function photos_geo_setLocation ($photo_id, $lat, $lon, $accuracy = NULL, $photo_context = NULL, $bookmark_id = NULL) {
 			/* http://www.flickr.com/services/api/flickr.photos.geo.setLocation.html */
-			return $this->call('flickr.photos.geo.setLocation', array('photo_id' => $photo_id, 'lat' => $lat, 'lon' => $lon, 'accuracy' => $accuracy, 'context' => $context, 'bookmark_id' => $bookmark_id));
+			return $this->call('flickr.photos.geo.setLocation', array('photo_id' => $photo_id, 'lat' => $lat, 'lon' => $lon, 'accuracy' => $accuracy, 'context' => $photo_context, 'bookmark_id' => $bookmark_id));
 		}
 		
 		function photos_geo_setPerms ($is_public, $is_contact, $is_friend, $is_family, $photo_id) {
