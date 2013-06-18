@@ -88,7 +88,6 @@
 	/*	Header & Nav ------------------ */
 		
 	header.primary h1, nav.primary		{display:inline-block; margin-right:1em; }
-	header.primary h1 a 							{padding-left:0; padding-right:0; }
 	nav.primary												{margin-bottom:1em; padding-top:.2em; }
 	nav.primary ul 										{list-style:none; display:inline-block; }
 	nav.primary li 										{display:inline-block; margin:0;}
@@ -96,9 +95,8 @@
 	header.primary nav a							{border-bottom:2px solid rgba(0,0,0,.1); }
 	header.primary nav li.current a		{color:#000; border-color:rgba(0,0,0,.3);}
 	
-	header.primary nav li:first-child a			{padding-left:0;}
-	header.primary nav li:last-child a			{padding-right:0;}
 	nav a:hover, a.button:hover				{color:#555;}
+	p.mode-trigger a									{padding-left:0; padding-right:0;}
 	p.mode-trigger a:before						{content:"❑ "; }
 	p.mode-trigger a.active:before		{content:"❒ ";}
 	
@@ -134,6 +132,7 @@
 	
 	.item																{margin-bottom:1em;}
 	.photo-title-desc										{margin-bottom:1em; }
+	h2.photo-title											{margin-bottom:.5em;}
 	.meta 															{padding-bottom:.5em;}
 	.meta p 														{font-size:.8em; margin-bottom:.5em; /*line-height:1.2em;*/}
 
@@ -191,7 +190,7 @@
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 		{display:none;}
 	body.mode .set-text 									{background:none;}
-	body.mode nav.photo-prev-next					{position:absolute; top:-35px; right:0; margin:0; padding-top:0; border:0; ;}
+	body.mode nav.photo-prev-next					{position:absolute; top:-35px; left:0; margin:0; padding-top:0; border:0; ;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
 	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(0,0,0,.05); }
@@ -221,6 +220,7 @@
 			
 			.tag-list 		{-moz-column-count:3; -webkit-column-count:3; column-count:3;}
 			
+			body.mode nav.photo-prev-next	{left:auto; right:0;}
 
 			} /* 2 */
 	
