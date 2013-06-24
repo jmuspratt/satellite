@@ -14,7 +14,11 @@
 		<meta name="robots" content="all">
 		<meta name="author" content="<?php echo $config['username'];?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- google webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 
+		<!-- css -->
 		<link href="<?php echo $root_url; ?>/css/screen.css" rel="stylesheet" type="text/css">
 	
 		<!--[if lt IE 9]>
@@ -23,6 +27,9 @@
 			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 			<script src="/js/respond.min.js"></script>
 		<![endif]-->
+			
+			
+			
 			
 			<!-- jQuery  -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

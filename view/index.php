@@ -51,53 +51,49 @@
 
 
 		<aside class="sidebar">
-						
-			<div class="photo-title-desc">
-				<?php if ($photo_info["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photo_info["photo"]["title"];?></h2><?php endif;?>
-				<?php if ($photo_info["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photo_info["photo"]["description"]; ?></p><?php endif;?>
-				
-			</div>
-			
-			
-			<div class="meta">
-			
+			<div class="photo-info">
+				<div class="photo-title-desc">
+					<?php if ($photo_info["photo"]["title"]) : ?><h2 class="photo-title"><?php echo $photo_info["photo"]["title"];?></h2><?php endif;?>
+					<?php if ($photo_info["photo"]["description"]) : ?><p class="photo-desc"><?php echo $photo_info["photo"]["description"]; ?></p><?php endif;?>
+				</div>
+				<div class="meta">
 					<?php date_default_timezone_set('UTC');?>
-				
-					<?php if ($config["show_date_taken"]) : ?><p><strong>Taken:</strong> <?php echo date("F j, Y",(strtotime($photo_info["photo"]["dates"]["taken"])));?><p><?php endif; ?>
-					<?php if ($config["show_date_uploaded"]) : ?><p><strong>Uploaded:</strong> <?php echo date("F j, Y", ($photo_info["photo"]["dates"]["posted"]));?></p><?php endif; ?>
-				
-				
+					<?php if ($config["show_date_taken"]) : ?><p class="photo-taken cf"><strong>Taken</strong> <span><?php echo date("F j, Y",(strtotime($photo_info["photo"]["dates"]["taken"])));?></span></p><?php endif; ?>
+					<?php if ($config["show_date_uploaded"]) : ?><p class="photo-uploaded cf"><strong>Uploaded</strong> <span><?php echo date("F j, Y", ($photo_info["photo"]["dates"]["posted"]));?></span></p><?php endif; ?>
 						<?php 
 						if (isset($sets_and_pools["set"])) { ?>
-							<p class="photo-sets">
-								<strong>Sets:</strong>
+							<p class="photo-sets cf">
+								<strong>Sets</strong>
+								<span>
 								<?php
 								$counter = 1;
 								$total = count($sets_and_pools["set"]);
-								
 								foreach ($sets_and_pools["set"] as $item) { ?>
-								<a href="<?php echo $root_url;?>sets/view/?<?php echo $item["id"];?>"><?php echo $item["title"];?></a><?php if ( $counter !== $total ) {echo ", ";} ?>
+									<a href="<?php echo $root_url;?>sets/view/?<?php echo $item["id"];?>"><?php echo $item["title"];?></a><?php if ( $counter !== $total ) {echo "<br />";} ?>
 								<?php $counter++; } ?>
+								</span>
 							</p>
 							<?php } ?>
 						
 							
 						<?php if ($this_photo_tags) { ?>
-						<p class="photo-tags"><strong>Tags:</strong> 
+						<p class="photo-tags cf"><strong>Tags</strong> 
+							<span>
 							<?php
-							
 							$counter = 1;
 							$total = count($this_photo_tags);
 							foreach ($this_photo_tags as $tag) { 
 									$tag_safe = str_replace(' ','',$tag["raw"]);
 								?>
-								
-							<a href="<?php echo $root_url;?>tags/view/?<?php echo $tag_safe;?>"><?php echo $tag["raw"];?></a><?php if ( $counter !== $total ) {echo ", ";} ?> 
+							<a href="<?php echo $root_url;?>tags/view/?<?php echo $tag_safe;?>"><?php echo $tag["raw"];?></a><?php if ( $counter !== $total ) {echo "<br />";} ?> 
 								<?php $counter++; } ?>
+							</span>
 						</p>
 						<?php } ?>
 				
-					<p><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["id"] ?>/">View on Flickr</a></p>
+					<p class="view-on-flickr"><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["id"] ?>/">View on Flickr</a></p>
+				
+				</div> <!-- photo-info -->
 				
 			</div>
 			
