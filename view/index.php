@@ -91,7 +91,7 @@
 						</p>
 						<?php } ?>
 				
-					<p class="view-on-flickr"><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["id"] ?>/">View on Flickr</a></p>
+					<p class="view-on-flickr"><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["photo"]["id"] ?>/">View on Flickr</a></p>
 				
 				</div> <!-- photo-info -->
 				
