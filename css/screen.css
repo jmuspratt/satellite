@@ -55,9 +55,9 @@
 
 		body 			{font: 12px/20px 'Cutive Mono', courier, monospace; color:rgb(100,100,100);  background:#eee;}
 
-	 	h1, h2, h3, h4	{font-weight:normal; clear:both; margin:0 ;}
+	 	h1, h2, h3, h4, h5	{font-weight:normal; clear:both; margin:0 ;}
 		h1							{font-size:13px; }
-	 	h2 							{font-size:13px; color:#999;}
+	 	h2 							{font-size:13px; color:#646464;}
 	 	h3							{font-style:italic; margin-bottom:0;}
 		h4							{font-size:13px; line-height:15px; }
 		h5							{font-size:12px; line-height:15px;}
@@ -235,6 +235,7 @@
 			aside.sidebar 					{width:24%;}
 			.tag-list 							{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
 	
+			.page-header						{width:50%;}
 			
 			} /* 3 */
 
@@ -246,6 +247,7 @@
 			.item		 								{width:78%;}
 			aside.sidebar 					{width:20%;}
 			.tag-list 							{-moz-column-count:5; -webkit-column-count:5; column-count:5;}
+			.page-header						{width:30%;}
 
 		
 			} /* 4 */	
