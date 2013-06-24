@@ -31,7 +31,7 @@
 		
 		<header class="page-header">
 			<h1>Tag: <?php echo $tag_name;?></h1>
-			<h5><?php echo $photos_with_this_tag["total"];?> Items</h5>
+			<h5><?php echo $photos_with_this_tag["total"];?> items</h5>
 		</header>
 		
 		<ul class="thumbs cf">
