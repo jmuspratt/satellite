@@ -235,7 +235,7 @@
 			aside.sidebar 					{width:24%;}
 			.tag-list 							{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
 	
-			.page-header						{width:50%;}
+/*			.page-header						{width:50%;}*/
 			
 			} /* 3 */
 
@@ -247,7 +247,7 @@
 			.item		 								{width:78%;}
 			aside.sidebar 					{width:20%;}
 			.tag-list 							{-moz-column-count:5; -webkit-column-count:5; column-count:5;}
-			.page-header						{width:30%;}
+/*			.page-header						{width:30%;}*/
 
 		
 			} /* 4 */	
