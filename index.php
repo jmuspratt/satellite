@@ -33,7 +33,7 @@
 		<header class="page-header">
 		<h1>Recent Photos</h1>
 		<nav class="paging cf">
-			<p><strong>Page <?php echo $page;?> of <?php echo $pages; ?></strong></p>
+			<p>Page <?php echo $page;?> of <?php echo $pages; ?></p>
 			<ul>
 				<?php
 				$prev = $page - 1; 
