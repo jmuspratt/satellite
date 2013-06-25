@@ -36,9 +36,9 @@
 		?>
 		
 		<header class="page-header">
-		<h1><?php echo $set_info["title"];?></h1>
-		<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> videos<?php endif; ?></h5>
-		<?php if ($set_info["description"]) {?>		<p><?php echo $set_info["description"];?></p><?php } ?>
+			<h1><?php echo $set_info["title"];?></h1>
+			<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> videos<?php endif; ?></h5>
+			<?php if ($set_info["description"]) {?>		<p class="set-desc"><?php echo $set_info["description"];?></p><?php } ?>
 		</header>
 		
 		<ul class="thumbs cf">

@@ -20,7 +20,7 @@
 
 <?php require_once("../inc/doc-head.php"); ?>
 
-<body class="sets">
+<body class="tags">
 	
 	<?php require_once("../inc/header.php"); ?>
 	
