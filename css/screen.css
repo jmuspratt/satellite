@@ -192,10 +192,12 @@
 /*	Viewing Mode------------------ */
 
 	body.mode 																	{background:#222;}
-	body.mode header.primary h1.current a,	
-	body.mode header.primary nav a							{border-color:rgba(255,255,255,.1);}
 	body.mode header.primary h1.current a,
 	 body.mode header.primary nav li.current a	{color:#fff; border-color:rgba(255,255,255,.1);}
+	 
+ 	body.mode header.primary h1.current a:hover,	
+ 	body.mode header.primary nav a:hover							{color:#eaeaea;}
+	 
 	
 	body.mode section.item								{width:100%;}
 	body.mode .photo-info									{display:none;}
@@ -206,7 +208,8 @@
 	body.mode nav.photo-prev-next					{position:absolute; top:-28px; left:0; margin:0; padding-top:0; border:0;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
-	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(0,0,0,.05); }
+	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(255,255,255,.03); }
+	body.mode nav.photo-prev-next li a.button:hover	{background:rgba(255,255,255,.05); color:#fff;}
 	body.mode .photo-title-desc, body.mode .page-header, 	body.mode .meta				{display:none;}
 
 
