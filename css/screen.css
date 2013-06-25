@@ -137,7 +137,7 @@
 	
 	.item																{margin-bottom:10px;}
 	.photo-title-desc										{margin-bottom:10px; }
-	h2.photo-title											{font-size:20px; margin-bottom:10px;}
+	h2.photo-title											{font-size:20px; line-height:20px; margin-bottom:10px;}
 	p.photo-desc												{margin-bottom:10px;}
 	.meta 															{padding-bottom:5px; border-top:1px dotted #ebebeb;}
 	.meta section												{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
