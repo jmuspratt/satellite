@@ -58,9 +58,9 @@
 	 	h1, h2, h3, h4, h5	{font-weight:normal; clear:both; margin:0 ;}
 		h1							{font-size:13px; }
 	 	h2 							{font-size:13px; color:#646464;}
-	 	h3							{font-style:italic; margin-bottom:0;}
+	 	h3							{margin-bottom:0;}
 		h4							{font-size:13px; line-height:15px; }
-		h5							{font-size:12px; line-height:15px;}
+		h5							{font-size:12px; line-height:15px; margin-bottom:10px;}
 
 
 		a				{color:#2d9af6;}
@@ -87,15 +87,23 @@
 	/*	Header & Nav ------------------ */
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:20px; font-size:12px; }
-/*	nav.primary												{margin-bottom:10px;}*/
+	
+	nav.primary								{float:left; width:65%;}
+	
+	
 	nav.primary ul 										{list-style:none; display:inline-block; }
-	nav.primary li 										{display:inline-block; margin:0 10px 0 0;}
+	nav.primary li 										{display:inline-block; margin:0 20px 0 0;}
+	header a													{color:#888;}
 	
-	header.primary h1.current a, header.primary nav li.current a		{color:#000; padding-bottom:2px; border-bottom:2px solid rgba(0,0,0,.1);}
+	header.primary h1.current a, 
+	header.primary nav li.current a		{color:#000; padding-bottom:2px; border-bottom:2px solid rgba(0,0,0,.1);}
 	
-	nav a:hover, a.button:hover				{color:#555;}
-	p.mode-trigger a									{padding-left:0; padding-right:0;}
-	p.mode-trigger a:before						{content:"❑ ";  width: 20px; height:15px;}
+	nav a:hover, a.button:hover				{color:#333;}
+	
+	p.mode-trigger 										{float:right; width:28%; text-align:right;}
+	p.mode-trigger a									{padding-left:0; padding-right:0; color:#888;}
+	p.mode-trigger a:hover						{color:#555;}
+	p.mode-trigger a:before						{content:"❑ "; width: 20px; height:15px;}
 	p.mode-trigger a.active:before		{content:"❒ ";}
 	
 	
@@ -132,9 +140,9 @@
 	h2.photo-title											{font-size:20px; margin-bottom:10px;}
 	p.photo-desc												{margin-bottom:10px;}
 	.meta 															{padding-bottom:5px; border-top:1px dotted #ebebeb;}
-	.meta p 														{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
-	.meta p strong 											{color:#b4b4b4; width:20%; float:left;}
-	.meta p span												{float:right; width:70%;}
+	.meta section												{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
+	.meta h3		 												{font-size:12px; float:left; width:20%; color:#b4b4b4; }
+	.meta section ul, .meta section p		{float:right; width:70%; list-style:none;}
 	
 	nav.photo-prev-next									{margin:20px 0;}
 	nav.photo-prev-next ul							{list-style:none;}
@@ -184,8 +192,10 @@
 /*	Viewing Mode------------------ */
 
 	body.mode 																	{background:#222;}
+	body.mode header.primary h1.current a,	
 	body.mode header.primary nav a							{border-color:rgba(255,255,255,.1);}
-	body.mode header.primary nav li.current a		{color:#fff; border-color:rgba(255,255,255,.3);}
+	body.mode header.primary h1.current a,
+	 body.mode header.primary nav li.current a	{color:#fff; border-color:rgba(255,255,255,.1);}
 	
 	body.mode section.item								{width:100%;}
 	body.mode .photo-info									{display:none;}
@@ -193,7 +203,7 @@
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 		{display:none;}
 	body.mode .set-text 									{background:none;}
-	body.mode nav.photo-prev-next					{position:absolute; top:-33px; left:0; margin:0; padding-top:0; border:0; ;}
+	body.mode nav.photo-prev-next					{position:absolute; top:-28px; left:0; margin:0; padding-top:0; border:0;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
 	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(0,0,0,.05); }
@@ -207,9 +217,6 @@
 			@media screen and (min-width: 750px) {
 			body:after {content: "2"; display:none;} /* flag for javascript */
 			body {padding:0 5%;}
-			
-			nav.primary								{float:left; width:70%;}
-			p.mode-trigger 						{float:right; width:28%; text-align:right;}
 			                    			
 			.item		 									{float:left; width:68%;}
 			aside.sidebar 						{float:right; width:28%;}
@@ -223,7 +230,7 @@
 			
 			.tag-list 		{-moz-column-count:3; -webkit-column-count:3; column-count:3;}
 			
-			body.mode nav.photo-prev-next	{left:auto; right:0;}
+			body.mode nav.photo-prev-next	{left:auto; top:-38px; right:30px;}
 
 			} /* 2 */
 	
@@ -235,8 +242,7 @@
 			.item		 								{width:74%;}
 			aside.sidebar 					{width:24%;}
 			.tag-list 							{-moz-column-count:4; -webkit-column-count:4; column-count:4;}
-	
-/*			.page-header						{width:50%;}*/
+			.set-desc							{width:50%;}
 			
 			} /* 3 */
 
@@ -248,7 +254,7 @@
 			.item		 								{width:78%;}
 			aside.sidebar 					{width:20%;}
 			.tag-list 							{-moz-column-count:5; -webkit-column-count:5; column-count:5;}
-/*			.page-header						{width:30%;}*/
+			.set-desc						{width:30%;}
 
 		
 			} /* 4 */	
