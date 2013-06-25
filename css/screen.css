@@ -85,10 +85,11 @@
 
 
 	/*	Header & Nav ------------------ */
+	header.primary										{margin-bottom:35px;}
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:20px; font-size:12px; }
 	
-	nav.primary								{float:left; width:65%;}
+	nav.primary												{float:left; width:80%;}
 	
 	
 	nav.primary ul 										{list-style:none; display:inline-block; }
@@ -100,10 +101,10 @@
 	
 	nav a:hover, a.button:hover				{color:#333;}
 	
-	p.mode-trigger 										{float:right; width:28%; text-align:right;}
-	p.mode-trigger a									{padding-left:0; padding-right:0; color:#888;}
+	p.mode-trigger 										{float:right; width:10%; text-align:right; width:15px; height:15px;}
+	p.mode-trigger a									{padding-left:0; padding-right:0; color:#888; display:block;}
 	p.mode-trigger a:hover						{color:#555;}
-	p.mode-trigger a:before						{content:"❑ "; width: 20px; height:15px;}
+	p.mode-trigger a:before						{content:"❑ ";}
 	p.mode-trigger a.active:before		{content:"❒ ";}
 	
 	
@@ -121,15 +122,15 @@
 	.thumbs 										{list-style:none;}
 	.thumbs li 									{float:left; display:block; overflow:hidden; position:relative;}
 	.thumbs li 									{width:48%;  margin-right:4%; margin-bottom:10px;}
-	.thumbs li:nth-child(2n-1)		{clear:both;}
+	.thumbs li:nth-child(2n-1)	{clear:both;}
 	.thumbs li:nth-child(2n) 		{margin-right:0;}
 	
 	.thumbs li img					{max-height:135px;}
 	.thumbs li.video:after			{content: "video"; position:absolute; display:inline-block; padding:1px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font-size:10px; text-transform:uppercase;}
 	
 	.paging 					{margin:0; }
-	.paging p					{float:left; width:45%;}
-	.paging ul 				{list-style:none; float:right; width:45%; text-align:right;}
+	.paging p					{float:left; width:35%;}
+	.paging ul 				{list-style:none; float:right; width:55%; text-align:right;}
 	.paging li 				{display:inline-block;}
 
 
@@ -205,7 +206,7 @@
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 		{display:none;}
 	body.mode .set-text 									{background:none;}
-	body.mode nav.photo-prev-next					{position:absolute; top:-28px; left:0; margin:0; padding-top:0; border:0;}
+	body.mode nav.photo-prev-next					{position:absolute; top:-30px; left:0; margin:0; padding-top:0; border:0;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
 	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(255,255,255,.03); }
@@ -233,7 +234,7 @@
 			
 			.tag-list 		{-moz-column-count:3; -webkit-column-count:3; column-count:3;}
 			
-			body.mode nav.photo-prev-next	{left:auto; top:-38px; right:30px;}
+			body.mode nav.photo-prev-next	{left:auto; top:-53px; right:30px;}
 
 			} /* 2 */
 	
