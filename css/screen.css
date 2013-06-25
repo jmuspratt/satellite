@@ -94,7 +94,7 @@
 	
 	nav.primary ul 										{list-style:none; display:inline-block; }
 	nav.primary li 										{display:inline-block; margin:0 20px 0 0;}
-	header a													{color:#888;}
+	header.primary a													{color:#888;}
 	
 	header.primary h1.current a, 
 	header.primary nav li.current a		{color:#000; padding-bottom:2px; border-bottom:2px solid rgba(0,0,0,.1);}
