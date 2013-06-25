@@ -53,7 +53,7 @@
 
 	/*	Type ------------------ */
 
-		body 			{font: 12px/20px 'Cutive Mono', courier, monospace; color:rgb(100,100,100);  background:#eee;}
+		body 			{font: 12px/15px 'Cutive Mono', courier, monospace; color:rgb(100,100,100);  background:#eee;}
 
 	 	h1, h2, h3, h4, h5	{font-weight:normal; clear:both; margin:0 ;}
 		h1							{font-size:13px; }
@@ -80,7 +80,7 @@
 
 	.page-header 								{margin-bottom:20px;}
 	.page-header h1 						{font-size:18px; line-height:24px; font-weight:normal;}
-	header.primary a, .button		{font-size:12px; display:inline-block; color:#979797; padding:2px 8px;  position:relative;}
+	header.primary a, .button		{font-size:12px; display:inline-block; color:#979797; padding:4px 8px;  position:relative;}
 	.button											{background:rgba(0,0,0,.03);}
 
 
@@ -96,7 +96,7 @@
 	
 	nav a:hover, a.button:hover				{color:#555;}
 	p.mode-trigger a									{padding-left:0; padding-right:0;}
-	p.mode-trigger a:before						{content:"❑ "; }
+	p.mode-trigger a:before						{content:"❑ ";  width: 20px; height:15px;}
 	p.mode-trigger a.active:before		{content:"❒ ";}
 	
 	
@@ -104,9 +104,9 @@
 
 /*	Home Page ------------------ */
 
-	li.newer span:before	{content: "⤌ ";}
 	li.older 							{text-align:right;}
-	li.older span:after		{content: " ⤍";}
+	li.newer span:before	{content: "← "; position:relative; top:1px;}
+	li.older span:after		{content: " →"; position:relative; top:1px;}
 	
 	
 /*	Home ------------------ */
@@ -118,7 +118,7 @@
 	.thumbs li:nth-child(2n) 		{margin-right:0;}
 	
 	.thumbs li img					{max-height:135px;}
-	.thumbs li.video:after			{content: "video"; position:absolute; display:inline-block; padding:3px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font:.7em/1em arial, sans-serif;; text-transform:uppercase;}
+	.thumbs li.video:after			{content: "video"; position:absolute; display:inline-block; padding:1px 5px; top:0; left:0; background:rgba(0,0,0,.5); color:#fff; font-size:10px; text-transform:uppercase;}
 	
 	.paging 					{margin:0; }
 	.paging p					{float:left; width:45%;}
@@ -130,31 +130,32 @@
 	
 	.item																{margin-bottom:10px;}
 	.photo-title-desc										{margin-bottom:10px; }
-	h2.photo-title											{font-size:20px; margin-bottom:5px;}
+	h2.photo-title											{font-size:20px; margin-bottom:10px;}
+	p.photo-desc												{margin-bottom:10px;}
 	.meta 															{padding-bottom:5px; border-top:1px dotted #ebebeb;}
 	.meta p 														{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
 	.meta p strong 											{color:#b4b4b4; width:20%; float:left;}
 	.meta p span												{float:right; width:70%;}
 	
-	nav.photo-prev-next									{margin:1.0em 0; padding:2em 0;  }
+	nav.photo-prev-next									{margin:20px 0;}
 	nav.photo-prev-next ul							{list-style:none;}
 	nav.photo-prev-next li							{display:inline-block;}
-	nav.photo-prev-next li img 					{display:inline-block;  padding:8px 0 0 0;}
+	nav.photo-prev-next li img 					{display:inline-block;  padding:5px 0 0 0;}
 	nav.photo-prev-next li.prev 				{text-align:right;}
-	nav.photo-prev-next li:first-child	{margin-right:20px;}
+	nav.photo-prev-next li:first-child	{margin-right:10px;}
 	nav.photo-prev-next li a.button			{display:block;}
 
-	aside.sidebar .title-desc						{margin-bottom:3em;}
-	.photo-info 												{padding:20px 5% 10px 5%; background:#fff; box-shadow: 0 0 2px rgba(0,0,0,.1);}
+	.title-desc													{margin-bottom:30px;}
+	.photo-info 												{padding:20px 3% 0px 3%; background:#fff; box-shadow: 0 0 2px rgba(0,0,0,.1);}
 	
-	p.view-on-flickr										{margin:2em 0 1em 0; border:0;}
+	p.view-on-flickr										{margin:15px 0 10px 0; border:0;}
 	
 /*	Sets Page ------------------ */
 
 	.thumbs.photosets li								{box-shadow: 0 0 2px rgba(0,0,0,.1); margin-bottom:20px; background:#fff;}
 	.thumbs.photosets li img						{display:block;}
 	.thumbs.photosets li a							{display:block;}
-	.set-text 													{margin:0; line-height:1.4em; padding:.5em 5% .5em 5%; }
+	.set-text 													{margin:0;  padding:10px 5%; }
 	.thumbs.photosets li h4							{margin-bottom:3px;}
 	.thumbs.photosets li h5							{color:#979797;font-weight:normal;}
 	.thumbs.photosets li a:hover				{color:#aaa;}
@@ -213,6 +214,7 @@
 			                    			
 			.item		 									{float:left; width:68%;}
 			aside.sidebar 						{float:right; width:28%;}
+			.photo-info								{padding-left:7%; padding-right:7%;}
 			
 			.thumbs li 								{width:200px; height:140px; overflow:hidden; margin-right:10px; margin-bottom:10px;}
 			.thumbs li:nth-child(2n-1)	{clear:none;}

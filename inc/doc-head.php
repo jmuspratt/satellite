@@ -1,6 +1,6 @@
+<!doctype html>
 <?php include ("functions.php"); ?>
 <?php include ("config-process.php"); ?>
-<!doctype html>
 	<head>
 		<title>
 			<?php echo $config["gallery_title"]; ?>

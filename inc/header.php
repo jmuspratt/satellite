@@ -7,6 +7,6 @@
 			</ul>
 		</nav>
 	
-		<p class="mode-trigger"><a title="[ V key ]" href="#" class="">Toggle Viewing Mode</a></p>
+		<p class="mode-trigger"><a title="Toggle Viewing Mode (v)" href="#" class=""></a></p>
 	
 	</header>
