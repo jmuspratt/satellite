@@ -89,7 +89,7 @@
 	
 	header.primary h1, nav.primary		{display:inline-block; margin-right:20px; font-size:12px; }
 	
-	nav.primary												{float:left; width:80%;}
+	nav.primary												{float:left; width:87%;}
 	
 	
 	nav.primary ul 										{list-style:none; display:inline-block; }
@@ -142,8 +142,8 @@
 	p.photo-desc												{margin-bottom:10px;}
 	.meta 															{padding-bottom:5px; border-top:1px dotted #ebebeb;}
 	.meta section												{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
-	.meta h3		 												{font-size:12px; float:left; width:20%; color:#b4b4b4; }
-	.meta section ul, .meta section p		{float:right; width:70%; list-style:none;}
+	.meta h3		 												{font-size:12px; float:left; width:35%; color:#b4b4b4; }
+	.meta section ul, .meta section p		{float:right; width:65%; list-style:none;}
 	
 	nav.photo-prev-next									{margin:20px 0;}
 	nav.photo-prev-next ul							{list-style:none;}
