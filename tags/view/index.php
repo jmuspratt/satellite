@@ -17,12 +17,17 @@
 		"user_id" => $nsid
 		));
 
+		$plural = false;
+		if ($photos_with_this_tag["total"] > 1) {
+			$plural = true;
+		}
+
 	?>
 
 <?php require_once("../../inc/doc-head.php"); ?>
 
 
-<body class="set-view">
+<body class="tag-view">
 	
 	<?php require_once("../../inc/header.php"); ?>
 	
@@ -31,7 +36,7 @@
 		
 		<header class="page-header">
 			<h1>Tag: <?php echo $tag_name;?></h1>
-			<h5><?php echo $photos_with_this_tag["total"];?> items</h5>
+			<h5><?php echo $photos_with_this_tag["total"];?> item<?php if ($plural) : ?>s<?php endif; ?></h5>
 		</header>
 		
 		<ul class="thumbs cf">
