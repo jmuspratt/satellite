@@ -144,6 +144,7 @@
 	.meta section												{font-size:12px; padding:5px 0; border-bottom:1px dotted #eee;}
 	.meta h3		 												{font-size:12px; float:left; width:35%; color:#b4b4b4; }
 	.meta section ul, .meta section p		{float:right; width:65%; list-style:none;}
+	.meta section li 										{margin-bottom:5px;}
 	
 	nav.photo-prev-next									{margin:20px 0;}
 	nav.photo-prev-next ul							{list-style:none;}
