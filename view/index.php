@@ -19,7 +19,12 @@
 	
 	$sets_and_pools = $f->photos_getAllContexts($id);
 	
-	$this_photo_tags = $f->tags_getListPhoto($id);
+	$this_photo_all_tags = $f->tags_getListPhoto($id);
+	
+	// exclude machine tags
+	foreach ($this_photo_all_tags as $tag) {
+		if ($tag[machine_tag] !== 1) { $this_photo_tags[] = $tag;}
+	}
 
 	// Loop through array of sizes and construct $confirmed_sizes array.
 	// Pick up $largest_size along the way.
@@ -48,7 +53,6 @@
 		<section class="item">
 			<?php require_once("../inc/snippet-item.php"); ?>
 		</section>
-
 
 		<aside class="sidebar">
 			<div class="photo-info">
