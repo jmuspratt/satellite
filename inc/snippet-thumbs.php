@@ -4,7 +4,7 @@
 
 	$photo_size = $f->photos_getSizes($id, $secret = NULL);
 	$is_portrait = false; 
-	if ( $largest_size['width'] < $largest_size['height'] ) {$is_portrait = true;}
+	if ( isset($largest_size) && ($largest_size['width'] < $largest_size['height']) ) {$is_portrait = true;}
 	
 	$is_video = false;
 	if ($photo_info['photo']['media'] == "video") {$is_video = true;}
