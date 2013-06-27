@@ -1,5 +1,8 @@
 	<header class="primary cf">
-	
+	<?php 
+	// debug
+	// error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+	?>	
 		<nav class="primary">
 			<h1<?php if ($this_page == "home") { ?> class="current" <?php } ?>><a href="<?php echo $root_url;?>"><?php echo $config["gallery_title"]; ?></a></h1>
 			<ul>
