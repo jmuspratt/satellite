@@ -15,6 +15,8 @@ Requirements
 
 Design Features
 --------
+- All type is set in (Cutive Mono)[http://www.google.com/fonts/specimen/Cutive+Mono] via Google webfonts.
+- Customizable background and link colors.
 - Home page shows thumbnails of recent photos (number configurable) in reverse-chronological order.
 - Sets page show "cover" thumbnail of each photo set.
 - Thumbnails of videos are clearly labelled with "Video".
@@ -30,7 +32,7 @@ Limitations
 -----------
 - Video: No ogv files or Flash fallback. Sorry, Firefox.
 - No Previous/Next links within a set or tag.
-
+- Current machine tags are excluded from tag listings on the individual photo pages, but not from the full Tags list page.
 
 Configuration
 -------------
