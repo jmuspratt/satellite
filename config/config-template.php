@@ -23,7 +23,7 @@ $config = array(
 	// -------------------- Optional Customizations --------------------
 
 	// Custom background and link colors.
-	// Ue any valid CSS color expression
+	// Ue any valid CSS color expression.
 	// Example 1: "#eaeaea"
 	// Example 2: "rgba(0,0,0,.05)"
 	
