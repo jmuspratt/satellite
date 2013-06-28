@@ -32,6 +32,15 @@
 			
 			
 			
+			<?php if ($config["background"] || $config["links"]) : ?>
+				<!-- user's custom colors -->
+				<style>
+				<?php if ($config["background"]) : ?>	body 	{background: <?php echo $config["background"];?>;} <?php endif; ?>
+				<?php if ($config["links"]) : ?>				a			{color:	<?php echo $config["links"];?>;}<?php endif; ?>
+				</style>
+			<?php endif; ?>
+			
+			
 			<!-- jQuery  -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 			<script>window.jQuery || document.write("<script src='<?php echo $root_url; ?>/js/jquery-1.10.1.min.js'>\x3C/script>")</script>

@@ -20,6 +20,16 @@ $config = array(
 	"root_url" => "",
 	
 
+	// -------------------- Optional Customizations --------------------
+
+	// Custom background and link colors.
+	// Ue any valid CSS color expression
+	// Example 1: "#eaeaea"
+	// Example 2: "rgba(0,0,0,.05)"
+	
+	"background" => "",
+	"links" => "",
+
 	// -------------------- Thumbnail Pages --------------------
 	
 	// On thumbnail views, how many photos per page? No quotation marks around numbers.
