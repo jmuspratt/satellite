@@ -51,7 +51,7 @@
 						<img src="<?php echo $set_cover_url;?>" alt="<?php echo $set["title"]; ?>" />
 						<div class="set-text">
 							<h4><?php echo $set["title"]; ?></h4>
-							<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photos<?php endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> videos<?php endif; ?></h5>
+							<h5><?php if ($photo_count > 0 ) : ?><?php echo $photo_count ?> photo<?php if ($photo_count > 1 ) : ?>s<?php endif; endif; ?><?php if ($show_comma) {echo ", ";}?><?php if ($vid_count > 0 ) : ?><?php echo $vid_count; ?> video<?php if ($vid_count > 1 ):?>s<?php endif; endif; ?></h5>
 						</div>
 					</a>
 				</li>
