@@ -10,6 +10,8 @@ $(document).ready(function(){
 		mode_on();
 	}
 		
+	// Pjax ------------------
+		$(document).pjax('a.pjax', '#pjax-content');
 	
 
 	// Wide screen trigger ------------------
@@ -29,6 +31,8 @@ $(document).ready(function(){
 		$("video").css("height", "auto");
 		}
 	
+
+
 	
 }); // document.ready
 

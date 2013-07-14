@@ -1,5 +1,7 @@
 <?php 
 
+	$pjax_active = $_SERVER["HTTP_X_PJAX"];
+
 	// get photo id from the url
 	$id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
 	
@@ -42,15 +44,27 @@
 	
 ?>
 
+
+
+<?php if (!($pjax_active)) : ?>
+
+
 <?php require_once("../inc/doc-head.php"); ?>
+
 
 <body class="view">
 
 	<?php require_once("../inc/header.php"); ?>
 	
 	<section class="main cf" role="main">
+
+<?php endif; ?>
 		
-		<section class="item">
+		
+		
+	<div id="pjax-content">
+		
+		<section class="item ">
 			<?php require_once("../inc/snippet-item.php"); ?>
 		</section>
 
@@ -118,7 +132,7 @@
 			
 				<?php if ($photo_context['nextphoto']['id']){ ?>
 						<li class="newer">
-							<a class="button" href="?<?php echo $photo_context['nextphoto']['id'];?>" title="<?php echo $photo_context['nextphoto']['title']; ?>">
+							<a class="pjax button" href="?<?php echo $photo_context['nextphoto']['id'];?>" title="<?php echo $photo_context['nextphoto']['title']; ?>">
 								<img src="<?php echo $photo_context['nextphoto']['thumb']; ?>" alt="<?php echo $photo_context['nextphoto']['title']; ?>"/><br />
 								<span>Newer</span> 
 							
@@ -128,7 +142,7 @@
 					
 			<?php if ($photo_context['prevphoto']['id']){ ?>
 				<li class="older">
-					<a class="button" href="?<?php echo $photo_context['prevphoto']['id'];?>" title="<?php echo $photo_context['prevphoto']['title']; ?>">
+					<a class="pjax button" href="?<?php echo $photo_context['prevphoto']['id'];?>" title="<?php echo $photo_context['prevphoto']['title']; ?>">
 						<img src="<?php echo $photo_context['prevphoto']['thumb'];?>" alt="<?php echo $photo_context['prevphoto']['title']; ?>" /><br />
 						<span>Older</span> 
 					</a>
@@ -145,11 +159,14 @@
 </section> <!-- main  -->
 
 
-<?php require_once ("../inc/footer.php"); ?>
 
+</div> <!-- pjax-content -->
 
+<?php if (!($pjax_active)) : ?>
 
+	<?php require_once ("../inc/footer.php"); ?>
 
 </body>
 </html>
 
+<?php endif; ?>
