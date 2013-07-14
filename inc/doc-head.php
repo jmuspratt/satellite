@@ -1,11 +1,11 @@
 <?php if (!($pjax_active)) : ?>
+	<!doctype html>
+<?php endif; ?>		
 
-<!doctype html>
-<?php include ("functions.php"); ?>
-<?php include ("config-process.php"); ?>
+	<?php include ("functions.php"); ?>
+	<?php include ("config-process.php"); ?>
 	<head>
 		
-<?php endif; ?>		
 		<title>
 			<?php echo $config["gallery_title"]; ?>
 			<?php if ($photo_info['photo']['title']) 	{echo " - " . $photo_info['photo']['title'];} ?>
@@ -13,6 +13,7 @@
 			<?php if ($this_page == "tags") 					{echo " - Tags";} ?>
 			<?php if ($set_info["title"]) 						{echo " - " . $set_info["title"];} ?>
 			<?php if ($tag_name) 											{echo " - " . $tag_name;} ?>
+				
 		</title>
 
 <?php if (!($pjax_active)) : ?>

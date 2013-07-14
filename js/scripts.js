@@ -17,17 +17,17 @@
 	
 	$(document).pjax('a.pjax', '#pjax-content');
 	
-	$(document).on('pjax:start', function() {
-		$('#pjax-content').fadeOut(600);
-	});
+	// $(document).on('pjax:start', function() {
+	// 	$('#pjax-content').fadeOut(300);
+	// });
 
 	$(document).on('pjax:end', function() {
 		picturefill();
 	});
 
-	$(document).on('pjax:success', function() {
-		$('#pjax-content').fadeIn(600);
-	});
+	// $(document).on('pjax:success', function() {
+	// 	$('#pjax-content').fadeIn(600);
+	// });
 
 
 
@@ -62,16 +62,18 @@ $(document).keydown(function(e){
 		var older_url =  $("li.older a").attr("href");
 		var	single_view = $("body").hasClass("view");
 		
+
 		// Newer: Left Arrow key is 37
 		if ( (e.keyCode == 37) && (typeof newer_url != 'undefined') ) { 
-			// alert("right");
-			window.location.href = newer_url;
+			// window.location.href = newer_url;
+		  $.pjax({url: newer_url, container: '#pjax-content'});
 			e.preventDefault();
 		}
 
 		// Older: Right arrow key is 39
 		if ( (e.keyCode == 39) && (typeof older_url != 'undefined') ) {  
-			window.location.href = older_url;
+			// window.location.href = older_url;
+		  $.pjax({url: older_url, container: '#pjax-content'});
 			e.preventDefault();
 		}
 
