@@ -2,9 +2,19 @@
 
 	$pjax_active = $_SERVER["HTTP_X_PJAX"];
 
-	// get photo id from the url
-	$id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
+	// get photo id from the url	
+	// $id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
 	
+
+	$url_stuff = $_SERVER['QUERY_STRING'];
+
+	if (strpos($url_stuff, "&")) {
+		$url_stuff_array = explode ("&", $url_stuff);
+		$id = $url_stuff_array[0];
+	}
+	else {
+		$id = $url_stuff;
+	}
 	
 	require_once('../lib/phpFlickr.php');
 	require_once('../config/config.php');
@@ -17,6 +27,8 @@
 	// Get info and size for this photo
 	$photo_info = $f->photos_getInfo($id, $secret = NULL);
 	$photo_size = $f->photos_getSizes($id, $secret = NULL);
+	
+	
 	$photo_context = $f->photos_getContext($id);
 	
 	$sets_and_pools = $f->photos_getAllContexts($id);
@@ -60,11 +72,17 @@
 
 <?php endif; ?>
 		
-		
+<?php if (($pjax_active)) : ?>
+	pjax active. id is  <?php echo $id; ?>
+	
+	
+<?php endif; ?>
+	
 		
 	<div id="pjax-content">
+
 		
-		<section class="item ">
+		<section class="item">
 			<?php require_once("../inc/snippet-item.php"); ?>
 		</section>
 

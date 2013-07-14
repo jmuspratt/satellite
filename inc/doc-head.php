@@ -43,7 +43,7 @@
 			
 			<!-- jQuery  -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-			<script>window.jQuery || document.write("<script src='<?php echo $root_url; ?>/js/jquery-1.10.1.min.js'>\x3C/script>")</script>
+			<script>window.jQuery || document.write("<script src='<?php echo $root_url; ?>js/jquery-1.10.1.min.js'>\x3C/script>")</script>
 			<!-- scripts -->
 			<script src="<?php echo $root_url; ?>/js/jquery.cookie.js"></script>
 			<script src="<?php echo $root_url; ?>/js/jquery.pjax.js"></script>

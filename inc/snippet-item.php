@@ -39,7 +39,7 @@
 		// Output Picturefill Image
 	
 	 ?>
-		<a href="?<?php echo $photo_context['prevphoto']['id'];?>">
+		<a class="pjax" href="?<?php echo $photo_context['prevphoto']['id'];?>">
 				<span data-picture data-alt="<?php echo $photo_info["photo"]["title"];?>">
 				<span data-src="<?php echo $confirmed_sizes[3]["source"]; ?>"></span>
 					
@@ -62,6 +62,7 @@
 				</noscript>
 			</span>
 		</a>
+		
 		
 		
 		

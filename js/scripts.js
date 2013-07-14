@@ -10,8 +10,20 @@ $(document).ready(function(){
 		mode_on();
 	}
 		
+
 	// Pjax ------------------
-		$(document).pjax('a.pjax', '#pjax-content');
+	$(document).pjax('a.pjax', '#pjax-content');
+	
+	$(document).on('pjax:start', function() {
+	  $(this).addClass('loading')
+	})
+
+	$(document).on('pjax:end', function() {
+	  $(this).removeClass('loading');
+		picturefill();
+	})
+
+
 	
 
 	// Wide screen trigger ------------------
