@@ -14,14 +14,20 @@
 
 	// Pjax ------------------
 	$.pjax.defaults.timeout = false;
+	
 	$(document).pjax('a.pjax', '#pjax-content');
 	
 	$(document).on('pjax:start', function() {
-	})
+		$('#pjax-content').fadeOut(600);
+	});
 
 	$(document).on('pjax:end', function() {
 		picturefill();
-	})
+	});
+
+	$(document).on('pjax:success', function() {
+		$('#pjax-content').fadeIn(600);
+	});
 
 
 
