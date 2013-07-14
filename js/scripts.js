@@ -1,4 +1,5 @@
-$(document).ready(function(){		
+// $(document).ready(function(){		
+	$(document).on('ready pjax:success', function() {
 	
 	// Get screensize ------------------
 	var screen_size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
@@ -12,19 +13,17 @@ $(document).ready(function(){
 		
 
 	// Pjax ------------------
+	$.pjax.defaults.timeout = false;
 	$(document).pjax('a.pjax', '#pjax-content');
 	
 	$(document).on('pjax:start', function() {
-	  $(this).addClass('loading')
 	})
 
 	$(document).on('pjax:end', function() {
-	  $(this).removeClass('loading');
 		picturefill();
 	})
 
 
-	
 
 	// Wide screen trigger ------------------
 	$("p.mode-trigger a").click(function(event){

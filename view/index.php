@@ -1,6 +1,7 @@
 <?php 
 
 	$pjax_active = $_SERVER["HTTP_X_PJAX"];
+	
 
 	// get photo id from the url	
 	// $id = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL; 
@@ -57,30 +58,23 @@
 ?>
 
 
-
-<?php if (!($pjax_active)) : ?>
-
-
 <?php require_once("../inc/doc-head.php"); ?>
 
+<?php if (!($pjax_active)) : ?>
 
 <body class="view">
 
 	<?php require_once("../inc/header.php"); ?>
 	
 	<section class="main cf" role="main">
+		
+		<div id="pjax-content">
+		
 
 <?php endif; ?>
 		
-<?php if (($pjax_active)) : ?>
-	pjax active. id is  <?php echo $id; ?>
-	
-	
-<?php endif; ?>
-	
-		
-	<div id="pjax-content">
 
+		
 		
 		<section class="item">
 			<?php require_once("../inc/snippet-item.php"); ?>
@@ -170,15 +164,23 @@
 			</nav>
 
 
-			
-
 		</aside> <!-- meta -->
 
+
+		<?php if (!($pjax_active)) : ?>
+
+	</div> <!-- pjax-content -->
+
+
 </section> <!-- main  -->
+<?php endif; ?>
 
 
 
-</div> <!-- pjax-content -->
+
+<?php if (($pjax_active)) : ?>
+	<!-- <p>pjax is active. id is  <?php echo $id; ?></p> -->
+<?php endif; ?>
 
 <?php if (!($pjax_active)) : ?>
 

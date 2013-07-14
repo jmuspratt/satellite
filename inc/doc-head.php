@@ -1,7 +1,11 @@
+<?php if (!($pjax_active)) : ?>
+
 <!doctype html>
 <?php include ("functions.php"); ?>
 <?php include ("config-process.php"); ?>
 	<head>
+		
+<?php endif; ?>		
 		<title>
 			<?php echo $config["gallery_title"]; ?>
 			<?php if ($photo_info['photo']['title']) 	{echo " - " . $photo_info['photo']['title'];} ?>
@@ -11,6 +15,7 @@
 			<?php if ($tag_name) 											{echo " - " . $tag_name;} ?>
 		</title>
 
+<?php if (!($pjax_active)) : ?>
 		<meta charset="utf-8">
 		<meta name="robots" content="all">
 		<meta name="author" content="<?php echo $config['username'];?>">
@@ -51,3 +56,6 @@
 			<script src="<?php echo $root_url; ?>/js/scripts.js"></script>
 
 	</head>
+	
+<?php endif; ?>		
+	
