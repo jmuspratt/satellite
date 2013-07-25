@@ -26,7 +26,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 
 		<!-- css -->
-		<link href="<?php echo $root_url; ?>/css/screen.css" rel="stylesheet" type="text/css">
+		<link href="<?php echo $root_url; ?>css/screen.css" rel="stylesheet" type="text/css">
 	
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,10 +51,10 @@
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 			<script>window.jQuery || document.write("<script src='<?php echo $root_url; ?>js/jquery-1.10.1.min.js'>\x3C/script>")</script>
 			<!-- scripts -->
-			<script src="<?php echo $root_url; ?>/js/jquery.cookie.js"></script>
-			<script src="<?php echo $root_url; ?>/js/jquery.pjax.js"></script>
-			<script src="<?php echo $root_url; ?>/js/picturefill.js"></script>
-			<script src="<?php echo $root_url; ?>/js/scripts.js"></script>
+			<script src="<?php echo $root_url; ?>js/jquery.cookie.js"></script>
+			<script src="<?php echo $root_url; ?>js/jquery.pjax.js"></script>
+			<script src="<?php echo $root_url; ?>js/picturefill.js"></script>
+			<script src="<?php echo $root_url; ?>js/scripts.js"></script>
 
 	</head>
 	
