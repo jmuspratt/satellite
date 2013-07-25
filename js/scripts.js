@@ -70,8 +70,8 @@ $(document).keydown(function(e){
 
 		// Older: Right arrow key is 39
 		if ( (e.keyCode == 39) && (typeof older_url != 'undefined') ) { 
-			if (history.pushState && single_view) {$.pjax({url: older_url, container: '#pjax-content'}); console.log("pushstate!");}
-			else {window.location.href = older_url; console.log("no pushstate");}
+			if (history.pushState && single_view) {$.pjax({url: older_url, container: '#pjax-content'});}
+			else {window.location.href = older_url;}
 			e.preventDefault();
 		}
 
