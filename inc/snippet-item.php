@@ -56,6 +56,12 @@
 				<?php }	}	?>
 				
 				
+				<!-- IE8 and lower -->
+					    <!--[if (lt IE 9) & (!IEMobile)]>
+			               <span data-src="<?php echo $last_size["source"];?>"></span>
+			           <![endif]-->
+					
+					
 			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 				<noscript>
 					<img src="<?php echo $confirmed_sizes[3]["source"]; ?>" alt="<?php echo $photo_info["photo"]["title"];?>">
