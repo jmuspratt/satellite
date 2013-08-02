@@ -209,7 +209,7 @@
 	body.mode .thumbs.photosets li h4, 
 	body.mode .thumbs.photosets li h5 		{display:none;}
 	body.mode .set-text 									{background:none;}
-	body.mode nav.photo-prev-next					{position:absolute; top:-30px; left:0; margin:0; padding-top:0; border:0;}
+	body.mode nav.photo-prev-next					{position:absolute; min-width:160px; top:-30px; left:0; margin:0; padding-top:0; border:0;}
 	body.mode nav.photo-prev-next img,  
 		body.mode nav.photo-prev-next br 		{display:none;}
 	body.mode nav.photo-prev-next li a.button 		{padding-top:2px; background:rgba(255,255,255,.03); }
