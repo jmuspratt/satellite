@@ -22,8 +22,14 @@ $config = array(
 
 	// -------------------- Optional Customizations --------------------
 
+	// Show link to "sets" and "tags" pages in navigation, and links to sets/tags in the single item page? No quotation marks around booleans.	
+	// Example: false
+	"show_sets" => true,
+	"show_tags" => true,
+
+
 	// Custom background and link colors.
-	// Ue any valid CSS color expression.
+	// Use any valid CSS color expression.
 	// Example 1: "#eaeaea"
 	// Example 2: "rgba(0,0,0,.05)"
 	

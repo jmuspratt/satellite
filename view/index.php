@@ -105,7 +105,7 @@
 						</section>
 					<?php endif; ?>
 						
-					<?php if (isset($sets_and_pools["set"])) : ?>
+					<?php if (isset($sets_and_pools["set"]) && $config["show_sets"]) : ?>
 						<section class="photo-sets cf">
 							<h3>Sets</h3>
 							<?php $counter = 1; $total = count($sets_and_pools["set"]);
@@ -117,7 +117,7 @@
 						</section> <!-- photo-sets -->
 					<?php endif; ?>
 							
-					<?php if ($this_photo_tags) : ?>
+					<?php if ($this_photo_tags && $config["show_tags"]) : ?>
 						<section class="photo-tags cf">
 							<h3>Tags</h3> 
 							<?php
