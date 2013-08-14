@@ -12,8 +12,8 @@
 /*	Reset ------------------ */
 
 	html					{margin:0; padding:0;}
-	body, body * 			{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
-	body img				{border:0;}
+	body, body * 	{margin:0; padding:0; text-indent:0; text-decoration: none; outline:none;}
+	body img			{border:0;}
 	
 
 /*	Utility Classes ------------------ */
@@ -147,13 +147,13 @@
 	.meta section li 										{margin-bottom:5px;}
 	.meta section li:last-child					{margin-bottom:0;}
 	
-	nav.photo-prev-next								{margin:20px 0;}
+	nav.photo-prev-next									{margin:20px 0;}
 	nav.photo-prev-next ul							{list-style:none;}
 	nav.photo-prev-next li							{display:inline-block;  }
-	nav.photo-prev-next li img 						{display:inline-block;  padding:5px 0 0 0;}
-	nav.photo-prev-next li.prev 					{text-align:right;}
-	nav.photo-prev-next li:first-child				{margin-right:2%;}
-	nav.photo-prev-next li a.button					{display:block;}
+	nav.photo-prev-next li img 					{display:inline-block;  padding:5px 0 0 0;}
+	nav.photo-prev-next li.prev 				{text-align:right;}
+	nav.photo-prev-next li:first-child	{margin-right:2%;}
+	nav.photo-prev-next li a.button			{display:block;}
 
 
 	.title-desc													{margin-bottom:30px;}
