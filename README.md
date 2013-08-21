@@ -2,7 +2,7 @@
 
 Overview
 ---------
-Satellite is a minimal, responsive template that makes use of several open-source PHP and Javascript libraries. Use it to display your Flickr photos and photo sets on your own website, perhaps at `http://yourdomain.com/photos/`. 
+Satellite is a minimal, responsive template that makes use of several open-source PHP and Javascript libraries. Use it to display your Flickr photos, videos, and sets on your own website, perhaps at `http://yourdomain.com/photos/`. 
 
 Satellite uses no lightboxes, Flash code or heavy styling. Modern web techniques like [Picturefill](https://github.com/scottjehl/picturefill) and [Pjax](https://github.com/defunkt/jquery-pjax) (ajax with pushState) are incorporated to serve appropriately-sized images and smooth transitions.
 
