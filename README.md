@@ -41,7 +41,8 @@ Limitations
 Configuration
 -------------
 1. Duplicate config/config-template.php and rename the copy to config.php. Open it in a plain text editor and fill in your gallery title, username, API key, etc. Close and save the file.
-2. Upload the contents of /satellite/ files to your web server . You can put them in a domain root or a sub-folder like `http://yourdomain.com/photos/`.
+2. Create a directory named `cache` in your root folder (i.e. at the same level as config, css, etc.). 
+3. Upload the contents of /satellite/ files to your web server . You can put them in a domain root or a sub-folder like `http://yourdomain.com/photos/`.
 3. Set the permissions of the `cache` directory to `777`.
 
 Credits/License
