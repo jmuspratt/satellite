@@ -131,7 +131,7 @@
 						</section> <!-- photo-tags -->
 					<?php endif; ?>
 				
-					<p class="view-on-flickr"><a class="button" href="http://flickr.com/photos/<?php echo $config["username"] ?>/<?php echo $photo_info["photo"]["id"] ?>/">View on Flickr</a></p>
+					<p class="view-on-flickr"><a class="button" href="http://flickr.com/photos/<?php echo $user_web_segment; ?>/<?php echo $photo_info["photo"]["id"] ?>/">View on Flickr</a></p>
 				
 				</div> <!-- meta -->
 				

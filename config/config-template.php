@@ -13,10 +13,13 @@ $config = array(
 
 	// Insert your Flickr username. This is not your Yahoo sign in username, or your Flickr screename - but the username you use for Flickr itself. To double check, sign in to Flickr and look at the top of the page where it says 'Signed in as...'. that is your username.
 	// Example: "joeschmoe"
-	"username"=> "",
+	"username" => "",
 		
+	// IF YOUR FLICKR WEB ADDRESS IS DIFFERENT FROM YOUR USERNAME (the /mywebaddress in flickr.com/photos/mywebaddress), insert it here. Otherwise, leave it empty.
+	"flickr_web_address" => "",
+
 	// Web address where Satellite is installed
-	// Example: "http://mydomain.com/photos/"
+	// Example: "http://mydomain.com/photos/"	
 	"root_url" => "",
 	
 
